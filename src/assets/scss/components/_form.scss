@@ -31,10 +31,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 183.333px;
+  border-radius: 183px;
   width: 56px;
   height: 56px;
   background-color: #0057FF;
+  overflow: hidden;
+
+  &--vk {
+    background-color: #0077FF;
+  }
+  &--ok {
+    background-color: #F7931E;
+  }
+  &--Yandex{
+    background-color: #FC3F1D;;
+  }
 }
 
 .field {
