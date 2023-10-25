@@ -1,0 +1,22 @@
+extends ../layout/default
+
+block content
+    .fullpage
+        form.form
+            p.form__title Войти
+            label.field
+                +icon('MailOutlineRounded')
+                input(placeholder="Введите почту или номер телефона" name="login" type="input")
+            label.field.field--password
+                +icon('SecurityRounded')
+                input(placeholder="Введите пароль" name="password" type="password")
+                span.field__password-hide
+                    +icon('RemoveRedEyeRounded')
+            a(href="#!").form__forgot-password Забыли пароль?
+            button(type="submit").btn Войти
+            button(type="button").btn Создать аккаунт
+            .socials
+                a(href="#").social
+                a(href="#").social
+                a(href="#").social
+                a(href="#").social
