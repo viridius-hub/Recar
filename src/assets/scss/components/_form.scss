@@ -12,6 +12,10 @@
     font-weight: 600;
   }
 
+  &__field {
+    margin-top: 16px;
+  }
+
   &__forgot-password {
     width: 100%;
     text-align: left;
@@ -45,6 +49,9 @@
   }
   &--Yandex{
     background-color: #FC3F1D;;
+  }
+  &--socMail{
+    background-color: #005FF9;;
   }
 }
 
