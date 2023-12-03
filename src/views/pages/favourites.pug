@@ -1,0 +1,46 @@
+extends ../layout/default
+
+block content
+    .orders
+        .container
+            button.back-button
+                +icon('back')
+                | Назад
+            .orders__content
+                .orders__header
+                    h1.orders__title Избранное
+                    .orders__filter-block
+                        label.orders__search
+                            +icon('search')
+                            input(placeholder="Поиск по названию или артикулу")
+                        .orders__filters
+                            button.orders__filter
+                                | По дате добавления
+                                +icon('arrow-down')
+                            button.orders__filter
+                                | По статусу
+                                +icon('arrow-down')
+                .orders__main
+                    .orders__table
+                        .orders__row.orders__row--grid-5
+                            .orders__column
+                                p Производитель
+                            .orders__column
+                                p Номер
+                            .orders__column
+                                p Наименование
+                            .orders__column
+                                p Дата
+                            .orders__column
+                        +loop(6)
+                            .orders__row.orders__row--grid-5
+                                .orders__column
+                                    p HONDA
+                                .orders__column
+                                    p 892189-098
+                                .orders__column
+                                    p.text-black Втулка стабилизатора
+                                .orders__column
+                                    p 20.12.2022
+                                .orders__column
+                                    button.orders__button Подробнее
