@@ -1,0 +1,57 @@
+extends ../layout/default
+
+block content
+    .new-car
+        .container
+            button.back-button
+                +icon('back')
+                | Назад
+            .new-car__content
+                h1.new-car__title Тачка 1
+                .new-car__sections
+                    .new-car__section
+                        label.new-car__field
+                            span Наименование
+                            input(placeholder="Мамина машина")
+                        label.new-car__field
+                            span Название авто
+                            input(placeholder="Марка, модель")
+                        label.new-car__field
+                            span VIN номер
+                            input(placeholder="123123123")
+                        label.new-car__checkbox
+                            span Сделать главным авто
+                            input(type='checkbox' checked)
+                            +icon('CheckBoxOutlineBlankRounded')
+                            +icon('CheckBoxRounded')
+                        button.new-car__edit Редактировать
+                        button.new-car__del Удалить
+                    .new-car__vertical_line
+                    .new-car__section.new-car__section--gap16
+                        label.new-car__field.new-car__field--gray
+                            span Год
+                            input(placeholder="Не выбрано")
+                        label.new-car__field.new-car__field--gray
+                            span Регион
+                            input(placeholder="Не выбрано")
+                        label.new-car__field.new-car__field--gray
+                            span Рулевое управление
+                            input(placeholder="Не выбрано")
+                        label.new-car__field.new-car__field--gray
+                            span Тип кузова
+                            input(placeholder="Не выбрано")
+                    .new-car__section.new-car__section--gap16
+                        label.new-car__field.new-car__field--gray
+                            span Тип коробки передач
+                            input(placeholder="Не выбрано")
+                        label.new-car__field.new-car__field--gray
+                            span Серия
+                            input(placeholder="Не выбрано")
+                        label.new-car__field.new-car__field--gray
+                            span Модель
+                            input(placeholder="Не выбрано")
+                        label.new-car__field.new-car__field--gray
+                            span Двигатель
+                            input(placeholder="Не выбрано")
+
+

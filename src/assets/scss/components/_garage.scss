@@ -12,14 +12,51 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  flex: 1 0 0;
   border-radius: 12px;
   border: 1px solid #E2EEF6;
   background: #FFF;
+
+  &__tag {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--neutral-gray, #949DA5);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.16px;
+
+    span {
+      width: 14px;
+      height: 14px;
+      background-color: var(--secondary-green, #49B870);
+      display: table;
+      border-radius: 50%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    justify-content: space-between;
+  }
 
   &__title {
     color: #201B45;
     font-size: 16px;
     font-weight: 600;
+  }
+
+  &__edit {
+    color: var(--accent-1, #139BE8);
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.15px;
   }
 }

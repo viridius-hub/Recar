@@ -20,38 +20,14 @@ block content
                                 | По дате добавления
                 .cards
                     .card
-                        a(href='#').card__title Mazda B-Series
+                        .card__header
+                            .card__title Mazda B-Series
+                            .card__tag
+                                span
+                                | Главный
                         a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
-                    .card
-                        a(href='#').card__title Mazda B-Series
-                        a(href='#').card__edit Изменить
+                    +loop(29)
+                        .card
+                            .card__header
+                                .card__title Mazda B-Series
+                            a(href='#').card__edit Изменить
