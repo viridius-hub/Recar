@@ -1,0 +1,54 @@
+extends ../layout/default
+
+block content
+    .catalog
+        .catalog__header
+            img(src='Rectangle').catalog__img
+            .catalog__vertical_line
+            h1.catalog__title Mazda
+            a(href='#').catalog__change Выбрать другой автомобиль
+        .catalog__filters_block
+            button.catalog__button.button_selected По категориям
+            button.catalog__button.button_selected По узлам
+            label.catalog__search
+                +icon('search')
+                input(placeholder="Поиск поназванию детали")
+                ul.catalog__filter
+                    li Двигатель
+                    li Двигатель
+                    li Выхлопная система
+                    li Топливо
+                    li Система связки
+                    li Система охлаждения
+                    li Выделение
+                    li Трансмиссия
+                    li Электрическая система двигателя
+                    li Электрическая система
+                    li Подвесное устройство
+                    li Управление
+                    li Тормозная система
+                    li Кузов
+                    li Кузов
+                    li Кузов
+                    li Кузов
+                    li Кузов
+                    li Кузов
+                    li Кузов
+                    li Кузов
+                    li Кузов
+                    li Кузов
+                    li Кузов
+                    li Кузов
+        .cards
+            .card
+                .card__header
+                    .card__title Mazda B-Series
+                    .card__tag
+                        span
+                        | Главный
+                a(href='#').card__edit Изменить
+            +loop(29)
+                .card
+                    .card__header
+                        .card__title Mazda B-Series
+                    a(href='#').card__edit Изменить
