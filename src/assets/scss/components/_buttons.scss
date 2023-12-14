@@ -31,4 +31,13 @@
     font-weight: 400;
     letter-spacing: -0.13px;
   }
+
+  &--text-min {
+    color: var(--Accent-1, #139BE8);
+    font-weight: 400;
+    letter-spacing: -0.14px;
+    padding: 4px 8px;
+    font-size: 14px;
+    gap: 8px;
+  }
 }

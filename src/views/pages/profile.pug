@@ -2,91 +2,113 @@ extends ../layout/default
 
 block content
     .profile
-        button.back-button
-            +icon('back')
-            | Назад
-        .nav-bar
-            a(href='#').nav-bar__item Личные данные
-            a(href='#').nav-bar__item История заказов
-            a(href='#').nav-bar__item История поиска
-            a(href='#').nav-bar__item Гараж
-        .profile__container
-            h1.profile__title Личные данные
-            .profile__box
-                h2.profile__paragraph Пушкин Александр Сергеевич
-                a(href='#').profile__edit Редактировать
-            .profile__block
-                label.profile__field
-                    span Почта
-                    input(placeholder="jason.saitama@gmail.com")
-                    +icon('InfoRounded')
-                span.profile__clue Eсли вы хотите изменить e-mail, напишите в службу поддержки
-            .profile__block
-                label.profile__field
-                    span Телефон
-                    input(placeholder="+7 (123) 456-78-90")
-                label.profile__field
-                    span Пароль
-                    input(placeholder="•••••••••••")
-        .profile__container
-            h2.profile__paragraph Адреса доставки
-            .profile__objects
-                .profile__object
-                    +icon('LocationonRounded')
-                    span.object__place г. Санкт-Петербург, ул. Пушкина, д. Колотушкина, кв.17
-                    a(href='#').profile__edit Редактировать
-                .profile__object
-                    +icon('LocationonRounded')
-                    span.object__place г. Санкт-Петербург, ул. Пушкина, д. Колотушкина, кв.17
-                    a(href='#').profile__edit Редактировать
-                .profile__new-object
-                    span.new-object__place Новый адрес
-                    +icon('AddRounded')
-        .profile__container
-            h2.profile__paragraph Мои получатели
-            .profile__components
-                .profile__component
-                    .profile__data
-                        h3.profile__title Пушкин Александр Сергеевич
-                        h3.profile__content +7 (123) 456-78-90
-                        h3.profile__huita jason.saitama@gmail.com
-                    a(href='#').profile__edit Редактировать
-                .profile__component
-                    .profile__data
-                        h3.profile__title Пушкин Александр Сергеевич
-                        h3.profile__content +7 (123) 456-78-90
-                        h3.profile__huita jason.saitama@gmail.com
-                    a(href='#').profile__edit Редактировать
-                .profile__component
-                    .profile__data
-                        h3.profile__title Пушкин Александр Сергеевич
-                        h3.profile__content +7 (123) 456-78-90
-                        h3.profile__huita jason.saitama@gmail.com
-                    a(href='#').profile__edit Редактировать
-                .profile__new-component
-                        h3.profile__new-content Новый получатель
-                        label.profile__icon
-                            +icon('search')
-        .profile__footer
-            h2.profile__subtitle Управление подписками
-            p.profile__text Подпишитесь на нашу рассылку, чтобы первыми получать самые выгодные предложения!
-            h2.profile__subtitle Подписка оформлена!
-            button.profile__button-footer Отписаться
-            p.profile__text Также подпишитесь на нас в соцсетях!
-            .profile__buttons-footer
-                button.profile__button-footer
-                    label.profile__icon
-                        +icon('socOK')
-                    p.profile__button-content Подписаться на OK
-                button.profile__button-footer
-                    label.profile__icon
-                        +icon('socVK')
-                    p.profile__button-content Подписаться на VK
-            .profile__pact
-                p.profile__text Вы соглашаетесь на отправку данных
-                input(type='checkbox' checked)
-        button.profile__deleted
-            p.profile__delete Удалить аккаунт
+        .container
+            button.back-button
+                +icon('back')
+                | Назад
+            .layout
+                .layout__left
+                    .nav-bar
+                        a(href='#').nav-bar__item.nav-bar__item--active Личные данные
+                        a(href='#').nav-bar__item История заказов
+                        a(href='#').nav-bar__item История поиска
+                        a(href='#').nav-bar__item Гараж
+                .layout__right
+                    h1.title Личные данные
+                    .profile__section
+                        .profile__name
+                            p Пушкин Александр Сергеевич
+                            a(href="#") Редактировать
+                        .profile__rows
+                            label.field-label
+                                span Почта
+                                .field-label__input
+                                    input(type="input" placeholder="jason.saitama@gmail.com" readonly)
+                                    +icon("InfoRounded")
+                            p.profile__caption Eсли вы хотите изменить e-mail, напишите
+                                br
+                                | в службу поддержки
+                        .profile__rows
+                            form
+                                label.field-label
+                                    span.text-black Телефон
+                                    .field-label__input
+                                        input(type="text" placeholder="+7 (123) 456-78-90")
+                                        button(type="submit").button.button--text.button--text-min Сменить
+                                    p.field-label__message.field-label__message--success Номер сохранен
+                            form
+                                label.field-label
+                                    span.text-black Пароль
+                                    .field-label__input
+                                        input(type="password")
+                                        button(type="submit").button.button--text.button--text-min Сменить
+                                    p.field-label__message.field-label__message--error Ошибка
+                    .profile-addresses
+                        p.profile-addresses__title Адреса доставки
+                        .profile-addresses__items
+                            label.profile-addresses-item
+                                input(type="radio" name="addresses" value="0" checked)
+                                .profile-addresses-item__content
+                                    +icon('LocationonRounded')
+                                    p.profile-addresses-item__title г. Санкт-Петербург, ул. Пушкина, д. Колотушкина, кв.17
+                                    +icon('RadioButtonCheckedRounded')
+                                    +icon('RadioButtonUncheckedRounded')
+                                a(href="#").profile-addresses-item__link Редактировать
+                            label.profile-addresses-item
+                                input(type="radio" name="addresses" value="1")
+                                .profile-addresses-item__content
+                                    +icon('LocationonRounded')
+                                    p.profile-addresses-item__title г. Санкт-Петербург, ул. Пушкина, д. Колотушкина, кв.17
+                                    +icon('RadioButtonCheckedRounded')
+                                    +icon('RadioButtonUncheckedRounded')
+                                a(href="#").profile-addresses-item__link Редактировать
+                            a(href="#").profile-addresses__add Новый адрес
+                                +icon("AddRounded")
+                    .profile-my_recipients
+                        p.profile-addresses__title Мои получатели
+                        .profile-my_recipients__items
+                            .profile-my_recipients__item
+                                .profile-my_recipients__content
+                                    p.profile-my_recipients__name Пушкин Александр Сергеевич
+                                    a(href="tel:+7 (123) 456-78-90").profile-my_recipients__tel +7 (123) 456-78-90
+                                    a(href="mailto:jason.saitama@gmail.com").profile-my_recipients__mail jason.saitama@gmail.com
+                                a(href="#").profile-addresses-item__link Редактировать
+                            .profile-my_recipients__item
+                                .profile-my_recipients__content
+                                    p.profile-my_recipients__name Пушкин Александр Сергеевич
+                                    a(href="tel:+7 (123) 456-78-90").profile-my_recipients__tel +7 (123) 456-78-90
+                                    a(href="mailto:jason.saitama@gmail.com").profile-my_recipients__mail jason.saitama@gmail.com
+                                a(href="#").profile-addresses-item__link Редактировать
+                            .profile-my_recipients__item
+                                .profile-my_recipients__content
+                                    p.profile-my_recipients__name Пушкин Александр Сергеевич
+                                    a(href="tel:+7 (123) 456-78-90").profile-my_recipients__tel +7 (123) 456-78-90
+                                    a(href="mailto:jason.saitama@gmail.com").profile-my_recipients__mail jason.saitama@gmail.com
+                                a(href="#").profile-addresses-item__link Редактировать
+                            .profile-my_recipients__item
+                                .profile-my_recipients__content
+                                    p.profile-my_recipients__name Пушкин Александр Сергеевич
+                                    a(href="tel:+7 (123) 456-78-90").profile-my_recipients__tel +7 (123) 456-78-90
+                                    a(href="mailto:jason.saitama@gmail.com").profile-my_recipients__mail jason.saitama@gmail.com
+                                a(href="#").profile-addresses-item__link Редактировать
+                            a(href="#").profile-addresses__add.profile-my_recipients__add Новый получатель
+                                +icon("AddRounded")
+                    .profile-subscriptions
+                        p.profile-subscriptions__title Управление подписками
+                        p.profile-subscriptions__subtitle Подпишитесь на нашу рассылку, чтобы первыми получать самые выгодные предложения!
+                        input(type="email" placeholder="Ваш email").profile-subscriptions__field
+                        button(type="submit").profile-subscriptions__button Сохранить подписку
+                        p.profile-subscriptions__caption Также подпишитесь на нас в соцсетях!
+                        div.profile-subscriptions__socails
+                            a(href="#")
+                                img(src=require("@images/ok.png"))
+                                | Подписаться на OK
+                            a(href="#")
+                                img(src=require("@images/vk.png"))
+                                | Подписаться на VK
+                    .profile-delete
+                        a(href="#") Удалить аккаунт
+
 
 
 
