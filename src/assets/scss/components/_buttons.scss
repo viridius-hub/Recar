@@ -1,11 +1,34 @@
-.btn {
-  padding: 14px 24px 16px;
-  border-radius: 10px;
-  background-color: #F6F6F8;
-  font-weight: bold;
+.button {
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  gap: 8px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  user-select: none;
 
   &--primary {
-    background-color: rgba(0, 87, 255, 0.15);
-    color: #0057FF;
+    border-radius: 8px;
+    background: var(--Accent-1, #139BE8);
+    color: var(--Neutral-White, #FFF);
+  }
+
+  &--text {
+    color: var(--Accent-1, #139BE8);
+    border-radius: 8px;
+  }
+
+  &--primary-min {
+    padding: 4px 8px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: -0.13px;
   }
 }

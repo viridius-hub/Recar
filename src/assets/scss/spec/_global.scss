@@ -5,3 +5,20 @@ img, video {
 .text-black {
   color: #000;
 }
+
+body {
+  &::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: var(--Neutral-White, #FFF);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: var(--Accent-1, #139BE8);
+  }
+}

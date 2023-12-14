@@ -1,5 +1,133 @@
 extends ../layout/default
 
 block content
-    .container
-        include ../components/test
+    .home
+        .container
+            .home__content
+                .swiper.home-banner
+                    button.home-banner__prev
+                        +icon('ArrowBackIosNewRounded')
+                    button.home-banner__next
+                        +icon('ArrowForwardIosRounded')
+                    .swiper-wrapper
+                        +loop(4)
+                            .swiper-slide.home-banner-item
+                                .home-banner-item__wrapper
+                                    h2 Поиск автозапчастей для любых авто
+                                    p Быстрее и надежнее, чем ждать в сервисе!
+                                img(src=require('@images/banner-item.jpg')).home-banner-item__image
+                .home-search
+                    .home-search__rows
+                        .home-search__row
+                            .home-search__wrapper
+                                p.home-search__title Поиск
+                                form.home-search-block
+                                    label.search
+                                        +icon('search')
+                                        input(type="text" placeholder="Поиск по VIN" required)
+                                    button(type="submit").button.button--primary Найти
+                                p.home-search-block__caption Например: VIN XW8AN2NE3JH035743 или FRAME KZN185-9023353
+                            .home-search__select
+                                label.select-box
+                                    input(type="checkbox" class="select-box__checkbox")
+                                    .select-box__header
+                                        .select-box__header-wrapper
+                                            div.select-box__header-content
+                                                img(src=require("@images/car_1.png"))
+                                                span.select-box__value Авто из гаража
+                                            +icon('KeyboardArrowDownRounded')
+                                    .select-box__main
+                                        .select-box__options
+                                            +loop(10)
+                                                label.select-box__option
+                                                    input(type="radio" name="car" value="BMW X6")
+                                                    .select-box__option-wrapper
+                                                        span BMW X6
+                                        .select-box__footer
+                                            a(href="").button.button--primary.button--primary-min Перейти в гараж
+
+
+
+
+                                a(href="").button.button--primary Перейти
+                        .home-search__line
+                        .home-search__row.home-search__row--mg
+                            p.home-search__title Список авто
+                            .home-search__items
+                                +loop(4)
+                                    .home-search__item
+                                        a(href="#") LADA (ВАЗ)
+                                            span (6230)
+                                        a(href="#") BMW
+                                            span (2230)
+                                        a(href="#") Cherry
+                                            span (5230)
+                                        a(href="#") Audi
+                                            span (1230)
+                                        a(href="#") BMW
+                                            span (2230)
+                                        a(href="#") Cherry
+                                            span (5230)
+                                        a(href="#") Audi
+                                            span (1230)
+                .home-section.home-section-1
+                    img(src=require('@images/home-section-1.svg')).home-section__image.home-section-1__image
+                    h2.home-section__title.home-section-1__title Точно определяем артикулы и кросс-номера
+                    .home-section__list.home-section-1__list
+                        .home-section__list-item.home-section-1__list-item
+                            +icon("CalendarTodayRounded")
+                            p Ежемесячно обновляем базу данных
+                        .home-section__list-item.home-section-1__list-item
+                            +icon("CompareArrowsRounded")
+                            p Исключаем возврат детали из-за неправильного подбора
+                        .home-section__list-item.home-section-1__list-item
+                            +icon("QuestionMarkRounded")
+                            p Поможем разобраться, если сомневаетесь
+                .home-section.home-section-2
+                    img(src=require('@images/home-section-2.svg')).home-section__image.home-section-2__image
+                    h2.home-section__title.home-section-2__title Подбираем оптимальные варианты покупки деталей
+                    .home-section__list.home-section-2__list
+                        .home-section__list-item.home-section-2__list-item
+                            +icon("SearchRounded")
+                            p Ищем по всем источникам и базам партнеров
+                        .home-section__list-item.home-section-2__list-item
+                            +icon("ContactPageRounded")
+                            p Получаем актуальные данные и цены в онлайн-режиме
+                        .home-section__list-item.home-section-2__list-item
+                            +icon("StarRateRounded")
+                            p Проверяем надежность продавцов, публикуем рейтинг и отзывы других покупателей
+                .home-section.home-section-3
+                    img(src=require('@images/home-section-3.svg')).home-section__image.home-section-3__image
+                    h2.home-section__title.home-section-3__title Находим необходимые запчасти в базах поставщиков
+                    .home-section__list.home-section-3__list
+                        .home-section__list-item.home-section-3__list-item
+                            +icon("CalendarViewMonthRounded")
+                            p Составляем список всех доступных комплектующих
+                        .home-section__list-item.home-section-3__list-item
+                            +icon("CasesRounded")
+                            p Указываем цены, сроки поставки, наличие на складе продавца
+                        .home-section__list-item.home-section-3__list-item
+                            +icon("CastleRounded")
+                            p Работаем без наценки напрямую с поставщиками
+                .home-working-together
+                    img(src=require('@images/home-working-together-bg.svg')).home-working-together__image
+                    h2.home-working-together__title ДАВАЙТЕ РАБОТАТЬ ВМЕСТЕ
+                    .home-working-together__items
+                        .home-working-together__item
+                            +icon("home-working-together")
+                            p Неограниченный доступ к базе клиентов
+                        .home-working-together__item
+                            +icon("home-working-together")
+                            p Простой вариант загрузки прайс-листов в систему
+                        .home-working-together__item
+                            +icon("home-working-together")
+                            p Удобный просмотр статистики продаж
+                        .home-working-together__item
+                            +icon("home-working-together")
+                            p Возможность быстро и удобно вести переписку с покупателями
+                        .home-working-together__item
+                            +icon("home-working-together")
+                            p Вывод ваших товаров в ТОП поисковой выдачи на сайте
+                    .home-working-together__footer
+                        a(href="#").button.button--primary Зарегистрируйтесь
+                        a(href="#").button.button--text Подробнее

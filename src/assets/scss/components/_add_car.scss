@@ -5,18 +5,23 @@
     font-weight: 600;
   }
 
-  &__sections {
-    display: grid;
-    grid-template-columns: 295px 1px 295px 295px;
-    width: 100%;
-    padding: 26px 29px;
-    align-items: flex-start;
-    gap: 24px;
-    flex-shrink: 0;
+  &__content {
     border-radius: 16px;
     border: 1px solid #EEE;
     background: #FFF;
     box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.07);
+    display: flex;
+    padding: 26px 29px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  &__sections {
+    display: grid;
+    grid-template-columns: 295px 1px 295px 295px;
+    width: 100%;
+    gap: 24px;
   }
 
   &__section {
