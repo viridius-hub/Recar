@@ -1,9 +1,10 @@
 extends ../layout/default
 
 block content
-    .not-found.fullpage
-        .not-found__wrapper 
-            h1 404
-            p Страница, которую вы запрашиваете, не существует. Возможно она устарела, была удалена, или вы ввели неверный адрес.
-            button(type="submit").btn.btn__not-found Перейти на главную
-        img(src=require('@images/404.png'))
+    .container
+        .not-found.fullpage
+            .not-found__wrapper
+                h1 404
+                p Страница, которую вы запрашиваете, не существует. Возможно она устарела, была удалена, или вы ввели неверный адрес.
+                button(type="submit").btn.btn__not-found Перейти на главную
+    img(src=require('@images/404.png')).not-found__img

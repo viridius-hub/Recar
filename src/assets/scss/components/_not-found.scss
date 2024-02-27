@@ -1,29 +1,39 @@
 
-
-.not-found{
+.not-found {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 20px;
-    &__wrapper{
+    
+    &__img {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-70%);
+    }
+    
+    &__wrapper {
         display: flex;
         flex-direction: column;
         padding: 24px 80px;
         gap: 24px;
-        h1{
-            font-size: 48px; 
-            font-family: Montserrat; 
-            font-weight: 600; 
+        
+        h1 {
+            font-size: 48px;
+            font-family: Montserrat;
+            font-weight: 600;
             text-transform: uppercase;
         }
-        p{
+        
+        p {
             max-width: 295px;
-            color: black; 
-            font-size: 15px; 
-            font-weight: 400; 
+            color: black;
+            font-size: 15px;
+            font-weight: 400;
             word-wrap: break-word;
         }
-        button{
+        
+        button {
             max-width: 295px;
         }
     }
