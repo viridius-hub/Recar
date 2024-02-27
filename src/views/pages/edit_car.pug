@@ -30,25 +30,74 @@ block content
                     .new-car__section.new-car__section--gap16
                         label.new-car__field
                             span Год
-                            input(placeholder="Не выбрано")
+                            .select
+                                input(placeholder="Не выбрано" data-select)
+                                +icon('dropdown')
+                                .select__options(data-select-options)
+                                    ul.select__options__wrapper
+                                        +loop(20)
+                                            li(data-select-option).select__options__item select option
                         label.new-car__field
                             span Регион
-                            input(placeholder="Не выбрано")
+                            .select
+                                input(placeholder="Не выбрано" data-select)
+                                +icon('dropdown')
+                                .select__options(data-select-options)
+                                    ul.select__options__wrapper
+                                        +loop(20)
+                                            li(data-select-option).select__options__item select option
                         label.new-car__field
                             span Рулевое управление
-                            input(placeholder="Не выбрано")
+                            .select
+                                input(placeholder="Не выбрано" data-select)
+                                +icon('dropdown')
+                                .select__options(data-select-options)
+                                    ul.select__options__wrapper
+                                        +loop(20)
+                                            li(data-select-option).select__options__item select option
                         label.new-car__field
                             span Тип кузова
-                            input(placeholder="Не выбрано")
+                            .select
+                                input(placeholder="Не выбрано" data-select)
+                                +icon('dropdown')
+                                .select__options(data-select-options)
+                                    ul.select__options__wrapper
+                                        +loop(20)
+                                            li(data-select-option).select__options__item select option
+                    .new-car__section.new-car__section--gap16
                         label.new-car__field
                             span Тип коробки передач
-                            input(placeholder="Не выбрано")
+                            .select
+                                input(placeholder="Не выбрано" data-select)
+                                +icon('dropdown')
+                                .select__options(data-select-options)
+                                    ul.select__options__wrapper
+                                        +loop(20)
+                                            li(data-select-option).select__options__item select option
                         label.new-car__field
                             span Серия
-                            input(placeholder="Не выбрано")
+                            .select
+                                input(placeholder="Не выбрано" data-select)
+                                +icon('dropdown')
+                                .select__options(data-select-options)
+                                    ul.select__options__wrapper
+                                        +loop(20)
+                                            li(data-select-option).select__options__item select option
                         label.new-car__field
                             span Модель
-                            input(placeholder="Не выбрано")
+                            .select
+                                input(placeholder="Не выбрано" data-select)
+                                +icon('dropdown')
+                                .select__options(data-select-options)
+                                    ul.select__options__wrapper
+                                        +loop(20)
+                                            li(data-select-option).select__options__item select option
                         label.new-car__field
                             span Двигатель
-                            input(placeholder="Не выбрано")
+                            .select
+                                input(placeholder="Не выбрано" data-select)
+                                +icon('dropdown')
+                                .select__options(data-select-options)
+                                    ul.select__options__wrapper
+                                        +loop(20)
+                                            li(data-select-option).select__options__item select option

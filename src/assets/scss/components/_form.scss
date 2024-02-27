@@ -5,6 +5,14 @@
   display: flex;
   flex-direction: column;
 
+  &__code_confirm{
+    color: #AFC3D1; 
+    font-size: 13px; 
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
   &__title {
     margin-bottom: 24px;
     color: var(--accent-dark, #201B45);
@@ -20,6 +28,8 @@
     font-size: 13px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    font-weight: 500;
+    color: #139BE8;
   }
 
   &__forgot-password:hover {
@@ -86,6 +96,9 @@
 
   &__password-hide {
     height: 20px;
+  }
+  &__code_confirm{
+    margin-bottom: 4px;
   }
 }
 
@@ -155,14 +168,27 @@
   }
 }
 
+.policy{
+  margin-bottom: 24px;
+  color: #949DA5; 
+  font-size: 14px; 
+  font-weight: 400;
+  a{
+    color: #139BE8;
+    font-weight: 500;
+  }
+}
+
 .btn{
   &__join {
     margin-bottom: 16px;
-    background-color: #139BE8;
+    background-color: #AFC3D1;
     color: #FFFFFF;
     font-size: 16px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    padding: 11px 0;
+    border-radius: 8px;
   }
 
   &__join:hover {
@@ -176,8 +202,23 @@
     font-size: 16px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    padding: 11px 0;
+    border-radius: 8px;
   }
 
+  &__not-found{
+    color: white; 
+    font-size: 16px; 
+    font-family: Montserrat; 
+    font-weight: 600;
+    background: #139BE8; 
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 16px;
+  }
 
   &__create:hover {
     background-color: #139BE8;

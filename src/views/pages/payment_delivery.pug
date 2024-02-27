@@ -1,0 +1,45 @@
+extends ../layout/default
+
+block content
+    .payment-delivery
+        .container
+                button.back-button
+                    +icon('back')
+                    | Назад
+                .layout
+                    .layout__left
+                        .nav-bar
+                            a(href='/contacts.html').nav-bar__item Контакты
+                            a(href='/payment_delivery.html').nav-bar__item.nav-bar__item--active Оплата и доставка
+                    .layout__right.payment-delivery__wrapper
+                        h1 Оплата и доставка
+                        p.payment-delivery__title 
+                            | Оплатить заказ Вы можете 
+                            br 
+                            | одним из следующих способов
+                        ul.payment-delivery__list.payment-delivery__list_first
+                            li.payment-delivery__block
+                                +icon('AccountBalanceWalletRounded')
+                                p Наличными в магазине
+                            li.payment-delivery__block
+                                +icon('LaptopChromebookRounded')
+                                p Онлайн через сайт
+                            li.payment-delivery__block
+                                +icon('CreditCardRounded')
+                                p Банковской картой в магазине
+                            li.payment-delivery__block
+                                +icon('AccountBalanceRounded')
+                                p Банковским переводом
+                        .payment-delivery__text
+                            p Узнать о возможных способах оплаты в конкретном магазине, Вы можете в карточке продавца, где содержится вся необходимая информация.
+                            p После совершения заказа с вами свяжется представитель магазина.
+                            p После успешного прохождения оплаты на электронную почту плательщика направляется электронная квитанция, подтверждающая совершение платежа и содержащая его уникальный идентификатор.
+                        .payment-delivery__line
+                        p.payment-delivery__title Способы доставки товаров
+                        ul.payment-delivery__list.payment-delivery__list_second
+                            li Самовывоз из магазина
+                            li Курьерская служба доставки
+                            li Доставка междугородней транспортной компанией
+                        p Узнать о возможных способах доставки в конкретном магазине, Вы можете в карточке продавца, где содержится вся необходимая информация.
+
+                            

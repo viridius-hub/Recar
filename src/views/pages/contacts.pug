@@ -1,0 +1,26 @@
+extends ../layout/default
+
+block content
+    .contacts
+        .container
+            button.back-button
+                +icon('back')
+                | Назад
+            .layout
+                .layout__left
+                    .nav-bar
+                        a(href='/contacts.html').nav-bar__item.nav-bar__item--active Контакты
+                        a(href='/payment_delivery.html').nav-bar__item Оплата и доставка
+                .layout__right.contacts__wrapper
+                    h1 Контакты
+                    p Офис в Москве
+                    .contacts__block
+                        a(type="tel" href="tel:+74999876543") +7 (499) 987-65-43
+                        p.contacts__label с 10:00 до 19:00 по рабочим дням
+                    .contacts__location
+                        +icon('LocationonRounded')
+                        p 101000, Россия, Москва, Ленина, 1, офис 1
+                    .contacts__line 
+                    .contacts__block
+                        p.contacts__label Почта поддержки
+                        a(type="mailto" href='mailto:jason.saitama@gmail.com') jason.saitama@gmail.com
