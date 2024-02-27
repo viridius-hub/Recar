@@ -1,0 +1,42 @@
+
+
+.payment-delivery{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        color: black;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        &_second{
+            list-style: disc;
+            padding-left: 20px;
+        }
+    }
+    &__block{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        svg{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__title{
+        font-size: 17px; 
+        font-family: Montserrat; 
+        font-weight: 600;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}

@@ -1,0 +1,30 @@
+
+
+.not-found{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: 24px 80px;
+        gap: 24px;
+        h1{
+            font-size: 48px; 
+            font-family: Montserrat; 
+            font-weight: 600; 
+            text-transform: uppercase;
+        }
+        p{
+            max-width: 295px;
+            color: black; 
+            font-size: 15px; 
+            font-weight: 400; 
+            word-wrap: break-word;
+        }
+        button{
+            max-width: 295px;
+        }
+    }
+}

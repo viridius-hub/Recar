@@ -1,0 +1,31 @@
+extends ../layout/default
+
+block content
+    .fullpage()
+        form.form
+            p.form__title Регистрация
+            label.field
+                input(placeholder="Фамилия" name="last_name" type="input")
+            label.field
+                input(placeholder="Имя" name="first_name" type="input")
+            label.field
+                input(placeholder="Отчество" name="middle_name" type="input")
+            label.field
+                input(placeholder="Почта" name="email" type="input")
+            label.field
+                input(placeholder="Пароль" name="password" type="password")
+                span.field__password-hide
+                    +icon('RemoveRedEyeRounded')
+            button(type="submit").btn.btn__join Создать аккаунт
+            .policy Нажимая на кнопку, вы соглашаетесь с 
+                a Политикой обработки персональных данных
+            button(type="button").btn.btn__create Уже есть аккаунт
+            .socials
+                a(href="#").social.social--vk
+                    +icon('socVK')
+                a(href="#").social.social--ok
+                    +icon('socOK')
+                a(href="#").social.social--Yandex
+                    +icon('socYandex')
+                a(href="#").social.social--socMail
+                    +icon('socMail')

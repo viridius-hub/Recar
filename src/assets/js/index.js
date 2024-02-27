@@ -1,6 +1,7 @@
 import Swiper, {Navigation, Autoplay} from 'swiper';
 
 import "./fields"
+import "./select"
 
 window.addEventListener("DOMContentLoaded", () => {
     new Swiper('.home-banner', {
