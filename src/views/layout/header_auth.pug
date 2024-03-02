@@ -9,12 +9,7 @@ header.header#header
                     +icon('search')
                     input(placeholder="Поиск")
                 .header__info
-                    a(href="#").header__button
-                        +icon('BookmarkRounded')
-                        | Избранное
-                    a(href="#").header__button
-                        +icon('ShoppingCartRounded')
-                        | Корзина
+                    a.button.button--primary Создать аккаунт
                     button.header__account
                         img(src=require('@images/avatar.png'))
                         +icon('KeyboardArrowUpRounded')

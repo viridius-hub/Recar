@@ -130,9 +130,19 @@
     align-items: center;
     flex: 1 0 0;
     transition: .3s;
+    color: #000000;
+    font-family: "Inter";
+
+    &_header{
+      color: #949DA5
+    }
 
     &--grid-5 {
-      grid-template-columns: 1fr 1fr 1fr 125px 124px;
+      grid-template-columns: 1fr 1fr 1fr 125px 1fr;
+    }
+
+    &--grid-6 {
+      grid-template-columns: 1fr 1fr 1fr 1fr 130px 125px;
     }
 
 
@@ -164,7 +174,6 @@
     width: 100%;
     padding: 0 16px;
     align-items: center;
-    color: var(--neutral-gray, #949DA5);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -179,6 +188,10 @@
     &--end {
       text-align: right;
       justify-content: flex-end;
+    }
+    &--start {
+      text-align: left;
+      justify-content: flex-start;
     }
   }
 

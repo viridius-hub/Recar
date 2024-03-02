@@ -1,12 +1,15 @@
 extends ../layout/default
 
+block header
+    include ../layout/header_auth
+
 block content
     .fullpage
         form.form
             p.form__title Войти
             label.field
                 //- +icon('MailOutlineRounded')
-                input(placeholder="Почта" name="login" type="input")
+                input(placeholder="Почта" name="login" type="email")
             label.field.field--password
                 //- +icon('SecurityRounded')
                 input(placeholder="Пароль" name="password" type="password")

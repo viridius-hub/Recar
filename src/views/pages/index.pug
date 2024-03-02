@@ -10,12 +10,16 @@ block content
                     button.home-banner__next
                         +icon('ArrowForwardIosRounded')
                     .swiper-wrapper
-                        +loop(4)
-                            .swiper-slide.home-banner-item
-                                .home-banner-item__wrapper
-                                    h2 Поиск автозапчастей для любых авто
-                                    p Быстрее и надежнее, чем ждать в сервисе!
-                                img(src=require('@images/banner-item.jpg')).home-banner-item__image
+                        .swiper-slide.home-banner-item
+                            .home-banner-item__wrapper
+                                h2 Поиск автозапчастей для любых авто
+                                p Быстрее и надежнее, чем ждать в сервисе!
+                            img(src=require('@images/banner-item.jpg')).home-banner-item__image
+                        .swiper-slide.home-banner-item
+                            .home-banner-item__wrapper
+                                h2 Поиск автозапчастей для любых авто1
+                                p Быстрее и надежнее, чем ждать в сервисе!
+                            img(src=require('@images/banner-item-2.jpg')).home-banner-item__image
                 .home-search
                     .home-search__rows
                         .home-search__row
@@ -130,4 +134,4 @@ block content
                             p Вывод ваших товаров в ТОП поисковой выдачи на сайте
                     .home-working-together__footer
                         a(href="#").button.button--primary Зарегистрируйтесь
-                        a(href="#").button.button--text Подробнее
+                        a(href="#").button.button--text_blue Подробнее

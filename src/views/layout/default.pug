@@ -1,5 +1,6 @@
 include ../components/mixins/icon
 include ../components/mixins/loop
+include ./modal
     
 doctype html
 html(lang="ru")
@@ -9,6 +10,9 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
         title DEV
     body
-        include header
-        block content
+        block header
+            include header
+        main.main
+            block content
         include footer
+        .errors#errorsContainer

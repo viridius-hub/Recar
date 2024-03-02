@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.18.9",
+    "micromodal": "^0.4.10",
     "node-sass": "^9.0.0",
     "swiper": "^8.3.2"
   }

@@ -1,11 +1,15 @@
-import Swiper, {Navigation, Autoplay} from 'swiper';
+import Swiper, {Navigation, Autoplay, EffectFade} from 'swiper';
 
 import "./fields"
 import "./select"
+import "./headerTransform"
+import "./inputErrors"
+import "./modal"
+import "./rating"
 
 window.addEventListener("DOMContentLoaded", () => {
     new Swiper('.home-banner', {
-        modules: [Navigation, Autoplay],
+        modules: [Navigation, Autoplay, EffectFade],
         autoplay: {
             delay: 4000
         },
@@ -14,6 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
             nextEl: '.home-banner__next',
             prevEl: '.home-banner__prev',
         },
+        effect: 'fade'
     });
 
 

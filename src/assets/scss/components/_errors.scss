@@ -1,0 +1,36 @@
+
+
+.errors{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4px;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 436px;
+    width: 100%;
+    &__item{
+        display: flex;
+        gap: 8px;
+        background: #FFEDEB;
+        border-radius: 8px;
+        padding: 16px;
+        transform: translateY(50vh);
+        transition: 0.2s transform;
+        &_active{
+            transform: none;
+        }
+        svg{
+            overflow: visible;
+            position: relative;
+            top: 2px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            color: #000000;
+        }
+        
+    }
+}

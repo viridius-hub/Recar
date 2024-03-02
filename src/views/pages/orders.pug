@@ -13,16 +13,16 @@ block content
                         label.orders__search
                             +icon('search')
                             input(placeholder="Поиск по названию или артикулу")
-                        .orders__filters
-                            button.orders__filter
-                                | По дате добавления
-                                +icon('arrow-down')
-                            button.orders__filter
-                                | По статусу
-                                +icon('arrow-down')
+                        //- .orders__filters
+                        //-     button.orders__filter
+                        //-         | По дате добавления
+                        //-         +icon('arrow-down')
+                        //-     button.orders__filter
+                        //-         | По статусу
+                        //-         +icon('arrow-down')
                 .orders__main
                     .orders__table
-                        .orders__row
+                        .orders__row.orders__row_header.orders__row--grid-6
                             .orders__column
                                 p Дата
                             .orders__column
@@ -34,8 +34,8 @@ block content
                             .orders__column
                                 p Сумма
                             .orders__column
-                        .orders__row
-                            .orders__column.orders__column--end
+                        .orders__row.orders__row--grid-6
+                            .orders__column.orders__column--start
                                 p 20.12.2022
                             .orders__column
                                 span.orders__circle.orders__circle--yellow
@@ -47,9 +47,9 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button Подробнее
-                        .orders__row
-                            .orders__column.orders__column--end
+                                button.orders__button.orders__column--end(data-modal-open='remove_car') Подробнее
+                        .orders__row.orders__row--grid-6
+                            .orders__column.orders__column--start
                                 p 20.12.2022
                             .orders__column
                                 span.orders__circle.orders__circle--yellow
@@ -61,9 +61,9 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button Подробнее
-                        .orders__row
-                            .orders__column.orders__column--end
+                                button.orders__button.orders__column--end Подробнее
+                        .orders__row.orders__row--grid-6
+                            .orders__column.orders__column--start
                                 p 20.12.2022
                             .orders__column
                                 span.orders__circle.orders__circle--yellow
@@ -75,9 +75,9 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button Подробнее
-                        .orders__row
-                            .orders__column.orders__column--end
+                                button.orders__button.orders__column--end Подробнее
+                        .orders__row.orders__row--grid-6
+                            .orders__column.orders__column--start
                                 p 20.12.2022
                             .orders__column
                                 span.orders__circle.orders__circle--red
@@ -89,9 +89,9 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button Подробнее
-                        .orders__row
-                            .orders__column.orders__column--end
+                                button.orders__button.orders__column--end Подробнее
+                        .orders__row.orders__row--grid-6
+                            .orders__column.orders__column--start
                                 p 20.12.2022
                             .orders__column
                                 span.orders__circle.orders__circle--green
@@ -103,9 +103,9 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button Подробнее
-                        .orders__row
-                            .orders__column.orders__column--end
+                                button.orders__button.orders__column--end Подробнее
+                        .orders__row.orders__row--grid-6
+                            .orders__column.orders__column--start
                                 p 20.12.2022
                             .orders__column
                                 span.orders__circle.orders__circle--yellow
@@ -117,9 +117,9 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button Подробнее
-                        .orders__row
-                            .orders__column.orders__column--end
+                                button.orders__button.orders__column--end Подробнее
+                        .orders__row.orders__row--grid-6
+                            .orders__column.orders__column--start
                                 p 20.12.2022
                             .orders__column
                                 span.orders__circle.orders__circle--yellow
@@ -131,4 +131,56 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button Подробнее
+                                button.orders__button.orders__column--end Подробнее
+    +modal('remove_car')(class="modal_w706")
+        .modal__header 
+            .modal__header__wrapper 
+                p.modal__header__title Заказ 892189-098
+                .modal__header__status
+                    span.orders__circle.orders__circle--yellow
+                    p Оформлен
+        .modal__content
+            .modal__content__wrapper
+                .modal__content__block
+                    p.modal__content__block__title Продавец
+                    p.modal__content__block__text ООО «Маркетплейс»
+                .modal__content__block
+                    p.modal__content__block__title Дата
+                    p.modal__content__block__text 20.12.2022
+                .modal__content__block
+                    p.modal__content__block__title Сумма
+                    p.modal__content__block__text 30.000₽
+            .modal__content__line
+            .modal__content__wrapper
+                .modal__content__vendor
+                    .modal__content__vendor__wrapper
+                        p.modal__content__vendor__title Покрышки “Michelin” Зима 18’
+                        p.modal__content__vendor__subtitle Артикул
+                    p.modal__content__vendor__price 15.000₽
+                .modal__content__vendor
+                    .modal__content__vendor__wrapper
+                        p.modal__content__vendor__title Покрышки “Michelin” Зима 18’
+                        p.modal__content__vendor__subtitle Артикул
+                    p.modal__content__vendor__price 15.000₽
+            .modal__content__line
+            .modal__content__block
+                p.modal__content__block__title Оценка
+                .rating(data-rating)
+                    button.rating__star
+                        +icon("home-working-together")
+                    button.rating__star
+                        +icon("home-working-together")
+                    button.rating__star
+                        +icon("home-working-together")
+                    button.rating__star
+                        +icon("home-working-together")
+                    button.rating__star
+                        +icon("home-working-together")
+            label.field-label
+                span.text-black Почта
+                .field-label__textarea
+                    textarea(type="textarea" placeholder="Поделитесь впечатлениями о товарах и/или продавце" resize=false)
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_right
+                button.button.button--text_blue Повторить заказ
+                button.button.button--secondary Оставить отзыв 

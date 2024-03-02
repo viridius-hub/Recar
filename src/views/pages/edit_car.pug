@@ -1,3 +1,5 @@
+
+
 extends ../layout/default
 
 block content
@@ -25,7 +27,7 @@ block content
                             +icon('CheckBoxOutlineBlankRounded')
                             +icon('CheckBoxRounded')
                         button.new-car__edit Сохранить
-                        button.new-car__del Удалить
+                        button.new-car__del(data-modal-open='remove_car') Удалить
                     .new-car__vertical_line
                     .new-car__section.new-car__section--gap16
                         label.new-car__field
@@ -101,3 +103,12 @@ block content
                                     ul.select__options__wrapper
                                         +loop(20)
                                             li(data-select-option).select__options__item select option
+    +modal('remove_car')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Удаление автомобиля
+        .modal__content 
+            p Авто Мамина машина будет удалено, все данные будут потеряны. Это действие невозможно отменить.
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_right
+                button.button.button--text_red Удалить
+                button.button.button--primary Отмена 

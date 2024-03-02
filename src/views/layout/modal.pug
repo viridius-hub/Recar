@@ -1,0 +1,7 @@
+mixin modal(id)
+    .modal.modal-slide(id=id)&attributes(attributes)
+        .modal__overlay(data-modal-close=id)
+        form.modal__container
+            button.modal__close(data-modal-close=id type="button")
+                +icon('ModalClose')
+            block
