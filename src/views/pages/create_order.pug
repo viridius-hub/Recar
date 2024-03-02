@@ -1,0 +1,182 @@
+extends ../layout/default
+
+block content
+    .create-order 
+        .container
+            button.back-button
+                +icon('back')
+                | Назад
+            h1 Оформление заказа
+            .layout_cart
+                .layout_cart__left
+                    .cart-content
+                        .cart-content__header 
+                            .cart-content__header__wrapper 
+                                p SPACE AUTO
+                                p Москва, Ленина, 1, офис 1
+                            +icon('trash')
+                        .cart-content__block.cart-content__block_grid2
+                            .cart-content__block__info 
+                                img(src=require('@images/Rectangle.png')).cart-content__block__img
+                                .cart-content__block__info__content 
+                                    .cart-content__block__info__content__header 
+                                        p METACO
+                                        p 2630035530
+                                    p.cart-content__block__info__content__subtitle Фильтр масляный Mazda, CX-9 2630035530
+                                    .cart-content__block__info__content__footer
+                                        p SPACE AUTO
+                                        p Поступление 12.03.2024
+                            .cart-content__block__total
+                                p 300 ₽
+                                p 1 шт.
+                        .cart-content__block.cart-content__block_grid2
+                            .cart-content__block__info 
+                                img(src=require('@images/Rectangle.png')).cart-content__block__img
+                                .cart-content__block__info__content 
+                                    .cart-content__block__info__content__header 
+                                        p METACO
+                                        p 2630035530
+                                    p.cart-content__block__info__content__subtitle Фильтр масляный Mazda, CX-9 2630035530
+                                    .cart-content__block__info__content__footer
+                                        p SPACE AUTO
+                                        p Поступление 12.03.2024
+                            .cart-content__block__total
+                                p 300 ₽
+                                p 1 шт.
+                        .cart-content__notification
+                            +icon('ErrorOutlineRounded')
+                            p После оформления заказа, с вами свяжется продавец для выставления счета
+                        .cart-content__delivery
+                            p.cart-content__delivery__header Способы получения
+                            .cart-content__delivery__wrapper
+                                label.cart-content__delivery__checkbox
+                                    .cart-content__delivery__checkbox__input 
+                                        input(type="checkbox" checked)
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Самовывоз из ПВЗ
+                                    p Москва, Ленина, 1, офис 1
+                                label.cart-content__delivery__checkbox
+                                    .cart-content__delivery__checkbox__input 
+                                        input(type="checkbox")
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    .cart-content__delivery__checkbox__wrapper
+                                        img(src=require('@images/YaMarket.png'))
+                                        p Яндекс Маркет
+                                    p Оплата доставки при получении
+                                label.cart-content__delivery__checkbox
+                                    .cart-content__delivery__checkbox__input 
+                                        input(type="checkbox")
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    .cart-content__delivery__checkbox__wrapper
+                                        img(src=require('@images/SDEK.png'))
+                                        p СДЭК
+                                    p Оплата доставки при получении
+                    .cart-content
+                        .cart-content__header 
+                            .cart-content__header__wrapper 
+                                p SPACE AUTO
+                                p Москва, Ленина, 1, офис 1
+                            +icon('trash')
+                        .cart-content__block.cart-content__block_grid2
+                            .cart-content__block__info 
+                                img(src=require('@images/Rectangle.png')).cart-content__block__img
+                                .cart-content__block__info__content 
+                                    .cart-content__block__info__content__header 
+                                        p METACO
+                                        p 2630035530
+                                    p.cart-content__block__info__content__subtitle Фильтр масляный Mazda, CX-9 2630035530
+                                    .cart-content__block__info__content__footer
+                                        p SPACE AUTO
+                                        p Поступление 12.03.2024
+                            .cart-content__block__total
+                                p 300 ₽
+                                p 1 шт.
+                        .cart-content__block.cart-content__block_grid2
+                            .cart-content__block__info 
+                                img(src=require('@images/Rectangle.png')).cart-content__block__img
+                                .cart-content__block__info__content 
+                                    .cart-content__block__info__content__header 
+                                        p METACO
+                                        p 2630035530
+                                    p.cart-content__block__info__content__subtitle Фильтр масляный Mazda, CX-9 2630035530
+                                    .cart-content__block__info__content__footer
+                                        p SPACE AUTO
+                                        p Поступление 12.03.2024
+                            .cart-content__block__total
+                                p 300 ₽
+                                p 1 шт.
+                        .cart-content__notification
+                            +icon('ErrorOutlineRounded')
+                            p После оформления заказа, с вами свяжется продавец для выставления счета
+                        .cart-content__delivery
+                            p.cart-content__delivery__header Способы получения
+                            .cart-content__delivery__wrapper
+                                label.cart-content__delivery__checkbox
+                                    .cart-content__delivery__checkbox__input 
+                                        input(type="checkbox" checked)
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Самовывоз из ПВЗ
+                                    p Москва, Ленина, 1, офис 1
+                                label.cart-content__delivery__checkbox
+                                    .cart-content__delivery__checkbox__input 
+                                        input(type="checkbox")
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    .cart-content__delivery__checkbox__wrapper
+                                        img(src=require('@images/YaMarket.png'))
+                                        p Яндекс Маркет
+                                    p Оплата доставки при получении
+                                label.cart-content__delivery__checkbox
+                                    .cart-content__delivery__checkbox__input 
+                                        input(type="checkbox")
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    .cart-content__delivery__checkbox__wrapper
+                                        img(src=require('@images/SDEK.png'))
+                                        p СДЭК
+                                    p Оплата доставки при получении
+                .layout_cart__right
+                    .cart-right
+                        .cart-right__header 
+                            p Данные получателя
+                        .cart-right__wrapper
+                            label.field-label
+                                .field-label__input
+                                    input(placeholder="Имя и фамилия")
+                            label.field-label
+                                .field-label__input
+                                    input(placeholder="Телефон")
+                            label.field-label
+                                .field-label__input
+                                    input(placeholder="Почта")
+                    .cart-right
+                        .cart-right__header 
+                            p Ваша корзина
+                            p 4 товара
+                        .cart-right__wrapper
+                            .cart-right__block 
+                                <p>SPACE AUTO <span>(2)</span></p>
+                                p 600 ₽
+                            .cart-right__block 
+                                <p>GETTZAP-ЮГ <span>(2)</span></p>
+                                p 600 ₽
+                        .cart__line
+                        .cart-right__block.cart-right__block_total
+                            p Общая стоимость
+                            p 1 200 ₽
+                        .cart-right__wrapper
+                            button.button.button--secondary(data-modal-open="create_order") Оформить заказ
+                            <p class="cart-right__footer">Нажимая на кнопку, вы соглашаетесь с <br/> <a href="##">Политикой обработки персональных данных</a></p>
+
+    +modal('create_order')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Заказ оформлен
+        .modal__content 
+            p Спасибо за заказ. В течение дня с вами свяжется продавец для выставления счета.
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_right
+                button.button.button--primary Закрыть 

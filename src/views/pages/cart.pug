@@ -1,0 +1,68 @@
+extends ../layout/default
+
+block content
+    .cart 
+        .container
+            button.back-button
+                +icon('back')
+                | Назад
+            h1 Корзина
+            .layout_cart
+                .layout_cart__left
+                    .cart-content
+                        .cart-content__selected
+                            label.cart__checkbox 
+                                input(type="checkbox")
+                                +icon('CheckBoxOutlineBlankRounded')
+                                +icon('CheckBoxRounded')
+                                p Выбрать все
+                            button.button.button--text_red Удалить выбранные
+                        +loop(4)
+                            .cart__line
+                            .cart-content__block
+                                label.cart__checkbox 
+                                    input(type="checkbox")
+                                    +icon('CheckBoxOutlineBlankRounded')
+                                    +icon('CheckBoxRounded')
+                                .cart-content__block__info 
+                                    img(src=require('@images/Rectangle.png')).cart-content__block__img
+                                    .cart-content__block__info__content 
+                                        .cart-content__block__info__content__header 
+                                            p METACO
+                                            p 2630035530
+                                        p.cart-content__block__info__content__subtitle Фильтр масляный Mazda, CX-9 2630035530
+                                        .cart-content__block__info__content__footer
+                                            p SPACE AUTO
+                                            p Поступление 12.03.2024
+                                .cart-content__block__options 
+                                    .cart-content__block__options__top 
+                                        p.cart-content__block__options__top__total 300 ₽
+                                        .cart-content__block__options__top__quantity
+                                            button
+                                                +icon('minus')
+                                            p 1
+                                            button 
+                                                +icon('plus')
+                                    .cart-content__block__options__footer 
+                                        +icon('BookmarkBorderRounded')
+                                        p Добавить в избранное
+                                        +icon('trash')
+                .layout_cart__right
+                    .cart-right
+                        .cart-right__header 
+                            p Ваша корзина
+                            p 4 товара
+                        .cart-right__wrapper
+                            .cart-right__block 
+                                <p>SPACE AUTO <span>(2)</span></p>
+                                p 600 ₽
+                            .cart-right__block 
+                                <p>GETTZAP-ЮГ <span>(2)</span></p>
+                                p 600 ₽
+                        .cart__line
+                        .cart-right__block.cart-right__block_total
+                            p Общая стоимость
+                            p 1 200 ₽
+                        .cart-right__wrapper
+                            button.button.button--primary Оформить заказ
+                            p.cart-right__footer Доступные способы и время доставки можно выбрать при оформлении заказа

@@ -74,6 +74,36 @@
   gap: 75px;
   padding-bottom: 20px;
 
+  &_cart{
+    display: grid;
+    grid-template-columns: 1fr 412px;
+    gap: 24px;
+    padding-bottom: 20px;
+
+    // &__block{
+    //   display: flex;
+    //   flex-direction: column;
+    //   width: 100%;
+    //   border-radius: 12px;
+    //   background: #FFF;
+    //   box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.07);
+    //   gap: 24px;
+    //   &_left{
+    //     padding: 24px;
+    //   }
+    //   &_right{
+    //     padding: 16px;
+    //   }
+    // }
+
+    &__left, &__right{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 12px;
+    }
+  }
+
   &__right {
     display: flex;
     width: 100%;
