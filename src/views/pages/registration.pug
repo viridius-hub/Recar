@@ -1,7 +1,10 @@
 extends ../layout/default
 
+block header
+    include ../layout/header_registration
+
 block content
-    .fullpage()
+    .fullpage
         form.form
             p.form__title Регистрация
             label.field

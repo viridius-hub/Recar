@@ -1,5 +1,18 @@
 .header {
+  $root: &;
   margin-bottom: 34px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: #ffffff;
+
+  &_fixed{
+    #{$root}{
+      &__wrapper{
+        height: 68px;
+      }
+    }
+  }
 
   &__wrapper {
     display: flex;
@@ -8,6 +21,7 @@
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
+    transition: 0.5s height;
   }
 
   &__logo {
@@ -21,7 +35,7 @@
     padding: 10px;
     justify-content: flex-end;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     flex: 1 0 0;
   }
 
@@ -86,10 +100,10 @@
 
   &__account {
     display: flex;
-    padding: 10px;
+    padding: 6px 10px;
     align-items: center;
     gap: 10px;
-    border-radius: 41px;
+    border-radius: 32px;
     border: 2px solid var(--accent-1, #139BE8);
 
     img {

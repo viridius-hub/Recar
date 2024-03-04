@@ -18,30 +18,31 @@ block content
                     .profile__section
                         .profile__name
                             p Пушкин Александр Сергеевич
-                            a(href="#") Редактировать
+                            a(href="##")(data-modal-open='change_account') Редактировать
                         .profile__rows
                             label.field-label
                                 span Почта
                                 .field-label__input
                                     input(type="input" placeholder="jason.saitama@gmail.com" readonly)
                                     +icon("InfoRounded")
-                            p.profile__caption Eсли вы хотите изменить e-mail, напишите
+                            p.profile__caption
+                                | Если вы хотите изменить e-mail, напишите
                                 br
-                                | в службу поддержки
+                                | <a href="#">в службу поддержки</a>
                         .profile__rows
                             form
                                 label.field-label
                                     span.text-black Телефон
                                     .field-label__input
-                                        input(type="text" placeholder="+7 (123) 456-78-90")
+                                        input(type="text" placeholder="+7 (123) 456-78-90" value="+7 (123) 456-78-90")
                                         button(type="submit").button.button--text.button--text-min Сменить
                                     p.field-label__message.field-label__message--success Номер сохранен
                             form
                                 label.field-label
                                     span.text-black Пароль
                                     .field-label__input
-                                        input(type="password")
-                                        button(type="submit").button.button--text.button--text-min Сменить
+                                        input(type="password" value="11111111111" readonly)
+                                        button(type="button" data-modal-open='change_password').button.button--text.button--text-min Сменить
                                     p.field-label__message.field-label__message--error Ошибка
                     .profile-addresses
                         p.profile-addresses__title Адреса доставки
@@ -53,7 +54,7 @@ block content
                                     p.profile-addresses-item__title г. Санкт-Петербург, ул. Пушкина, д. Колотушкина, кв.17
                                     +icon('RadioButtonCheckedRounded')
                                     +icon('RadioButtonUncheckedRounded')
-                                a(href="#").profile-addresses-item__link Редактировать
+                                button(data-modal-open='change_adress').profile-addresses-item__link Редактировать
                             label.profile-addresses-item
                                 input(type="radio" name="addresses" value="1")
                                 .profile-addresses-item__content
@@ -61,7 +62,7 @@ block content
                                     p.profile-addresses-item__title г. Санкт-Петербург, ул. Пушкина, д. Колотушкина, кв.17
                                     +icon('RadioButtonCheckedRounded')
                                     +icon('RadioButtonUncheckedRounded')
-                                a(href="#").profile-addresses-item__link Редактировать
+                                button.profile-addresses-item__link Редактировать
                             a(href="#").profile-addresses__add Новый адрес
                                 +icon("AddRounded")
                     .profile-my_recipients
@@ -72,32 +73,38 @@ block content
                                     p.profile-my_recipients__name Пушкин Александр Сергеевич
                                     a(href="tel:+7 (123) 456-78-90").profile-my_recipients__tel +7 (123) 456-78-90
                                     a(href="mailto:jason.saitama@gmail.com").profile-my_recipients__mail jason.saitama@gmail.com
-                                a(href="#").profile-addresses-item__link Редактировать
+                                button(href="#").profile-addresses-item__link(data-modal-open='change_recipient') Редактировать
                             .profile-my_recipients__item
                                 .profile-my_recipients__content
                                     p.profile-my_recipients__name Пушкин Александр Сергеевич
                                     a(href="tel:+7 (123) 456-78-90").profile-my_recipients__tel +7 (123) 456-78-90
                                     a(href="mailto:jason.saitama@gmail.com").profile-my_recipients__mail jason.saitama@gmail.com
-                                a(href="#").profile-addresses-item__link Редактировать
+                                button(href="#").profile-addresses-item__link Редактировать
                             .profile-my_recipients__item
                                 .profile-my_recipients__content
                                     p.profile-my_recipients__name Пушкин Александр Сергеевич
                                     a(href="tel:+7 (123) 456-78-90").profile-my_recipients__tel +7 (123) 456-78-90
                                     a(href="mailto:jason.saitama@gmail.com").profile-my_recipients__mail jason.saitama@gmail.com
-                                a(href="#").profile-addresses-item__link Редактировать
+                                button(href="#").profile-addresses-item__link Редактировать
                             .profile-my_recipients__item
                                 .profile-my_recipients__content
                                     p.profile-my_recipients__name Пушкин Александр Сергеевич
                                     a(href="tel:+7 (123) 456-78-90").profile-my_recipients__tel +7 (123) 456-78-90
                                     a(href="mailto:jason.saitama@gmail.com").profile-my_recipients__mail jason.saitama@gmail.com
-                                a(href="#").profile-addresses-item__link Редактировать
-                            a(href="#").profile-addresses__add.profile-my_recipients__add Новый получатель
+                                button(href="#").profile-addresses-item__link Редактировать
+                            button(href="#").profile-addresses__add.profile-my_recipients__add Новый получатель
                                 +icon("AddRounded")
                     .profile-subscriptions
                         p.profile-subscriptions__title Управление подписками
                         p.profile-subscriptions__subtitle Подпишитесь на нашу рассылку, чтобы первыми получать самые выгодные предложения!
-                        input(type="email" placeholder="Ваш email").profile-subscriptions__field
-                        button(type="submit").profile-subscriptions__button Сохранить подписку
+                        .profile-subscriptions__block
+                            .profile-subscriptions__block__wrapper 
+                                input(type="email" placeholder="Ваш email").profile-subscriptions__field
+                                button(type="submit").profile-subscriptions__button Подписаться
+                            p.profile-subscriptions__block__rules
+                                | Нажимая на кнопку, вы соглашаетесь
+                                br
+                                | <a href="#">с Политикой обработки персональных данных</a>
                         p.profile-subscriptions__caption Также подпишитесь на нас в соцсетях!
                         div.profile-subscriptions__socails
                             a(href="#")
@@ -107,7 +114,102 @@ block content
                                 img(src=require("@images/vk.png"))
                                 | Подписаться на VK
                     .profile-delete
-                        a(href="#") Удалить аккаунт
+                        button(href="#")(data-modal-open='remove_account') Удалить аккаунт
+    
+    +modal('remove_account')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Удаление аккаунта
+        .modal__content 
+            p Ваш аккаунт будет удален, все данные будут потеряны. Это действие невозможно отменить.
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_right
+                button.button.button--text_red Удалить
+                button.button.button--primary Отмена
+
+    +modal('change_account')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Измение личных данных
+        .modal__content 
+            .modal__content__wrapper 
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="Фамилия" value="Фамилия")
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="Имя" value="Имя")
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="Отчество" value="Отчество")
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_center
+                button.button.button--primary Сохранить 
+    
+    +modal('change_recipient')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Данные получателя
+        .modal__content 
+            .modal__content__wrapper 
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="Фамилия" value="Фамилия")
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="Имя" value="Имя")
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="Отчество" value="Отчество")
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="+7 (123) 456-78-90" value="+7 (123) 456-78-90")
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="jason.saitama@gmail.com" value="jason.saitama@gmail.com")
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_center
+                button.button.button--primary Сохранить
+                button.button.button--text_red(data-modal-open='remove_recipient' data-modal-close='change_recipient') Удалить получателя
+    
+    +modal('remove_recipient')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Удаление получателя
+        .modal__content 
+            p Получатель Фамилия Имя Отчество будет удален, все данные будут потеряны. Это действие невозможно отменить.
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_right
+                button.button.button--text_red Удалить
+                button.button.button--primary Отмена
+
+    +modal('change_password')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Смена пароля
+        .modal__content 
+            .modal__content__wrapper 
+                label.field.field--password.field_default
+                    input(placeholder="Старый пароль" name="old_password" type="password")
+                    span.field__password-hide
+                        +icon('RemoveRedEyeRounded')
+                label.field.field--password.field_default
+                    input(placeholder="Новый пароль" name="new_password" type="password")
+                    span.field__password-hide
+                        +icon('RemoveRedEyeRounded')
+                label.field.field--password.field_default
+                    input(placeholder="Повторите новый пароль" name="repeat_password" type="password")
+                    span.field__password-hide
+                        +icon('RemoveRedEyeRounded')
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_center
+                button.button.button--secondary Сохранить
+
+    +modal('change_adress')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Новый адрес доставки
+        .modal__content 
+            label.field.field_default
+                +icon('LocationonRounded')
+                input(type="text" placeholder="Адрес")
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_center
+                button.button.button--secondary Сохранить
 
 
 

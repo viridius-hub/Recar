@@ -1,0 +1,299 @@
+
+
+.cart{
+    h1{
+        margin-bottom: 24px;
+        font-size: 22px;
+    }
+    &-content, &-right{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.07);
+        gap: 24px;
+    }
+    &-content{
+        padding: 24px;
+
+        &__header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            &__wrapper{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                p{
+                    &:first-child{
+                        font-weight: 600;
+                    }
+                    &:last-child{
+                        color: #949DA5;
+                    }
+                }
+            }
+            svg{
+                width: 20px;
+                height: 20px;
+                overflow: visible;
+                cursor: pointer;
+            }
+        }
+        &__selected{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            button{
+                padding: 0 16px;
+            }
+        }
+        &__block{
+            display: grid;
+            grid-template-columns: 24px 1fr 230px;
+            gap: 24px;
+            align-items: flex-start;
+            &_grid2{
+                grid-template-columns: 1fr 120px;
+            }
+            &__info{
+                display: flex;
+                gap: 16px;
+                font-family: "Inter";
+                img{
+                    width: 60px;
+                    height: 80px;
+                    border-radius: 8px;
+                }
+                &__content{
+                    &__header{
+                        display: flex;
+                        gap: 8px;
+                    }
+                    &__subtitle{
+                        color: #949DA5
+                    }
+                    &__footer{
+                        margin-top: 12px;
+                        display: flex;
+                        gap: 8px;
+                        p{
+                            &:last-child{
+                                color: #FF735D;
+                            }
+                        }
+                    }
+                }
+            }
+            &__options{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                &__top{
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    justify-content: flex-end;
+                    &__total{
+                        font-weight: 600;
+                    }
+                    &__quantity{
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        button{
+                            width: 20px;
+                            height: 20px;
+                            svg{
+                                width: inherit;
+                                height: inherit;
+                            }
+                        }
+                    }
+                }
+                &__footer{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 8px;
+                    color: #139BE8;
+                    font-size: 14px;
+                    svg{
+                        width: 16px;
+                        height: 16px;
+                        overflow: visible;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &__total{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                justify-content: flex-end;
+                p{
+                    &:first-child{
+                        font-weight: 600;
+                    }
+                    &:last-child{
+                        font-family: 'Inter';
+                        color: #949DA5;
+                    }
+                }
+            }
+        }
+        &__notification{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px;
+            background: rgba(0, 185, 227, 0.05);
+            border-radius: 8px;
+            color: #000000;
+            font-family: "Inter";
+            margin: 16px 0;
+            svg{
+                width: 20px;
+                height: 20px;
+                overflow: visible;
+            }
+        }
+        &__delivery{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            &__header{
+                font-weight: 600;
+            }
+            &__wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+            &__checkbox{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                p{
+                    &:first-child{
+                        color: #000000;
+                    }
+                    &:last-child{
+                        color: #949DA5;
+                    }
+                }
+                &__wrapper{
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    p{
+                        color: #000000 !important;
+                    }
+                }
+                &__input{
+                    display: flex;
+                    svg{
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .icon--RadioRounded{
+                        display: none;
+                    }
+                    input{
+                        display: none;
+                        &:checked ~ .icon--RadioRounded {
+                            display: block !important;
+                        }
+                        &:checked ~ .icon--RadioBorderRounded {
+                            display: none !important;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    &__checkbox{
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        input{
+            display: none;
+            &:checked ~ .icon--CheckBoxOutlineBlankRounded {
+                display: none !important;
+            }
+            &:checked ~ .icon--CheckBoxRounded {
+                display: table !important;
+            }
+        }
+        p{
+            font-family: "Inter";
+            font-weight: 400;
+            white-space: nowrap;
+        }
+        .icon--CheckBoxRounded {
+            display: none;
+          }
+      
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__line{
+        width: 100%;
+        height: 1px;
+        background: #E2EEF6;
+    }
+    &-right{
+        padding: 16px;
+        font-family: "Inter";
+        &__header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                &:first-child{
+                    font-weight: 700;
+                    font-family: "Montserrat";
+                }
+            }
+        }
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        &__block{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                span{
+                    color: #949DA5;
+                }
+            }
+            &_total{
+                p{
+                    &:last-child{
+                        font-weight: 700;
+                        font-family: "Montserrat";
+                    }
+                }
+            }
+        }
+        &__footer{
+            text-align: center;
+            color: #949DA5;
+            a{
+                color: #139BE8;
+            }
+        }
+    }
+
+}

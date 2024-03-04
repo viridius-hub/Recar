@@ -20,9 +20,22 @@
     color: var(--Neutral-White, #FFF);
   }
 
-  &--text {
-    color: var(--Accent-1, #139BE8);
+  &--secondary{
     border-radius: 8px;
+    background: #AFC3D1;
+    color: var(--Neutral-White, #FFF);
+  }
+
+
+  &--text {
+    // color: var(--Accent-1, #139BE8);
+    border-radius: 8px;
+    &_red{
+      color: var(--secondary-red, #FF735D);
+    }
+    &_blue{
+      color: #139BE8;
+    }
   }
 
   &--primary-min {
