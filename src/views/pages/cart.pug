@@ -11,16 +11,17 @@ block content
                 .layout_cart__left
                     .cart-content
                         .cart-content__selected
-                            label.cart__checkbox 
-                                input(type="checkbox")
-                                +icon('CheckBoxOutlineBlankRounded')
-                                +icon('CheckBoxRounded')
+                            .cart-content__selected__input
+                                label.checkbox.checkbox--square 
+                                    input(type="checkbox")
+                                    +icon('CheckBoxOutlineBlankRounded')
+                                    +icon('CheckBoxRounded')
                                 p Выбрать все
                             button.button.button--text_red Удалить выбранные
                         +loop(4)
                             .cart__line
                             .cart-content__block
-                                label.cart__checkbox 
+                                label.checkbox.checkbox--square 
                                     input(type="checkbox")
                                     +icon('CheckBoxOutlineBlankRounded')
                                     +icon('CheckBoxRounded')

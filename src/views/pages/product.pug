@@ -1,0 +1,125 @@
+extends ../layout/default
+
+block content
+    .product 
+        .container 
+            .product__options 
+                button.button.button--third
+                    +icon('BookmarkBorderRounded')
+                    p Добавить в избранное
+                button.button.button--third
+                    +icon('InsertLinkRounded')
+                    p Поделиться
+            .product__main 
+                h1.product__main__title Mazda, CX-9 2630035530 Фильтр масляный
+                .product__main__wrapper 
+                    img(src=require('@images/Rectangle.png')).product__main__image
+                    .product__main__block
+                        .product__main__block__feature
+                            p.product__main__block__feature-title Характеристики
+                            .product__main__block__feature__wrapper
+                                .product__main__block__feature__item 
+                                    p Производитель
+                                    p Mazda
+                                .product__main__block__feature__item 
+                                    p Номер детали
+                                    p 2630035530
+                                .product__main__block__feature__item 
+                                    p Количество
+                                    p 29 штук
+                                .product__main__block__feature__item 
+                                    p Состояние
+                                    p Новый
+                        .product__line
+                        .product__main__block__options 
+                            .product__main__block__options__wrapper 
+                                label.product__main__block__options__item
+                                    .product__main__block__options__item__wrapper
+                                        .checkbox.checkbox--circle
+                                            input(type="checkbox")
+                                            +icon('RadioBorderRounded')
+                                            +icon('RadioRounded')
+                                        p Поступление 26.01.2024
+                                    p 300 ₽
+                                label.product__main__block__options__item
+                                    .product__main__block__options__item__wrapper
+                                        .checkbox.checkbox--circle
+                                            input(type="checkbox")
+                                            +icon('RadioBorderRounded')
+                                            +icon('RadioRounded')
+                                        p Поступление 26.02.2024
+                                    p 400 ₽
+                            button.button.button--primary 
+                                +icon('ShoppingCartRoundedWhite')
+                                p 400 ₽
+                        .product__main__block__delivery 
+                            .product__main__block__delivery__block
+                                p Отправляем в ПВЗ
+                                .product__main__block__delivery__block__wrapper 
+                                    .product__main__block__delivery__block__item 
+                                        img(src=require('@images/YaMarket.png'))
+                                        p Яндекс Маркет
+                                    .product__main__block__delivery__block__item 
+                                        img(src=require('@images/SDEK.png'))
+                                        p СДЭК
+                            .product__line
+                            .product__main__block__delivery__block
+                                p Самовывоз из ПВЗ Рекар
+                                p Москва, Ленина, 1, офис 1
+                                .product__main__block__delivery__block__item
+                                    img(src=require('@images/SubwayRounded.png'))
+                                    p Бульвар Дмитрия Донского
+                                a(href="##") Схема проезда
+                        .product__main__block__payment
+                            img(src=require('@images/Visa.png'))
+                            img(src=require('@images/Mastercard.png'))
+                            img(src=require('@images/Mir.png'))
+                            img(src=require('@images/СБП.png'))
+            .product__description
+                p.product__description__title Описание товара
+                .product__description__wrapper
+                    p Фильтр масляный. Номер производителя: 2630035530. 
+                    p Производитель: Mazda.
+            .product__applicability
+                p.product__applicability__title Применимость
+                <p class="product__applicability__text">
+                    KIA Ceed SW (1G), Hyundai Accent (26), A3 24, KIA Venga, Hyundai Creta (16), Hyundai Solaris (2G), KIA Magentis Il, Honda CR-V (RE), Mitsubishi Outlander XL, Nissan Wingroad (111), Lada 2101, УАЗ Patriot, Hyundai Getz, Hyundai i30 (1G), Hyundai Solaris, Hyundai Elantra (5G), KIA Rio (3G), BMW 7 series (E38), УАЗ 31514, Chevrolet Niva, Audi A6 (C6), Hyundai Tucson (JM), KIA Ceed (1G), KIA Sorento (1G), Great Wall Hover, Land Rover Discovery
+                </p>                    
+                .product__more 
+                    p Показать больше
+                    +icon("KeyboardArrowDownRounded")
+            .product__analogs 
+                p.product__analogs__title Аналоги
+                +loop(4)
+                    .cart-content__block__info 
+                        img(src=require('@images/Rectangle.png')).cart-content__block__img
+                        .cart-content__block__info__content 
+                            .cart-content__block__info__content__header 
+                                p METACO
+                                p 2630035530
+                            p.cart-content__block__info__content__subtitle Фильтр масляный Mazda, CX-9 2630035530
+                            .cart-content__block__info__content__statistic
+                                p от 300 ₽
+                                .cart-content__block__info__content__statistic__wrapper 
+                                    +icon("StarRoundedActive")
+                                    p 5.0 (4 отзыва)
+                .product__more 
+                    p Показать больше
+                    +icon("KeyboardArrowDownRounded")
+            .product__searched
+                p.product__searched__title Вы недавно искали
+                .product__searched__wrapper 
+                    +loop(8)
+                        .product__searched__item 
+                            img(src=require('@images/Rectangle.png'))
+                            .product__searched__item__wrapper 
+                                p AIRLINE
+                                p АВ96
+                            <p class="product__searched__item__text">Знак аварийный в пластмассовом футляре "AIRLINE" (АВ-96) АВ96 AIRLINE</p>
+                .product__more 
+                    p Показать больше
+                    +icon("KeyboardArrowDownRounded")
+
+
+                                    
+                                            

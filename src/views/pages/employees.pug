@@ -1,0 +1,79 @@
+extends ../layout/default
+
+block content
+    .employees 
+        .container
+            button.back-button
+                +icon('back')
+                | Назад
+            .layout
+                .layout__left
+                    .nav-bar
+                        a(href='##').nav-bar__item Личные данные
+                        a(href='##').nav-bar__item История заказов
+                        a(href='##').nav-bar__item История поиска
+                        a(href='##').nav-bar__item Гараж
+                    .nav-bar
+                        a(href='##').nav-bar__item Данные организации
+                        a(href='##').nav-bar__item Управление подпиской
+                        a(href='##').nav-bar__item.nav-bar__item--active Сотрудники
+                        a(href='##').nav-bar__item Адреса
+                    .nav-bar
+                        a(href='##').nav-bar__item Панель управления
+                .layout__right.employees__main
+                    h1.employees__title Сотрудники
+                    .employees__search
+                        label.form__field.form__field--img
+                            .form__field__wrapper
+                                .form__field--img_left
+                                    +icon("SearchRounded")
+                                input(placeholder="Поиск по сотрудникам")
+                    .employees__wrapper 
+                        +loop(3)
+                            .employees__item
+                                .employees__item__header
+                                    p.employees__item__title Имя Фамилия (Роль)
+                                    button.employees__item__change(data-modal-open='change_employe') Редактировать
+                                p.employees__item__mail jason.saitama@gmail.com
+                                p.employees__item__info Должность, Филиал
+                            .employees__line
+                    .employees__new 
+                        p Новый сотрудник
+                        button 
+                            +icon("AddRounded")
+
+
+    +modal('change_employe')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Данные сотрудника
+        .modal__content 
+            .modal__content__wrapper 
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="Фамилия" value="Фамилия")
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="Имя" value="Имя")
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="Отчество" value="Отчество")
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="+7 (123) 456-78-90" value="+7 (123) 456-78-90")
+                .field-label
+                    .field-label__input 
+                        input(type="text" placeholder="jason.saitama@gmail.com" value="jason.saitama@gmail.com")
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_center
+                button.button.button--primary Сохранить
+                button.button.button--text_red(data-modal-open='remove_employe' data-modal-close='change_employe') Удалить сотрудника
+
+    +modal('remove_employe')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Удаление сотрудника
+        .modal__content 
+            p Сотрудник Имя Фамилия будет удален, все данные будут потеряны. Это действие невозможно отменить.
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_right
+                button.button.button--text_red Удалить
+                button.button.button--primary Отмена 

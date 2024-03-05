@@ -1,0 +1,74 @@
+extends ../layout/default
+
+block content
+    .sub 
+        .container
+            button.back-button
+                +icon('back')
+                | Назад
+            .layout
+                .layout__left
+                    .nav-bar
+                        a(href='##').nav-bar__item Личные данные
+                        a(href='##').nav-bar__item История заказов
+                        a(href='##').nav-bar__item История поиска
+                        a(href='##').nav-bar__item Гараж
+                    .nav-bar
+                        a(href='##').nav-bar__item Данные организации
+                        a(href='##').nav-bar__item.nav-bar__item--active Управление подпиской
+                        a(href='##').nav-bar__item Сотрудники
+                        a(href='##').nav-bar__item Адреса
+                    .nav-bar
+                        a(href='##').nav-bar__item Панель управления
+                .layout__right.sub__main
+                    h1.sub__title Услуги и стоимость подписки для партнеров
+                    <p class="sub__subtitle">Доступ к неограниченной базе и подпискам для продавцов по минимальной цене.<br>Первые две недели тестовый тариф — бесплатно.</p>
+                    .sub__wrapper 
+                        .sub__card
+                            p.sub__card__title Тестовый
+                            .sub__card__line
+                            .sub__card__wrapper 
+                                .sub__card__block 
+                                    p.sub__card__price 2 недели бесплатно
+                                    button.button.button--primary Попробовать
+                                ul.sub__list
+                                    li.sub__list__item Размещение прайс-листа
+                                    li.sub__list__item Статистика по клиентам
+                                    li.sub__list__item Выдача с ограничением контрактов до 100
+                                    li.sub__list__item Неограниченное количество заявок клиентов
+                        .sub__card
+                            p.sub__card__title Минимальный
+                            .sub__card__line
+                            .sub__card__wrapper 
+                                .sub__card__block 
+                                    p.sub__card__price 13000 руб. / месяц
+                                    button.button.button--third Подписаться
+                                ul.sub__list
+                                    li.sub__list__item Размещение прайс-листа
+                                    li.sub__list__item Статистика по клиентам
+                                    li.sub__list__item Выдача с ограничением контрактов до 100
+                                    li.sub__list__item Неограниченное количество заявок клиентов
+                        .sub__card
+                            p.sub__card__title Основной
+                            .sub__card__line
+                            .sub__card__wrapper 
+                                .sub__card__block 
+                                    p.sub__card__price 17000 руб. / месяц
+                                    button.button.button--third Подписаться
+                                ul.sub__list
+                                    li.sub__list__item Размещение прайс-листа
+                                    li.sub__list__item Статистика по клиентам
+                                    li.sub__list__item Выдача с ограничением контрактов до 100
+                                    li.sub__list__item Неограниченное количество заявок клиентов
+                        .sub__card
+                            p.sub__card__title Максимальный
+                            .sub__card__line
+                            .sub__card__wrapper 
+                                .sub__card__block 
+                                    p.sub__card__price 28000 руб. / месяц
+                                    button.button.button--third Подписаться
+                                ul.sub__list
+                                    li.sub__list__item Размещение прайс-листа
+                                    li.sub__list__item Статистика по клиентам
+                                    li.sub__list__item Выдача с ограничением контрактов до 100
+                                    li.sub__list__item Неограниченное количество заявок клиентов

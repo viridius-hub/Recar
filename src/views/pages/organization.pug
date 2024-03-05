@@ -1,0 +1,163 @@
+extends ../layout/default
+
+block content
+    .org 
+        .container
+            button.back-button
+                +icon('back')
+                | Назад
+            .layout
+                .layout__left
+                    .nav-bar
+                        a(href='##').nav-bar__item Личные данные
+                        a(href='##').nav-bar__item История заказов
+                        a(href='##').nav-bar__item История поиска
+                        a(href='##').nav-bar__item Гараж
+                    .nav-bar
+                        a(href='##').nav-bar__item.nav-bar__item--active Данные организации
+                        a(href='##').nav-bar__item Управление подпиской
+                        a(href='##').nav-bar__item Сотрудники
+                        a(href='##').nav-bar__item Адреса
+                    .nav-bar
+                        a(href='##').nav-bar__item Панель управления
+                form.layout__right.org__main
+                    h1.org__title Данные организации
+                    .org__info
+                        .org__info__wrapper
+                            .org__info__date
+                                p Дата регистрации:
+                                span.org__info_black 10.10.2010
+                            .org__info__access
+                                p Доступ:
+                                .org__info__block
+                                    span.org__info_red Ограниченный
+                                    +icon("InfoRounded")
+                            .org__info__status
+                                p Статус:
+                                .org__info__block
+                                    span.org__info_red Непроверенный продавец
+                                    +icon("InfoRounded")
+                        label.org__info__file
+                            input(type="file")
+                            p Загрузить логотип
+                    .org__block
+                        .org__block__wrapper
+                            label.form__field(style="max-width: 100px")
+                                .select
+                                    input(placeholder="ООО" data-select value="ООО")
+                                    +icon('dropdown')
+                                    .select__options(data-select-options)
+                                        ul.select__options__wrapper
+                                            li(data-select-option).select__options__item ООО
+                                            li(data-select-option).select__options__item ИП
+                            <p class="org__block__change">Eсли вы хотите изменить тип организации, <br> обратитесь в <a href="##">службу поддержки</a></p>
+                                
+                        label.form__field.form__field--change
+                            span ФИО индивидуального предпринимателя
+                            .form__field__wrapper
+                                input(placeholder="ФИО" readonly value="Пушкин Александр Сергеевич")
+                                button.button.form__field--change__button Изменить
+                        label.form__field.form__field--change
+                            span Руководитель
+                            .form__field__wrapper
+                                input(placeholder="Руководитель" readonly value="Пушкин Александр Сергеевич")
+                                button.button.form__field--change__button Изменить
+                        label.form__field.form__field--img
+                            span Дата регистрации организации
+                            .form__field__wrapper
+                                .form__field--img_left
+                                    +icon("CalendarTodayRounded")
+                                input(placeholder="__.__.____")
+                    .org__block
+                        label.form__field
+                            span Основной сайт
+                            .form__field__wrapper
+                                input(placeholder="Например: https://example.ru")
+                        label.form__field
+                            span Дополнительный сайт
+                            .form__field__wrapper
+                                input(placeholder="Например: https://example.ru")
+                        label.form__field.form__field--img
+                            span Основной адрес
+                            .form__field__wrapper
+                                .form__field--img_left
+                                    +icon("LocationonRounded")
+                                input(placeholder="Начните вводить адрес")
+                        label.form__field
+                            span E-mail
+                            .form__field__wrapper
+                                input(placeholder="Например: example@gmail.com")
+                        label.org__checkbox 
+                            .checkbox.checkbox--square 
+                                input(type="checkbox")
+                                +icon('CheckBoxOutlineBlankRounded')
+                                +icon('CheckBoxRounded')
+                            p Получать статусы заказов на почту
+                        label.org__checkbox 
+                            .checkbox.checkbox--square 
+                                input(type="checkbox")
+                                +icon('CheckBoxOutlineBlankRounded')
+                                +icon('CheckBoxRounded')
+                            p Подписаться на новостную рассылку
+                    .org__block
+                        label.field-label
+                            span.text-black Описание компании
+                            .field-label__textarea
+                                textarea(type="textarea" placeholder="Расскажите о преимуществах компании и товаров, которые вы предлагаете покупателю" resize=false)
+                    .org__block
+                        label.form__field
+                            span Drive2
+                            .form__field__wrapper
+                                input(placeholder="Например: https://drive2.ru/users/example")
+                        label.form__field
+                            span Facebook
+                            .form__field__wrapper
+                                input(placeholder="Например: https://facebook.com/example")
+                        label.form__field
+                            span Одноклассники
+                            .form__field__wrapper
+                                input(placeholder="Например: https://ok.ru/example")
+                        label.form__field
+                            span Одноклассники
+                            .form__field__wrapper
+                                input(placeholder="Например: https://vk.ru/example")
+                        label.form__field
+                            span Instagram
+                            .form__field__wrapper
+                                input(placeholder="Например: https://instagram.com/example")
+                    .org__block 
+                        p.org__block__title Документы
+                        .org__block__docs
+                            .org__block__docs__item
+                                .org__block__docs__wrapper
+                                    p Свидетельство о государственной регистрации ИП
+                                    a(href="##") Загрузить скан
+                            .org__block__docs__item
+                                .org__block__docs__wrapper
+                                    p Свидетельство о постановке на учет в налоговом органе
+                                    a(href="##") Загрузить скан
+                            .org__block__docs__item 
+                                .org__block__docs__wrapper 
+                                    p Копия паспорта
+                                    a(href="##") Загрузить скан
+                                .org__block__docs__item__image 
+                                    img(src=require('@images/Rectangle.png'))
+                                    +icon('ModalClose')
+                    .org__block
+                        button.button.button--secondary Отправить на проверку
+                        <p class="org__block__rules">Нажимая на кнопку, вы соглашаетесь <a href="##">с Политикой обработки персональных данных</a></p>
+                    .org__block.org__block__review
+                        <p>Ваша заявка отправлена на проверку. <br> Следите за статусом в разделе «Данные организации». <br> Если у вас возникли вопросы, обратитесь в <a href="##">службу поддержки</a>.</p>
+                    .org__block 
+                        button.button.button--text_red(data-modal-open='remove_organization' type="button") Удалить аккаунт
+
+
+    +modal('remove_organization')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Удаление аккаунта
+        .modal__content 
+            p Ваш аккаунт будет удален, все данные будут потеряны. Это действие невозможно отменить.
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_right
+                button.button.button--text_red Удалить
+                button.button.button--primary Отмена 

@@ -46,6 +46,11 @@
             display: flex;
             align-items: center;
             gap: 16px;
+            &__input{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
             button{
                 padding: 0 16px;
             }
@@ -83,6 +88,21 @@
                             &:last-child{
                                 color: #FF735D;
                             }
+                        }
+                    }
+                    &__statistic{
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        margin-top: 16px;
+                        svg{
+                            width: 24px;
+                            height: 24px;
+                        }
+                        &__wrapper{
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
                         }
                     }
                 }
@@ -173,7 +193,8 @@
                 flex-direction: column;
                 gap: 16px;
             }
-            &__checkbox{
+            &__item{
+                cursor: pointer;
                 display: flex;
                 align-items: center;
                 gap: 8px;
@@ -188,61 +209,12 @@
                 &__wrapper{
                     display: flex;
                     align-items: center;
-                    gap: 4px;
+                    gap: 6px;
                     p{
                         color: #000000 !important;
                     }
-                }
-                &__input{
-                    display: flex;
-                    svg{
-                        width: 20px;
-                        height: 20px;
-                    }
-                    .icon--RadioRounded{
-                        display: none;
-                    }
-                    input{
-                        display: none;
-                        &:checked ~ .icon--RadioRounded {
-                            display: block !important;
-                        }
-                        &:checked ~ .icon--RadioBorderRounded {
-                            display: none !important;
-                        }
-                    }
-                }
-                
+                }             
             }
-        }
-    }
-    &__checkbox{
-        width: fit-content;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        cursor: pointer;
-        input{
-            display: none;
-            &:checked ~ .icon--CheckBoxOutlineBlankRounded {
-                display: none !important;
-            }
-            &:checked ~ .icon--CheckBoxRounded {
-                display: table !important;
-            }
-        }
-        p{
-            font-family: "Inter";
-            font-weight: 400;
-            white-space: nowrap;
-        }
-        .icon--CheckBoxRounded {
-            display: none;
-          }
-      
-        .icon {
-            width: 24px;
-            height: 24px;
         }
     }
     &__line{
