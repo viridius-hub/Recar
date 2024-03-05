@@ -1,0 +1,157 @@
+
+
+.org{
+    &__title{
+        color: #000000; 
+        font-size: 22px;
+        font-weight: 700;
+    }
+    &__delete{
+        margin-top: 8px;
+    }
+    &__main{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__info{
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        justify-content: space-between;
+        &_black{
+            color: #000000;
+        }
+        &_red{
+            color: #FF735D;
+        }
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        &__date, &__access, &__status{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            p{
+                color: #949DA5;
+                font-family: "Inter";
+            }
+        }
+        &__block{
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &__file{
+            color: #139BE8; 
+            font-size: 14px; 
+            font-family: "Inter";
+            font-weight: 400;
+            cursor: pointer;
+            input{
+                display: none;
+            }
+        }
+    }
+    &__block{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        &__title{
+            color: #000000; 
+            font-size: 17px; 
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+        &__wrapper{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        &__change{
+            color: #949DA5; 
+            font-size: 12px; 
+            font-family: "Inter";
+            a{
+                color: #139BE8;
+            }
+        }
+        &__docs{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            &__item{
+                border: 1px #E2EEF6 solid;
+                border-radius: 12px;
+                padding: 16px;
+                font-family: "Inter";
+                height: 270px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                p{
+                    color: #000000;
+                }
+                a{
+                    color: #139BE8; 
+                    font-size: 14px;
+                }
+                &__image{
+                    border-radius: 12px;
+                    overflow: hidden;
+                    position: relative;
+                    width: fit-content;
+                    margin-top: auto;
+                    img{
+                        max-width: 110px;
+                    }
+                    svg{
+                        width: 32px;
+                        height: 32px;
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                    }
+                }
+            }
+        }
+        &__rules{
+            text-align: center;
+            font-family: "Inter";
+            color: #949DA5;
+            a{
+                color: #139BE8;
+            }
+        }
+        &__review{
+            padding: 24px 16px;
+            text-align: center;
+            border-radius: 12px; 
+            border: 1px #E2EEF6 solid;
+            color: #000000; 
+            font-size: 14px; 
+            font-family: "Inter";
+            a{
+                color: #139BE8;
+            }
+        }
+    }
+    &__checkbox{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #000000; 
+        font-size: 16px; 
+        font-family: "Inter"; 
+        font-weight: 400;
+    }
+
+}

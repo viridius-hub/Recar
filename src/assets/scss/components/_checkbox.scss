@@ -1,0 +1,37 @@
+.checkbox{
+    cursor: pointer;
+    display: flex;
+    width: fit-content;
+    svg{
+        width: 24px;
+        height: 24px;
+    }
+    &--circle{
+        .icon--RadioRounded{
+            display: none;
+        }
+        input{
+            display: none;
+            &:checked ~ .icon--RadioRounded {
+                display: block !important;
+            }
+            &:checked ~ .icon--RadioBorderRounded {
+                display: none !important;
+            }
+        }
+    }
+    &--square{
+        .icon--CheckBoxRounded{
+            display: none;
+        }
+        input{
+            display: none;
+            &:checked ~ .icon--CheckBoxRounded {
+                display: block !important;
+            }
+            &:checked ~ .icon--CheckBoxOutlineBlankRounded {
+                display: none !important;
+            }
+        }
+    }
+}

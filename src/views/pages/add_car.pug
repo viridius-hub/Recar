@@ -21,9 +21,10 @@ block content
                             input(placeholder="123123123")
                         label.new-car__checkbox
                             span Сделать главным авто
-                            input(type='checkbox' checked)
-                            +icon('CheckBoxOutlineBlankRounded')
-                            +icon('CheckBoxRounded')
+                            .checkbox.checkbox--square 
+                                input(type="checkbox")
+                                +icon('CheckBoxOutlineBlankRounded')
+                                +icon('CheckBoxRounded')
                         button.new-car__edit Редактировать
                         button.new-car__del Удалить
                     .new-car__vertical_line

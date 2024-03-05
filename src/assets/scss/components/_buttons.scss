@@ -26,6 +26,11 @@
     color: var(--Neutral-White, #FFF);
   }
 
+  &--third{
+    border-radius: 8px;
+    background: rgba(0, 185, 227, 0.05);
+    color: #139BE8;
+  }
 
   &--text {
     // color: var(--Accent-1, #139BE8);

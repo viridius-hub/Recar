@@ -1,0 +1,55 @@
+extends ../layout/default
+
+block content
+    .office 
+        .container
+            button.back-button
+                +icon('back')
+                | Назад
+            .layout
+                .layout__left
+                    .nav-bar
+                        a(href='##').nav-bar__item Личные данные
+                        a(href='##').nav-bar__item История заказов
+                        a(href='##').nav-bar__item История поиска
+                        a(href='##').nav-bar__item Гараж
+                    .nav-bar
+                        a(href='##').nav-bar__item Данные организации
+                        a(href='##').nav-bar__item Управление подпиской
+                        a(href='##').nav-bar__item Сотрудники
+                        a(href='##').nav-bar__item.nav-bar__item--active Адреса
+                    .nav-bar
+                        a(href='##').nav-bar__item Панель управления
+                .layout__right.office__main
+                    h1.office__title Адреса
+                    .office__search
+                        label.form__field.form__field--img
+                            .form__field__wrapper
+                                .form__field--img_left
+                                    +icon("SearchRounded")
+                                input(placeholder="Поиск по филиалам")
+                    .office__wrapper 
+                        +loop(2)
+                            .office__item
+                                .office__item__wrapper
+                                    +icon("LocationonRounded")
+                                    p.office__item__title г. Санкт-Петербург, ул. Пушкина, д. 17
+                                button.office__item__change Редактировать
+                            .office__line
+                    .office__new 
+                        p Новый адрес
+                        button 
+                            +icon("AddRounded")
+
+
+
+
+    +modal('remove_office')(class="modal_w488")
+        .modal__header 
+            p.modal__header__title Удаление филиала
+        .modal__content 
+            p Филиал Благо будет удален, все данные будут потеряны. Это действие невозможно отменить.
+        .modal__footer 
+            .modal__footer__wrapper.modal__footer__wrapper_right
+                button.button.button--text_red Удалить
+                button.button.button--primary Отмена 
