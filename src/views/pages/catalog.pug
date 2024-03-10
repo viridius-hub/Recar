@@ -2,53 +2,149 @@ extends ../layout/default
 
 block content
     .catalog
-        .catalog__header
-            img(src='Rectangle').catalog__img
-            .catalog__vertical_line
-            h1.catalog__title Mazda
-            a(href='#').catalog__change Выбрать другой автомобиль
-        .catalog__filters_block
-            button.catalog__button.button_selected По категориям
-            button.catalog__button.button_selected По узлам
-            label.catalog__search
-                +icon('search')
-                input(placeholder="Поиск поназванию детали")
-                ul.catalog__filter
-                    li Двигатель
-                    li Двигатель
-                    li Выхлопная система
-                    li Топливо
-                    li Система связки
-                    li Система охлаждения
-                    li Выделение
-                    li Трансмиссия
-                    li Электрическая система двигателя
-                    li Электрическая система
-                    li Подвесное устройство
-                    li Управление
-                    li Тормозная система
-                    li Кузов
-                    li Кузов
-                    li Кузов
-                    li Кузов
-                    li Кузов
-                    li Кузов
-                    li Кузов
-                    li Кузов
-                    li Кузов
-                    li Кузов
-                    li Кузов
-                    li Кузов
-        .cards
-            .card
-                .card__header
-                    .card__title Mazda B-Series
-                    .card__tag
-                        span
-                        | Главный
-                a(href='#').card__edit Изменить
-            +loop(29)
-                .card
-                    .card__header
-                        .card__title Mazda B-Series
-                    a(href='#').card__edit Изменить
+        .container
+            .catalog__product
+                img.catalog__product__img(src=require('@images/Rectangle.png'))
+                .catalog__product__line
+                .catalog__product__info 
+                    p.catalog__product__info__title Mazda, CX-9 2630035530
+                    button.catalog__product__info__other Выбрать другое авто
+                    p.catalog__product__info__subtitle Фильтр масляный двигателя
+                    .catalog__product__info__footer
+                        .catalog__product__info__footer__wrapper
+                            button.button.button--primary Показать аналоги (4012)
+                            button.button.button--third Сохранить номер
+                        a.catalog__product__info__footer__map
+                            +icon("LocationonRoundedBlue")
+                            p Показать на карте
+                    .catalog__product__info__footer
+                        .catalog__product__info__footer__wrapper
+                            
+                            button.button.catalog__product__info__footer__analogues
+                                +icon('ModalClose')
+                                p Закрыть аналоги
+                            button.button.catalog__product__info__footer__number Номер сохранен
+                        a.catalog__product__info__footer__map
+                            +icon("LocationonRoundedBlue")
+                            p Показать на карте
+            button.back-button
+                +icon('back')
+                | Назад
+            .layout.layout_412.catalog-layout
+                .catalog-filter 
+                    .catalog-filter__header 
+                        .catalog-filter__header__tabs 
+                            button.button.catalog-filter__header__tab.catalog-filter__header__tab_active(data-catalog_open="groups") По группам
+                            button.button.catalog-filter__header__tab(data-catalog_open="nodes") По узлам
+                        .employees__search
+                            label.form__field.form__field--img
+                                .form__field__wrapper
+                                    .form__field--img_left
+                                        +icon("SearchRounded")
+                                    input(placeholder="Поиск по названию детали")
+                    .catalog-filter__content.catalog-filter__content_active(data-catalog_content="groups")
+                        .catalog-filter__content__dropdown.catalog-filter__content__dropdown_open(data-catalog_dropdown)
+                            button.catalog-filter__content__dropdown__button
+                                p Детали для ТО
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-filter__content__dropdown__select
+                                a.catalog-filter__content__dropdown__select__item Фильтр масляный
+                                a.catalog-filter__content__dropdown__select__item Фильтр воздушный
+                                a.catalog-filter__content__dropdown__select__item Фильтр топливный
+                                a.catalog-filter__content__dropdown__select__item Свечи зажигания
+                                a.catalog-filter__content__dropdown__select__item Ремень клиновой
+                        .catalog-filter__content__dropdown(data-catalog_dropdown)
+                            button.catalog-filter__content__dropdown__button
+                                p Детали для ТО
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-filter__content__dropdown__select
+                                a.catalog-filter__content__dropdown__select__item Фильтр масляный
+                                a.catalog-filter__content__dropdown__select__item Фильтр воздушный
+                                a.catalog-filter__content__dropdown__select__item Фильтр топливный
+                                a.catalog-filter__content__dropdown__select__item Свечи зажигания
+                                a.catalog-filter__content__dropdown__select__item Ремень клиновой
+                        .catalog-filter__content__dropdown(data-catalog_dropdown)
+                            button.catalog-filter__content__dropdown__button
+                                p Детали для ТО
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-filter__content__dropdown__select
+                                a.catalog-filter__content__dropdown__select__item Фильтр масляный
+                                a.catalog-filter__content__dropdown__select__item Фильтр воздушный
+                                a.catalog-filter__content__dropdown__select__item Фильтр топливный
+                                a.catalog-filter__content__dropdown__select__item Свечи зажигания
+                                a.catalog-filter__content__dropdown__select__item Ремень клиновой
+                    .catalog-filter__content(data-catalog_content="nodes")
+                        .catalog-filter__content__dropdown(data-catalog_dropdown)
+                            button.catalog-filter__content__dropdown__button
+                                p 0 Engine, emission, engine electrical
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-filter__content__dropdown__select
+                                a.catalog-filter__content__dropdown__select__item Фильтр масляный
+                                a.catalog-filter__content__dropdown__select__item Фильтр воздушный
+                                a.catalog-filter__content__dropdown__select__item Фильтр топливный
+                                a.catalog-filter__content__dropdown__select__item Свечи зажигания
+                                a.catalog-filter__content__dropdown__select__item Ремень клиновой
+                        .catalog-filter__content__dropdown(data-catalog_dropdown)
+                            button.catalog-filter__content__dropdown__button
+                                p 0 Engine, emission, engine electrical
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-filter__content__dropdown__select
+                                a.catalog-filter__content__dropdown__select__item Фильтр масляный
+                                a.catalog-filter__content__dropdown__select__item Фильтр воздушный
+                                a.catalog-filter__content__dropdown__select__item Фильтр топливный
+                                a.catalog-filter__content__dropdown__select__item Свечи зажигания
+                                a.catalog-filter__content__dropdown__select__item Ремень клиновой
+                        .catalog-filter__content__dropdown(data-catalog_dropdown)
+                            button.catalog-filter__content__dropdown__button
+                                p 8 Chassis electrical, heating/air, conditioning, wipers, radio
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-filter__content__dropdown__select
+                                a.catalog-filter__content__dropdown__select__item Фильтр масляный
+                                a.catalog-filter__content__dropdown__select__item Фильтр воздушный
+                                a.catalog-filter__content__dropdown__select__item Фильтр топливный
+                                a.catalog-filter__content__dropdown__select__item Свечи зажигания
+                                a.catalog-filter__content__dropdown__select__item Ремень клиновой
+                .catalog-content.catalog-content_group.catalog-content_active(data-catalog_content_block='groups' data-catalog_content_visible)
+                    a(href="##").catalog-content_group__item
+                        img.catalog-content_group__item__img(src=require('@images/Rectangle.png'))
+                        .catalog-content_group__item__wrapper 
+                            .catalog-content_group__item__title
+                                p (2510) Элементы обеспечения работы двигателя
+                                p Узлы систем двигателя
+                            .catalog-content_group__item__table 
+                                .catalog-content_group__item__table__header
+                                    p OEM
+                                    p Наименование детали
+                                .catalog-content_group__item__table__line
+                                .catalog-content_group__item__table__content(data-catalog_table_content)
+                                    +loop(12)
+                                        .catalog-content_group__item__table__content__item
+                                            p S123614021CA
+                                            p Датчик температуры и давления во впускном коллекторе (TMAP)
+                                button.catalog-content_group__item__table__more(data-catalog_table_more)
+                                    p Остальные детали узла
+                                    +icon('KeyboardArrowDownRounded')
+                    a(href="##").catalog-content_group__item
+                        img.catalog-content_group__item__img(src=require('@images/Rectangle.png'))
+                        .catalog-content_group__item__wrapper 
+                            .catalog-content_group__item__title
+                                p (2510) Элементы обеспечения работы двигателя
+                                p Узлы систем двигателя
+                            .catalog-content_group__item__table 
+                                .catalog-content_group__item__table__header
+                                    p OEM
+                                    p Наименование детали
+                                .catalog-content_group__item__table__line
+                                .catalog-content_group__item__table__content(data-catalog_table_content)
+                                    +loop(12)
+                                        .catalog-content_group__item__table__content__item
+                                            p S123614021CA
+                                            p Датчик температуры и давления во впускном коллекторе (TMAP)
+                                button.catalog-content_group__item__table__more(data-catalog_table_more)
+                                    p Остальные детали узла
+                                    +icon('KeyboardArrowDownRounded')
+                .catalog-content.catalog-content_nodes(data-catalog_content_block='nodes')
+                    +loop(6)
+                        a(href="##").catalog-content_nodes__item 
+                            p.catalog-content_nodes__item__title 1. Передняя концевая часть
+                            img.catalog-content_nodes__item__img(src=require('@images/Rectangle.png'))

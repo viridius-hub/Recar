@@ -6,6 +6,8 @@ import "./headerTransform"
 import "./inputErrors"
 import "./modal"
 import "./rating"
+import "./catalog"
+import "./catalog_item"
 
 window.addEventListener("DOMContentLoaded", () => {
     new Swiper('.home-banner', {

@@ -75,6 +75,7 @@
         padding-right: 150px;
       }
       &__button{
+        display: flex;
         color: #139BE8; 
         font-size: 14px; 
         font-family: "Inter";
@@ -84,6 +85,10 @@
         left: calc(100% - 16px);
         // left: 80%;
         transform: translateY(-50%) translateX(-100%);
+        svg{
+          width: 20px;
+          height: 20px;
+        }
       }
     }
     &--img{

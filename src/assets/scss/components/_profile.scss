@@ -104,6 +104,14 @@
     }
   }
 
+  &_412{
+    grid-template-columns: 412px 1fr;
+  }
+
+  &_582{
+    grid-template-columns: 582px 1fr;
+  }
+
   &__left{
     display: flex;
     flex-direction: column;

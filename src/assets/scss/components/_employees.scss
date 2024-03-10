@@ -71,4 +71,50 @@
             }
         }
     }
+    &__modal{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        &__office{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 46px;
+            svg{
+                width: 24px;
+                height: 24px;
+            }
+            .icon--trash{
+                cursor: pointer;
+            }
+            &__wrapper{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+        &__add{
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                font-size: 17px;
+                color: #000000;
+                font-family: "Inter";
+            }
+            svg{
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+            }
+        }
+        &__all{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            margin-top: 8px;
+        }
+    }
 }
