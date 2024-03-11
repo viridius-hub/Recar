@@ -1,0 +1,356 @@
+
+
+.catalog-select{
+    &__product{
+        display: flex;
+        gap: 24px;
+        border-radius: 16px;
+        padding: 26px 29px;
+        background: #fff;
+        box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.07);
+        margin-bottom: 24px;
+        &__img{
+            width: 237px;
+            height: 140px;
+            border-radius: 12px;
+        }
+        &__line{
+            width: 1px;
+            height: auto;
+            background: #E2EEF6;
+        }
+        &__info{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            justify-content: space-between;
+            &__title{
+                font-size: 22px;
+                font-weight: 600;
+                color: #000000;
+            }
+            &__other, &__subtitle{
+                margin-top: 12px;
+                font-size: 14px;
+                font-weight: 400;
+                font-family: "Inter";
+            }
+            &__subtitle{
+                color: #949DA5;
+            }
+            &__other{
+                color: #139BE8;
+            }
+            &__footer{
+                margin-top: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                &__wrapper{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                &__map{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: #139BE8;
+                    font-size: 16px;
+                    font-weight: 600;
+                    svg{
+                        width: 24px;
+                        height: 24px;
+                        path{
+                            fill: #139BE8;
+                        }
+                    }
+                }
+                &__analogues{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: #FF735D;
+                    svg{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                &__number{
+                    color: #949DA5;
+                }
+            }
+        }
+    }
+    &-filter{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 16px; 
+        background: white; 
+        box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.07); 
+        border-radius: 12px;
+        height: fit-content;
+        &__content{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            &__dropdown{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+                &_open{
+                    .catalog-select-filter__content__dropdown{
+                        &__select{
+                            display: flex;
+                        }
+                        &__button{
+                            svg{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+                &__button{
+                    height: 36px;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    justify-content: space-between;
+                    width: 100%;
+                    p{
+                        color: #139BE8; 
+                        font-size: 16px;
+                        font-weight: 600;
+                        text-align: left;
+                    }
+                    svg{
+                        width: 24px;
+                        height: 24px;
+                        overflow: visible;
+                    }
+                }
+                &__select{
+                    display: none;
+                    flex-direction: column;
+                    gap: 12px;
+                    &__item{
+                        color: #000000; 
+                        font-size: 16px; 
+                        font-family: "Inter";
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        &_rating{
+                            cursor: pointer;
+                            padding: 8px;
+                            border-radius: 8px;
+                            &_active{
+                                background: rgba(0, 185, 227, 0.05);
+                            }
+                            .icon--StarRoundedActive{
+                                display: none;
+                            }
+                            input{
+                                display: none;
+                                &:checked ~ .catalog-select-filter__content__dropdown__select__item_rating__wrapper{
+                                    .icon--StarRoundedActive {
+                                        display: block !important;
+                                    }
+                                }
+                                &:checked ~ .catalog-select-filter__content__dropdown__select__item_rating__wrapper{
+                                    .icon--StarRoundedGray {
+                                        display: none !important;
+                                    }
+                                }
+                            }
+                            &__wrapper{
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                            }
+                            &__star{
+                                display: flex;
+                                position: relative;
+                                svg{
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        &__buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+        }
+    }
+    &-layout{
+        gap: 24px !important;
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        height: fit-content;
+        &__item{
+            display: flex;
+            gap: 24px;
+            padding: 16px; 
+            background: white; 
+            box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.07); 
+            border-radius: 12px;
+            height: fit-content;
+            &__img{
+                max-width: 178px;
+                max-height: 240px;
+                border-radius: 12px;
+            }
+            &__wrapper{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            &__block{
+                &_center{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 18.5px;
+                }
+                &_rigth{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            }
+            &__header{
+                &__title{
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    p{
+                        &:first-child{
+                            font-weight: 600;
+                            color: #000000;
+                        }
+                        &:last-child{
+                            font-family: "Inter";
+                            color: #139BE8;
+                        }
+                    }
+                }
+                &__subtitle{
+                    font-family: "Inter";
+                    color: #949DA5;
+                }
+            }
+            &__main{
+                &__header, &__info{
+                    display: flex;
+                    align-items: center;
+                    gap: 17px;
+                }
+                &__info{
+                    height: 35px;
+                    margin-top: 8px;
+                }
+            }
+            &__brand{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #139BE8;
+                font-family: "Inter";
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &__review{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #000000;
+                font-family: "Inter";
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &__address{
+                color: #000000;
+                font-family: "Inter";
+                margin-top: 12px;
+            }
+            &__metro{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #000000;
+                font-family: "Inter";
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &__phone{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #139BE8;
+                font-family: "Inter";
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &__delivery{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                &__wrapper{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: #000000;
+                    font-family: "Inter";
+                }
+                &__description{
+                    font-size: 12px;
+                    color: #949DA5;
+                    font-family: "Inter";
+                }
+            }
+            &__status{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #000000;
+                font-family: "Inter";
+            }
+            &__price{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                color: #000000;
+                font-weight: 600;
+                align-items: flex-end;
+                &__button{
+                    svg{
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

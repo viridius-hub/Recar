@@ -43,6 +43,14 @@
         } 
     }
 
+    &__image{
+        max-width: 500px;
+        max-height: 90vh;
+        border-radius: 20px;
+        overflow-y: auto;
+        position: relative;
+    }
+
     &__container {
         background-color: #fff;
         padding: 24px;

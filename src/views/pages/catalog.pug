@@ -6,27 +6,28 @@ block content
             .catalog__product
                 img.catalog__product__img(src=require('@images/Rectangle.png'))
                 .catalog__product__line
-                .catalog__product__info 
-                    p.catalog__product__info__title Mazda, CX-9 2630035530
-                    button.catalog__product__info__other Выбрать другое авто
-                    p.catalog__product__info__subtitle Фильтр масляный двигателя
-                    .catalog__product__info__footer
-                        .catalog__product__info__footer__wrapper
-                            button.button.button--primary Показать аналоги (4012)
-                            button.button.button--third Сохранить номер
-                        a.catalog__product__info__footer__map
-                            +icon("LocationonRoundedBlue")
-                            p Показать на карте
-                    .catalog__product__info__footer
-                        .catalog__product__info__footer__wrapper
+                .catalog__product__info
+                    .catalog__product__info__wrapper
+                        p.catalog__product__info__title Mazda, CX-9 2630035530
+                        button.catalog__product__info__other Выбрать другое авто
+                    //- p.catalog__product__info__subtitle Фильтр масляный двигателя
+                    //- .catalog__product__info__footer
+                    //-     .catalog__product__info__footer__wrapper
+                    //-         button.button.button--primary Показать аналоги (4012)
+                    //-         button.button.button--third Сохранить номер
+                    //-     a.catalog__product__info__footer__map
+                    //-         +icon("LocationonRoundedBlue")
+                    //-         p Показать на карте
+                    //- .catalog__product__info__footer
+                    //-     .catalog__product__info__footer__wrapper
                             
-                            button.button.catalog__product__info__footer__analogues
-                                +icon('ModalClose')
-                                p Закрыть аналоги
-                            button.button.catalog__product__info__footer__number Номер сохранен
-                        a.catalog__product__info__footer__map
-                            +icon("LocationonRoundedBlue")
-                            p Показать на карте
+                    //-         button.button.catalog__product__info__footer__analogues
+                    //-             +icon('ModalClose')
+                    //-             p Закрыть аналоги
+                    //-         button.button.catalog__product__info__footer__number Номер сохранен
+                    //-     a.catalog__product__info__footer__map
+                    //-         +icon("LocationonRoundedBlue")
+                    //-         p Показать на карте
             button.back-button
                 +icon('back')
                 | Назад

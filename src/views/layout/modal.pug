@@ -5,3 +5,11 @@ mixin modal(id)
             button.modal__close(data-modal-close=id type="button")
                 +icon('ModalClose')
             block
+
+mixin modalImage(id)
+    .modal.modal-slide(id=id)&attributes(attributes)
+        .modal__overlay(data-modal-close=id)
+        .modal__image
+            button.modal__close(data-modal-close=id type="button")
+                +icon('ModalClose')
+            block

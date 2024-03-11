@@ -1,6 +1,17 @@
 .select {
     position: relative;
     width: 100%;
+    &--img{
+        input{
+            padding-left: 44px;
+        }
+        svg{
+            &:first-child{
+                right: auto;
+                left: 16px;
+            }
+        }
+    }
     input{
         height: 39px;
     }
