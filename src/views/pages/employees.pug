@@ -43,26 +43,64 @@ block content
                             +icon("AddRounded")
 
 
-    +modal('change_employe')(class="modal_w488")
+    +modal('change_employe')(class="modal_w706")
         .modal__header 
             p.modal__header__title Данные сотрудника
         .modal__content 
             .modal__content__wrapper 
+                p.modal__content__title Информация о сотруднике
                 .field-label
                     .field-label__input 
-                        input(type="text" placeholder="Фамилия" value="Фамилия")
+                        input(type="text" placeholder="ФИО" value="Иванов Иван Иванович")
                 .field-label
                     .field-label__input 
-                        input(type="text" placeholder="Имя" value="Имя")
-                .field-label
-                    .field-label__input 
-                        input(type="text" placeholder="Отчество" value="Отчество")
+                        input(type="text" placeholder="Должность" value="Менеджер")
                 .field-label
                     .field-label__input 
                         input(type="text" placeholder="+7 (123) 456-78-90" value="+7 (123) 456-78-90")
                 .field-label
                     .field-label__input 
+                        input(type="text" placeholder="email" value="jason.saitama@gmail.com")
+                .field-label
+                    .field-label__input 
                         input(type="text" placeholder="jason.saitama@gmail.com" value="jason.saitama@gmail.com")
+            .modal__content__line
+            .modal__content__wrapper 
+                p.modal__content__title Филиалы
+                .employees__modal
+                    +loop(2)
+                        .employees__modal__office 
+                            .employees__modal__office__wrapper 
+                                +icon('LocationonRounded')
+                                p г. Санкт-Петербург, ул. Пушкина, д. 17
+                            +icon('trash')
+                        .modal__content__line
+                    .employees__modal__add 
+                        p Добавить филиал
+                        +icon('AddRounded')
+                    label.employees__modal__all 
+                        .checkbox.checkbox--square 
+                            input(type="checkbox")
+                            +icon('CheckBoxOutlineBlankRounded')
+                            +icon('CheckBoxRounded')
+                        p Выбрать все
+            .modal__content__line
+            .modal__content__wrapper
+                p.modal__content__title Доступ
+                label.form__field
+                    .select
+                        input(placeholder="Выберите доступ" data-select value="Полный доступ")
+                        +icon('dropdown')
+                        .select__options(data-select-options)
+                            ul.select__options__wrapper
+                                li(data-select-option).select__options__item Полный доступ
+                                li(data-select-option).select__options__item Ограниченый доступ
+                label.form__field.form__field--change
+                    .form__field__wrapper
+                        input(placeholder="ФИО" readonly value="Пушкин Александр Сергеевич")
+                        .form__field--change__button
+                            +icon("ReplayRounded")
+                
         .modal__footer 
             .modal__footer__wrapper.modal__footer__wrapper_center
                 button.button.button--primary Сохранить

@@ -1,0 +1,259 @@
+extends ../layout/default
+
+block content
+    .catalog-select
+        .container
+            .catalog-select__product
+                img.catalog-select__product__img(src=require('@images/Rectangle.png'))
+                .catalog-select__product__line
+                .catalog-select__product__info
+                    .catalog-select__product__info__wrappper
+                        p.catalog-select__product__info__title Mazda, CX-9 2630035530
+                        p.catalog-select__product__info__subtitle Фильтр масляный двигателя
+                    .catalog-select__product__info__footer
+                        .catalog-select__product__info__footer__wrapper
+                            button.button.button--primary Показать аналоги (4012)
+                            button.button.button--third Сохранить номер
+                        a.catalog-select__product__info__footer__map
+                            +icon("LocationonRoundedBlue")
+                            p Показать на карте
+                    //- .catalog-select__product__info__footer
+                    //-     .catalog-select__product__info__footer__wrapper
+                            
+                    //-         button.button.catalog-select__product__info__footer__analogues
+                    //-             +icon('ModalClose')
+                    //-             p Закрыть аналоги
+                    //-         button.button.catalog-select__product__info__footer__number Номер сохранен
+                    //-     a.catalog-select__product__info__footer__map
+                    //-         +icon("LocationonRoundedBlue")
+                    //-         p Показать на карте
+            .layout.layout_412.catalog-select-layout
+                form.catalog-select-filter 
+                    .catalog-select-filter__content
+                        .catalog-select-filter__content__dropdown.catalog-select-filter__content__dropdown_open(data-catalog_select_dropdown)
+                            button(type='button').catalog-select-filter__content__dropdown__button
+                                p Категория
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-select-filter__content__dropdown__select
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='1')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Только новые
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='1')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Только б/у
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='1')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Любые
+                        .catalog-select-filter__content__dropdown.catalog-select-filter__content__dropdown_open(data-catalog_select_dropdown)
+                            button(type='button').catalog-select-filter__content__dropdown__button
+                                p Наличие
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-select-filter__content__dropdown__select
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='2')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Сегодня
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='2')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Сегодня или завтра
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='2')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p До 5 дней
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='2')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Любой
+                        .catalog-select-filter__content__dropdown.catalog-select-filter__content__dropdown_open(data-catalog_select_dropdown)
+                            button(type='button').catalog-select-filter__content__dropdown__button
+                                p Способ доставки
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-select-filter__content__dropdown__select
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='3')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Самовывоз из магазина
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='3')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Курьер продавца
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='3')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Отправка ТК продавцом
+                                label.catalog-select-filter__content__dropdown__select__item
+                                    .checkbox.checkbox--circle
+                                        input(type="radio" name='3')
+                                        +icon('RadioBorderRounded')
+                                        +icon('RadioRounded')
+                                    p Любой
+                        .catalog-select-filter__content__dropdown.catalog-select-filter__content__dropdown_open(data-catalog_select_dropdown)
+                            button(type='button').catalog-select-filter__content__dropdown__button
+                                p Рейтинг магазина
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-select-filter__content__dropdown__select
+                                label.catalog-select-filter__content__dropdown__select__item.catalog-select-filter__content__dropdown__select__item_rating
+                                    input(type="radio" name='4')(data-catalog_select_rating)
+                                    p От
+                                    .catalog-select-filter__content__dropdown__select__item_rating__wrapper
+                                        .catalog-select-filter__content__dropdown__select__item_rating__star
+                                            +icon('StarRoundedActive')
+                                            +icon('StarRoundedGray')
+                                        .catalog-select-filter__content__dropdown__select__item_rating__star
+                                            +icon('StarRoundedActive')
+                                            +icon('StarRoundedGray')
+                                label.catalog-select-filter__content__dropdown__select__item.catalog-select-filter__content__dropdown__select__item_rating
+                                    input(type="radio" name='4')(data-catalog_select_rating)
+                                    p От
+                                    .catalog-select-filter__content__dropdown__select__item_rating__wrapper
+                                        .catalog-select-filter__content__dropdown__select__item_rating__star
+                                            +icon('StarRoundedActive')
+                                            +icon('StarRoundedGray')
+                                        .catalog-select-filter__content__dropdown__select__item_rating__star
+                                            +icon('StarRoundedActive')
+                                            +icon('StarRoundedGray')
+                                        .catalog-select-filter__content__dropdown__select__item_rating__star
+                                            +icon('StarRoundedActive')
+                                            +icon('StarRoundedGray')
+                                label.catalog-select-filter__content__dropdown__select__item.catalog-select-filter__content__dropdown__select__item_rating
+                                    input(type="radio" name='4')(data-catalog_select_rating)
+                                    p От
+                                    .catalog-select-filter__content__dropdown__select__item_rating__wrapper
+                                        .catalog-select-filter__content__dropdown__select__item_rating__star
+                                            +icon('StarRoundedActive')
+                                            +icon('StarRoundedGray')
+                                        .catalog-select-filter__content__dropdown__select__item_rating__star
+                                            +icon('StarRoundedActive')
+                                            +icon('StarRoundedGray')
+                                        .catalog-select-filter__content__dropdown__select__item_rating__star
+                                            +icon('StarRoundedActive')
+                                            +icon('StarRoundedGray')
+                                        .catalog-select-filter__content__dropdown__select__item_rating__star
+                                            +icon('StarRoundedActive')
+                                            +icon('StarRoundedGray')
+                                        .catalog-select-filter__content__dropdown__select__item_rating__star
+                                            +icon('StarRoundedActive')
+                                            +icon('StarRoundedGray')
+                        .catalog-select-filter__content__dropdown.catalog-select-filter__content__dropdown_open(data-catalog_select_dropdown)
+                            button(type='button').catalog-select-filter__content__dropdown__button
+                                p Метро
+                                +icon('KeyboardArrowDownRounded')
+                            .catalog-select-filter__content__dropdown__select
+                                label.form__field
+                                    .select.select--img
+                                        +icon("SubwayRounded")
+                                        input(placeholder="Станция метро" data-select)
+                                        +icon('dropdown')
+                                        .select__options(data-select-options)
+                                            ul.select__options__wrapper
+                                                li(data-select-option).select__options__item Полный доступ
+                                                li(data-select-option).select__options__item Ограниченый доступ
+                    .catalog-select-filter__buttons 
+                        button.button.button--primary Показать
+                        button.button.button--text_blue Сбросить фильтры
+                .catalog-select-content
+                    a(href="##").catalog-select-content__item
+                        img.catalog-select-content__item__img(src=require('@images/Rectangle.png'))
+                        .catalog-select-content__item__wrapper
+                            .catalog-select-content__item__block_center
+                                .catalog-select-content__item__header
+                                    .catalog-select-content__item__header__title 
+                                        p Mazda, CX-9 2630035530
+                                        p (S2630035530, S2630035530)
+                                    p.catalog-select-content__item__header__subtitle Фильтр масляный
+                                .catalog-select-content__item__main 
+                                    .catalog-select-content__item__main__header
+                                        .catalog-select-content__item__brand
+                                            p SPACE AUTO
+                                            +icon('VerifiedRounded')
+                                        .catalog-select-content__item__review
+                                            +icon('StarRoundedActive')
+                                            p 5.0 (4 отзыва)
+                                    p.catalog-select-content__item__address Москва, ул. Свободы, 20
+                                    .catalog-select-content__item__main__info 
+                                        .catalog-select-content__item__metro
+                                            +icon('SubwayRounded')
+                                            p Тушинская
+                                        .catalog-select-content__item__phone
+                                            +icon('CallRounded')
+                                            p Показать номер
+                                .catalog-select-content__item__delivery
+                                    .catalog-select-content__item__delivery__wrapper
+                                        p Самовывоз
+                                        p Курьер
+                                        p Отправка ТК
+                                    .catalog-select-content__item__delivery__description 
+                                        p Самовывоз, доставка курьером от 300 ₽
+                                        p Отправка ТК СДЭК или Деловые Линии +300 ₽ к заказу
+                            .catalog-select-content__item__block_rigth
+                                .catalog-select-content__item__status 
+                                    .status.status_green
+                                    p В наличии
+                                .catalog-select-content__item__price
+                                    p 300 ₽
+                                    button.button.button--primary.catalog-select-content__item__price__button
+                                        +icon('ShoppingCartRoundedWhite')
+                                        p Купить
+                    +loop(2)
+                        a(href="##").catalog-select-content__item
+                            img.catalog-select-content__item__img(src=require('@images/Rectangle.png'))
+                            .catalog-select-content__item__wrapper
+                                .catalog-select-content__item__block_center
+                                    .catalog-select-content__item__header
+                                        .catalog-select-content__item__header__title 
+                                            p Mazda, CX-9 2630035530
+                                            p (S2630035530, S2630035530)
+                                        p.catalog-select-content__item__header__subtitle Фильтр масляный
+                                    .catalog-select-content__item__main 
+                                        .catalog-select-content__item__main__header
+                                            .catalog-select-content__item__brand
+                                                p SPACE AUTO
+                                                +icon('VerifiedRounded')
+                                            .catalog-select-content__item__review
+                                                +icon('StarRoundedActive')
+                                                p 5.0 (4 отзыва)
+                                        p.catalog-select-content__item__address Москва, ул. Свободы, 20
+                                        .catalog-select-content__item__main__info 
+                                            .catalog-select-content__item__metro
+                                                +icon('SubwayRoundedActive')
+                                                p Нагатинская
+                                            .catalog-select-content__item__phone
+                                                +icon('CallRounded')
+                                                p Показать номер
+                                    .catalog-select-content__item__delivery
+                                        .catalog-select-content__item__delivery__wrapper
+                                            p Самовывоз
+                                            p Курьер
+                                .catalog-select-content__item__block_rigth
+                                    .catalog-select-content__item__status 
+                                        .status.status_yellow
+                                        p Под заказ 3-4 дня
+                                    .catalog-select-content__item__price
+                                        p 300 ₽
+                                        button.button.button--primary.catalog-select-content__item__price__button
+                                            +icon('ShoppingCartRoundedWhite')
+                                            p Купить

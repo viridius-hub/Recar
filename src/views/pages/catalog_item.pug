@@ -1,0 +1,65 @@
+extends ../layout/default
+
+block content
+    .catalog-item
+        .container
+            .catalog-item__product
+                img.catalog-item__product__img(src=require('@images/Rectangle.png'))
+                .catalog-item__product__line
+                .catalog-item__product__info
+                    .catalog-item__product__info__wrapper
+                        p.catalog-item__product__info__title Mazda, CX-9 2630035530
+                        button.catalog-item__product__info__other Выбрать другое авто
+            button.back-button
+                +icon('back')
+                | Назад
+            .layout.layout_582.catalog-item-layout
+                .catalog-item-filter 
+                    .catalog-item-filter__header 
+                        .catalog-item-filter__header__tabs 
+                            button.button.catalog-item-filter__header__tab(data-catalog_item_open="groups") По группам
+                            button.button.catalog-item-filter__header__tab.catalog-item-filter__header__tab_active(data-catalog_item_open="nodes") По узлам
+                        .employees__search
+                            label.form__field.form__field--img
+                                .form__field__wrapper
+                                    .form__field--img_left
+                                        +icon("SearchRounded")
+                                    input(placeholder="Поиск по названию детали")
+                    .catalog-item-filter__content(data-catalog_item_content="groups")
+                        .catalog-item-filter__content__header 
+                            p №
+                            p OEM
+                            p Наименование детали
+                        .catalog-item-filter__content__line 
+                        .catalog-item-filter__content__wrapper 
+                            +loop(5)
+                                .catalog-item-filter__content__item 
+                                    p.catalog-item-filter__content__item__index 1
+                                    p.catalog-item-filter__content__item__oem 1140066821
+                                    p.catalog-item-filter__content__item__name Комплект уплотнительных прокладок двигателя
+                                    button 
+                                        +icon("InfoRounded")
+                    .catalog-item-filter__content.catalog-item-filter__content_active(data-catalog_item_content="nodes")
+                        .catalog-item-filter__content__header 
+                            p №
+                            p OEM
+                            p Наименование детали
+                        .catalog-item-filter__content__line 
+                        .catalog-item-filter__content__wrapper 
+                            +loop(8)
+                                .catalog-item-filter__content__item 
+                                    p.catalog-item-filter__content__item__index 1
+                                    p.catalog-item-filter__content__item__oem 1140066821
+                                    p.catalog-item-filter__content__item__name Комплект уплотнительных прокладок двигателя
+                                    button 
+                                        +icon("InfoRounded")
+                .catalog-item-content
+                    .catalog-item-content__title 
+                        p JB420W-4 E22|2
+                        p 2 - Комплект прокладок двигателя (JB420W)
+                    img.catalog-item-content__img(src=require('@images/Rectangle.png'))
+                    button.catalog-item-content__zoom(data-modal-open='card_item_zoom')
+                        +icon("ZoomOutMapRounded")
+
+    +modalImage('card_item_zoom')
+        img(src=require('@images/Rectangle.png'))

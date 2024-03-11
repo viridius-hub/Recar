@@ -43,6 +43,14 @@
         } 
     }
 
+    &__image{
+        max-width: 500px;
+        max-height: 90vh;
+        border-radius: 20px;
+        overflow-y: auto;
+        position: relative;
+    }
+
     &__container {
         background-color: #fff;
         padding: 24px;
@@ -55,6 +63,10 @@
         flex-direction: column;
         gap: 24px;
         width: 100%;
+        max-height: 90vh;
+        &::-webkit-scrollbar{
+            display: none;
+        }
 
         #{$root}{
             &_active {
@@ -94,8 +106,8 @@
         position: absolute;
         top: 24px;
         right: 24px;
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         .icon{
             width: inherit;
             height: inherit;
@@ -128,12 +140,6 @@
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
-            &__wrapper{
-                
-            }
-            &__title{
-
-            }
             &__subtitle{
                 color: #949DA5;
                 margin-top: -5px;
@@ -143,6 +149,11 @@
             height: 1px;
             width: 100%;
             background: #E2EEF6;
+        }
+        &__title{
+            color: #000000;
+            font-size: 16px; 
+            font-weight: 600;
         }
     }
 
