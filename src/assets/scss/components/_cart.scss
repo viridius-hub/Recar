@@ -1,11 +1,11 @@
 
-
-.cart{
-    h1{
+.cart {
+    h1 {
         margin-bottom: 24px;
         font-size: 22px;
     }
-    &-content, &-right{
+    
+    &-content, &-right {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -14,92 +14,117 @@
         box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.07);
         gap: 24px;
     }
-    &-content{
+    
+    &-content {
         padding: 24px;
-
-        &__header{
+        
+        &__header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 16px;
-            &__wrapper{
+            
+            &__wrapper {
                 display: flex;
                 align-items: center;
                 gap: 16px;
-                p{
-                    &:first-child{
+                
+                p {
+                    &:first-child {
                         font-weight: 600;
                     }
-                    &:last-child{
+                    
+                    &:last-child {
                         color: #949DA5;
                     }
                 }
             }
-            svg{
+            
+            svg {
                 width: 20px;
                 height: 20px;
                 overflow: visible;
                 cursor: pointer;
             }
         }
-        &__selected{
+        
+        &__selected {
             display: flex;
             align-items: center;
             gap: 16px;
-            &__input{
+            
+            label {
                 display: flex;
                 align-items: center;
                 gap: 8px;
             }
-            button{
+            
+            &__input {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            button {
                 padding: 0 16px;
             }
         }
-        &__block{
+        
+        &__block {
             display: grid;
             grid-template-columns: 24px 1fr 230px;
             gap: 24px;
             align-items: flex-start;
-            &_grid2{
+            
+            &_grid2 {
                 grid-template-columns: 1fr 120px;
             }
-            &__info{
+            
+            &__info {
                 display: flex;
                 gap: 16px;
                 font-family: "Inter";
-                img{
+                
+                img {
                     width: 60px;
                     height: 80px;
                     border-radius: 8px;
                 }
-                &__content{
-                    &__header{
+                
+                &__content {
+                    &__header {
                         display: flex;
                         gap: 8px;
                     }
-                    &__subtitle{
+                    
+                    &__subtitle {
                         color: #949DA5
                     }
-                    &__footer{
+                    
+                    &__footer {
                         margin-top: 12px;
                         display: flex;
                         gap: 8px;
-                        p{
-                            &:last-child{
+                        
+                        p {
+                            &:last-child {
                                 color: #FF735D;
                             }
                         }
                     }
-                    &__statistic{
+                    
+                    &__statistic {
                         display: flex;
                         align-items: center;
                         gap: 16px;
                         margin-top: 16px;
-                        svg{
+                        
+                        svg {
                             width: 24px;
                             height: 24px;
                         }
-                        &__wrapper{
+                        
+                        &__wrapper {
                             display: flex;
                             align-items: center;
                             gap: 8px;
@@ -107,41 +132,49 @@
                     }
                 }
             }
-            &__options{
+            
+            &__options {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 height: 100%;
-                &__top{
+                
+                &__top {
                     display: flex;
                     align-items: center;
                     gap: 16px;
                     justify-content: flex-end;
-                    &__total{
+                    
+                    &__total {
                         font-weight: 600;
                     }
-                    &__quantity{
+                    
+                    &__quantity {
                         display: flex;
                         align-items: center;
                         gap: 8px;
-                        button{
+                        
+                        button {
                             width: 20px;
                             height: 20px;
-                            svg{
+                            
+                            svg {
                                 width: inherit;
                                 height: inherit;
                             }
                         }
                     }
                 }
-                &__footer{
+                
+                &__footer {
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
                     gap: 8px;
                     color: #139BE8;
                     font-size: 14px;
-                    svg{
+                    
+                    svg {
                         width: 16px;
                         height: 16px;
                         overflow: visible;
@@ -149,23 +182,27 @@
                     }
                 }
             }
-            &__total{
+            
+            &__total {
                 display: flex;
                 align-items: center;
                 gap: 16px;
                 justify-content: flex-end;
-                p{
-                    &:first-child{
+                
+                p {
+                    &:first-child {
                         font-weight: 600;
                     }
-                    &:last-child{
+                    
+                    &:last-child {
                         font-family: 'Inter';
                         color: #949DA5;
                     }
                 }
             }
         }
-        &__notification{
+        
+        &__notification {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -175,97 +212,117 @@
             color: #000000;
             font-family: "Inter";
             margin: 16px 0;
-            svg{
+            
+            svg {
                 width: 20px;
                 height: 20px;
                 overflow: visible;
             }
         }
-        &__delivery{
+        
+        &__delivery {
             display: flex;
             flex-direction: column;
             gap: 24px;
-            &__header{
+            
+            &__header {
                 font-weight: 600;
             }
-            &__wrapper{
+            
+            &__wrapper {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
             }
-            &__item{
+            
+            &__item {
                 cursor: pointer;
                 display: flex;
                 align-items: center;
                 gap: 8px;
-                p{
-                    &:first-child{
+                
+                p {
+                    &:first-child {
                         color: #000000;
                     }
-                    &:last-child{
+                    
+                    &:last-child {
                         color: #949DA5;
                     }
                 }
-                &__wrapper{
+                
+                &__wrapper {
                     display: flex;
                     align-items: center;
                     gap: 6px;
-                    p{
+                    
+                    p {
                         color: #000000 !important;
                     }
-                }             
+                }
             }
         }
     }
-    &__line{
+    
+    &__line {
         width: 100%;
         height: 1px;
         background: #E2EEF6;
     }
-    &-right{
+    
+    &-right {
         padding: 16px;
         font-family: "Inter";
-        &__header{
+        
+        &__header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            p{
-                &:first-child{
+            
+            p {
+                &:first-child {
                     font-weight: 700;
                     font-family: "Montserrat";
                 }
             }
         }
-        &__wrapper{
+        
+        &__wrapper {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
-        &__block{
+        
+        &__block {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            p{
-                span{
+            
+            p {
+                span {
                     color: #949DA5;
                 }
             }
-            &_total{
-                p{
-                    &:last-child{
+            
+            &_total {
+                p {
+                    &:last-child {
                         font-weight: 700;
                         font-family: "Montserrat";
                     }
                 }
             }
         }
-        &__footer{
+        
+        &__footer {
             text-align: center;
             color: #949DA5;
-            a{
+            font-size: 14px;
+            
+            a {
                 color: #139BE8;
             }
         }
     }
-
+    
 }

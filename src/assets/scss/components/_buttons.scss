@@ -1,61 +1,86 @@
 .button {
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: none;
-  border: none;
-  outline: none;
-  padding: 8px 16px;
-  gap: 8px;
-  font-family: Montserrat, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  user-select: none;
-
-  &--primary {
-    border-radius: 8px;
-    background: var(--Accent-1, #139BE8);
-    color: var(--Neutral-White, #FFF);
-  }
-
-  &--secondary{
-    border-radius: 8px;
-    background: #AFC3D1;
-    color: var(--Neutral-White, #FFF);
-  }
-
-  &--third{
-    border-radius: 8px;
-    background: rgba(0, 185, 227, 0.05);
-    color: #139BE8;
-  }
-
-  &--text {
-    // color: var(--Accent-1, #139BE8);
-    border-radius: 8px;
-    &_red{
-      color: var(--secondary-red, #FF735D);
-    }
-    &_blue{
-      color: #139BE8;
-    }
-  }
-
-  &--primary-min {
-    padding: 4px 8px;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: -0.13px;
-  }
-
-  &--text-min {
-    color: var(--Accent-1, #139BE8);
-    font-weight: 400;
-    letter-spacing: -0.14px;
-    padding: 4px 8px;
-    font-size: 14px;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 8px 16px;
     gap: 8px;
-  }
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    user-select: none;
+    transition: background .3s, color .3s, border .3s;
+    
+    &--primary {
+        border-radius: 8px;
+        background: var(--Accent-1, #139BE8);
+        color: var(--Neutral-White, #FFF);
+        
+        &:hover {
+            background: rgba(0, 185, 227, 0.05);
+            color: #139BE8;
+        }
+    }
+    
+    &--secondary {
+        border-radius: 8px;
+        background: #AFC3D1;
+        color: var(--Neutral-White, #FFF);
+        
+        &:hover {
+            background: var(--Accent-1, #139BE8);
+            color: var(--Neutral-White, #FFF);
+        }
+    }
+    
+    &--third {
+        border-radius: 8px;
+        background: rgba(0, 185, 227, 0.05);
+        color: #139BE8;
+        
+        &:hover {
+            background: var(--Accent-1, #139BE8);
+            color: var(--Neutral-White, #FFF);
+        }
+    }
+    
+    &--text {
+        // color: var(--Accent-1, #139BE8);
+        border-radius: 8px;
+        
+        &_red {
+            border-radius: 8px;
+            color: var(--secondary-red, #FF735D);
+        }
+        
+        &_blue {
+            border-radius: 8px;
+            color: #139BE8;
+            
+            &:hover {
+                background: var(--Accent-1, #139BE8);
+                color: var(--Neutral-White, #FFF);
+            }
+        }
+    }
+    
+    &--primary-min {
+        padding: 4px 8px;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: -0.13px;
+    }
+    
+    &--text-min {
+        color: var(--Accent-1, #139BE8);
+        font-weight: 400;
+        letter-spacing: -0.14px;
+        padding: 4px 8px;
+        font-size: 14px;
+        gap: 8px;
+    }
 }

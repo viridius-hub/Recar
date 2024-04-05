@@ -1,7 +1,16 @@
 .fullpage {
-  width: 100%;
-  height: calc(100vh - 120px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 124px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &--reset-password {
+        align-items: flex-start;
+        
+        .form {
+            margin-top: 150px;
+            margin-bottom: 150px;
+        }
+    }
 }

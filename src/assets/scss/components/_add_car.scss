@@ -95,9 +95,9 @@
   &__checkbox {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    gap: 8px;
     align-items: center;
-    color: var(--neutral-gray, #949DA5);
+    color: #000000;
     font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -117,8 +117,8 @@
     align-items: center;
     gap: 8px;
     border-radius: 8px;
-    background: var(--accent-1-soft, rgba(0, 185, 227, 0.05));
-    color: var(--accent-1, #139BE8);
+    background: #00B9E30D;
+    color: #139BE8;
     font-family: Montserrat, sans-serif;
     font-size: 16px;
     font-weight: 600;

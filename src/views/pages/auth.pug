@@ -1,19 +1,18 @@
-extends ../layout/default
+extends ../layout/simple
 
 block header
     include ../layout/header_auth
 
 block content
     .fullpage
-        form.form
+        form#login_form.form
             p.form__title Войти
             label.field
-                //- +icon('MailOutlineRounded')
                 input(placeholder="Почта" name="login" type="email")
             label.field.field--password
-                //- +icon('SecurityRounded')
                 input(placeholder="Пароль" name="password" type="password")
                 span.field__password-hide
+                    +icon('RedEyeRounded')
                     +icon('RemoveRedEyeRounded')
             a(href="#!").form__forgot-password Забыли пароль?
             button(type="submit").btn.btn__join Войти

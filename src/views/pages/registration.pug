@@ -1,23 +1,24 @@
-extends ../layout/default
+extends ../layout/simple
 
 block header
     include ../layout/header_registration
 
 block content
     .fullpage
-        form.form
+        form#register_form.form
             p.form__title Регистрация
             label.field
-                input(placeholder="Фамилия" name="last_name" type="input")
+                input(placeholder="Фамилия" name="last_name" type="text")
             label.field
-                input(placeholder="Имя" name="first_name" type="input")
+                input(placeholder="Имя" name="first_name" type="text")
             label.field
-                input(placeholder="Отчество" name="middle_name" type="input")
+                input(placeholder="Отчество" name="middle_name" type="text")
             label.field
-                input(placeholder="Почта" name="email" type="input")
-            label.field
+                input(placeholder="Почта" name="email" type="email")
+            label.field.field--password
                 input(placeholder="Пароль" name="password" type="password")
                 span.field__password-hide
+                    +icon('RedEyeRounded')
                     +icon('RemoveRedEyeRounded')
             button(type="submit").btn.btn__join Создать аккаунт
             .policy Нажимая на кнопку, вы соглашаетесь с 
