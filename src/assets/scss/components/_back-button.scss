@@ -1,25 +1,29 @@
 .back-button {
-  display: inline-flex;
-  padding: 8px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 8px;
-
-  color: var(--accent-1, #139BE8);
-  font-family: Montserrat, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  transition: .2s;
-
-  margin-bottom: 24px;
-
-  .icon {
-    width: 16px;
-    height: 16px;
-  }
-
-  &:hover {
-    background: var(--accent-1-soft, rgba(0, 185, 227, 0.05));
-  }
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    
+    color: var(--accent-1, #139BE8);
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .2s;
+    
+    margin-bottom: 24px;
+    
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    &:hover {
+        background: var(--accent-1-soft, rgba(0, 185, 227, 0.05));
+    }
+    
+    @include media-down(md) {
+        padding: 8px 0;
+    }
 }
