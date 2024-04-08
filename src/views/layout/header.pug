@@ -5,16 +5,20 @@ header.header#header
                 a(href="/")
                     img(src=require('@images/logo.png'))
             .header__block
-                label.header__search
-                    +icon('search')
-                    input(placeholder="Поиск")
+                .only-desktop
+                    label.header__search
+                        +icon('search')
+                        input(placeholder="Поиск")
+                .only-mobile
+                    a(href="#").header__button
+                        +icon('SearchRoundedFilled')
                 .header__info
                     a(href="#").header__button
                         +icon('BookmarkRounded')
-                        | Избранное
+                        span Избранное
                     a(href="#").header__button
                         +icon('ShoppingCartRounded')
-                        | Корзина
+                        span Корзина
                     button.header__account
                         img(src=require('@images/avatar.png'))
                         +icon('KeyboardArrowUpRounded')

@@ -1,24 +1,48 @@
 img, video {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .text-black {
-  color: #000;
+    color: #000;
 }
 
 body {
-  &::-webkit-scrollbar {
-    width: 8px;
-    border-radius: 4px;
-  }
+    &::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background: var(--Neutral-White, #FFF);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background: var(--Accent-1, #139BE8);
+    }
+}
 
-  &::-webkit-scrollbar-track {
-    border-radius: 4px;
-    background: var(--Neutral-White, #FFF);
-  }
+.only-desktop {
+    display: none;
+    
+    @include media-up(md) {
+        display: contents;
+    }
+}
 
-  &::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background: var(--Accent-1, #139BE8);
-  }
+.only-tablet {
+    display: none;
+    
+    @include media-down(md) {
+        display: contents;
+    }
+}
+
+.only-mobile {
+    display: none;
+    
+    @include media-down(sm) {
+        display: contents;
+    }
 }
