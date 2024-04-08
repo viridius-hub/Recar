@@ -26,7 +26,7 @@ body {
 .only-desktop {
     display: none;
     
-    @include media-up(md) {
+    @include media-up(lg) {
         display: contents;
     }
 }

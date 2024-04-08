@@ -12,6 +12,14 @@ import "./forms"
 import "./cart"
 
 window.addEventListener("DOMContentLoaded", () => {
+    const navBarButtonEls = document.querySelectorAll('.nav-bar-menu')
+    navBarButtonEls.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault()
+            button.classList.toggle('nav-bar-menu--active')
+        })
+    })
+
     new Swiper('.home-banner', {
         modules: [Navigation, Autoplay, EffectFade],
         loop: true,

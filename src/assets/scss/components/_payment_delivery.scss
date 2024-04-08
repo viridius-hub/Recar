@@ -1,7 +1,6 @@
 
-
-.payment-delivery{
-    &__wrapper{
+.payment-delivery {
+    &__wrapper {
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -9,32 +8,44 @@
         font-weight: 500;
         font-size: 16px;
     }
-    &__list{
+    
+    &__list {
         display: flex;
         flex-direction: column;
         gap: 12px;
         margin: 0;
         padding: 0;
-        &_second{
+        
+        &_second {
             list-style: disc;
             padding-left: 20px;
         }
     }
-    &__block{
+    
+    &__block {
         display: flex;
         align-items: center;
         gap: 8px;
-        svg{
+        
+        svg {
             width: 24px;
             height: 24px;
         }
     }
-    &__title{
-        font-size: 17px; 
-        font-family: Montserrat; 
+    
+    &__title {
+        font-size: 17px;
         font-weight: 600;
+        
+        @include media-down(md) {
+            font-size: 16px;
+            br {
+                display: none;
+            }
+        }
     }
-    &__text{
+    
+    &__text {
         display: flex;
         flex-direction: column;
         gap: 12px;
