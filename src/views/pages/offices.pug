@@ -8,20 +8,27 @@ block content
                 | Назад
             .layout
                 .layout__left
-                    .nav-bar
-                        a(href='##').nav-bar__item Личные данные
-                        a(href='##').nav-bar__item История заказов
-                        a(href='##').nav-bar__item История поиска
-                        a(href='##').nav-bar__item Гараж
-                    .nav-bar
-                        a(href='##').nav-bar__item Данные организации
-                        a(href='##').nav-bar__item Управление подпиской
-                        a(href='##').nav-bar__item Сотрудники
-                        a(href='##').nav-bar__item.nav-bar__item--active Адреса
-                    .nav-bar
-                        a(href='##').nav-bar__item Панель управления
+                    button.nav-bar-menu
+                        .nav-bar-menu__button
+                            span
+                            span
+                            span
+                        span.nav-bar-menu__span Адреса
+                    .nav-bar-items
+                        .nav-bar
+                            a(href='##').nav-bar__item Личные данные
+                            a(href='##').nav-bar__item История заказов
+                            a(href='##').nav-bar__item История поиска
+                            a(href='##').nav-bar__item Гараж
+                        .nav-bar
+                            a(href='##').nav-bar__item Данные организации
+                            a(href='##').nav-bar__item Управление подпиской
+                            a(href='##').nav-bar__item Сотрудники
+                            a(href='##').nav-bar__item.nav-bar__item--active Адреса
+                        .nav-bar
+                            a(href='##').nav-bar__item Панель управления
                 .layout__right.office__main
-                    h1.office__title Адреса
+                    h1.office__title.only-desktop Адреса
                     .office__search
                         label.form__field.form__field--img
                             .form__field__wrapper

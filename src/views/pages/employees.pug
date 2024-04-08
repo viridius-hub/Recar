@@ -8,20 +8,27 @@ block content
                 | Назад
             .layout
                 .layout__left
-                    .nav-bar
-                        a(href='##').nav-bar__item Личные данные
-                        a(href='##').nav-bar__item История заказов
-                        a(href='##').nav-bar__item История поиска
-                        a(href='##').nav-bar__item Гараж
-                    .nav-bar
-                        a(href='##').nav-bar__item Данные организации
-                        a(href='##').nav-bar__item Управление подпиской
-                        a(href='##').nav-bar__item.nav-bar__item--active Сотрудники
-                        a(href='##').nav-bar__item Адреса
-                    .nav-bar
-                        a(href='##').nav-bar__item Панель управления
+                    button.nav-bar-menu
+                        .nav-bar-menu__button
+                            span
+                            span
+                            span
+                        span.nav-bar-menu__span Сотрудники
+                    .nav-bar-items
+                        .nav-bar
+                            a(href='##').nav-bar__item Личные данные
+                            a(href='##').nav-bar__item История заказов
+                            a(href='##').nav-bar__item История поиска
+                            a(href='##').nav-bar__item Гараж
+                        .nav-bar
+                            a(href='##').nav-bar__item Данные организации
+                            a(href='##').nav-bar__item Управление подпиской
+                            a(href='##').nav-bar__item.nav-bar__item--active Сотрудники
+                            a(href='##').nav-bar__item Адреса
+                        .nav-bar
+                            a(href='##').nav-bar__item Панель управления
                 .layout__right.employees__main
-                    h1.employees__title Сотрудники
+                    h1.employees__title.only-desktop Сотрудники
                     .employees__search
                         label.form__field.form__field--img
                             .form__field__wrapper

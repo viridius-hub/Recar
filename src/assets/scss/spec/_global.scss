@@ -27,7 +27,7 @@ body {
     display: none;
     
     @include media-up(lg) {
-        display: contents;
+        display: initial;
     }
 }
 
@@ -35,7 +35,7 @@ body {
     display: none;
     
     @include media-down(md) {
-        display: contents;
+        display: initial;
     }
 }
 
@@ -43,6 +43,6 @@ body {
     display: none;
     
     @include media-down(sm) {
-        display: contents;
+        display: initial;
     }
 }

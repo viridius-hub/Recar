@@ -277,6 +277,10 @@
         line-height: normal;
         letter-spacing: -0.13px;
         
+        @include media-down(sm) {
+            position: static;
+        }
+        
         &--success {
             color: var(--Secondary-Green, #49B870);
         }

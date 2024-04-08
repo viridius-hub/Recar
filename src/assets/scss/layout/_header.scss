@@ -61,6 +61,14 @@
         }
     }
     
+    &__search-block {
+        width: 100%;
+        
+        @include media-down(sm) {
+            display: none;
+        }
+    }
+    
     &__search {
         width: 100%;
         display: flex;
@@ -111,6 +119,10 @@
         .icon {
             width: 16px;
             height: 16px;
+            
+            @include media-up(md) {
+                display: none;
+            }
         }
         
         @include media-down(sm) {
@@ -118,6 +130,12 @@
             height: 32px;
             padding: 0 !important;
             margin-left: 32px - 4px;
+        }
+        
+        span {
+            @include media-down(sm) {
+                display: none;
+            }
         }
     }
     

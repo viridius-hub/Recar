@@ -5,7 +5,7 @@ header.header#header
                 a(href="/")
                     img(src=require('@images/logo.png'))
             .header__block
-                .only-desktop
+                .header__search-block
                     label.header__search
                         +icon('search')
                         input(placeholder="Поиск")
@@ -20,6 +20,5 @@ header.header#header
                         +icon('ShoppingCartRounded')
                         span Корзина
                     a.header__login.button.button--primary
-                        span.only-mobile
-                            +icon('LoginRounded')
-                        span.only-desktop Войти
+                        +icon('LoginRounded')
+                        span Войти

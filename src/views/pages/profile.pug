@@ -8,13 +8,20 @@ block content
                 | Назад
             .layout
                 .layout__left
-                    .nav-bar
-                        a(href='#').nav-bar__item.nav-bar__item--active Личные данные
-                        a(href='#').nav-bar__item История заказов
-                        a(href='#').nav-bar__item История поиска
-                        a(href='#').nav-bar__item Гараж
+                    button.nav-bar-menu
+                        .nav-bar-menu__button
+                            span
+                            span
+                            span
+                        span.nav-bar-menu__span Личные данные
+                    .nav-bar-items
+                        .nav-bar
+                            a(href='#').nav-bar__item.nav-bar__item--active Личные данные
+                            a(href='#').nav-bar__item История заказов
+                            a(href='#').nav-bar__item История поиска
+                            a(href='#').nav-bar__item Гараж
                 .layout__right
-                    h1.title Личные данные
+                    h1.title.only-desktop Личные данные
                     .profile__section
                         .profile__name
                             p Пушкин Александр Сергеевич
