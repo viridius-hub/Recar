@@ -13,4 +13,8 @@
 
 .main{
     margin-top: 124px;
+    
+    @include media-down(md) {
+        margin-top: 80px;
+    }
 }

@@ -5,12 +5,26 @@
     align-items: center;
     justify-content: center;
     
+    @include media-down(md) {
+        align-items: flex-start;
+        
+        .form {
+            margin-top: 120px;
+            margin-bottom: 120px;
+        }
+    }
+    
     &--reset-password {
         align-items: flex-start;
         
         .form {
             margin-top: 150px;
             margin-bottom: 150px;
+            
+            @include media-down(md) {
+                margin-top: 120px;
+                margin-bottom: 120px;
+            }
         }
     }
 }

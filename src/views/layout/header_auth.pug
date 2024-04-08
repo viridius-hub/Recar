@@ -5,11 +5,21 @@ header.header#header
                 a(href="/")
                     img(src=require('@images/logo.png'))
             .header__block
-                label.header__search
-                    +icon('search')
-                    input(placeholder="Поиск")
+                .only-desktop
+                    label.header__search
+                        +icon('search')
+                        input(placeholder="Поиск")
+                .only-mobile
+                    a(href="#").header__button
+                        +icon('SearchRoundedFilled')
                 .header__info
-                    a.button.button--primary Создать аккаунт
-                    button.header__account
-                        img(src=require('@images/avatar.png'))
-                        +icon('KeyboardArrowUpRounded')
+                    a(href="#").header__button
+                        +icon('BookmarkRounded')
+                        span Избранное
+                    a(href="#").header__button
+                        +icon('ShoppingCartRounded')
+                        span Корзина
+                    a.header__login.button.button--primary
+                        span.only-mobile
+                            +icon('LoginRounded')
+                        span.only-desktop Войти
