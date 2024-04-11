@@ -1,4 +1,4 @@
-extends ../layout/default
+extends ../layout/simple
 
 block content
     .new-car
@@ -7,7 +7,6 @@ block content
                 +icon('back')
                 | Назад
             .new-car__content
-                h1.new-car__title Тачка 1
                 .new-car__sections
                     .new-car__section
                         label.new-car__field.new-car__field--gray
@@ -25,8 +24,9 @@ block content
                                 +icon('CheckBoxOutlineBlankRounded')
                                 +icon('CheckBoxRounded')
                             span Сделать главным авто
-                        button.new-car__edit Редактировать
-                        button.new-car__del Удалить
+                        .new-car__buttons
+                            button.new-car__edit Редактировать
+                            button.new-car__del Удалить
                     .new-car__vertical_line
                     .new-car__section.new-car__section--gap16
                         label.new-car__field.new-car__field--gray
