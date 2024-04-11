@@ -1,4 +1,4 @@
-extends ../layout/default
+extends ../layout/simple
 
 block content
     .orders
@@ -13,13 +13,6 @@ block content
                         label.orders__search
                             +icon('search')
                             input(placeholder="Поиск по названию или артикулу")
-                        //- .orders__filters
-                        //-     button.orders__filter
-                        //-         | По дате добавления
-                        //-         +icon('arrow-down')
-                        //-     button.orders__filter
-                        //-         | По статусу
-                        //-         +icon('arrow-down')
                 .orders__main
                     .orders__table
                         .orders__row.orders__row_header.orders__row--grid-5
@@ -43,4 +36,6 @@ block content
                                 .orders__column
                                     p 20.12.2022
                                 .orders__column.orders__column--end
-                                    button.orders__button Подробнее
+                                    button.orders__button
+                                        span Подробнее
+                                        +icon('InfoOutlineRounded')
