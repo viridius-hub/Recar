@@ -1,4 +1,5 @@
-import Swiper, {Navigation, Autoplay, EffectFade} from 'swiper';
+import Swiper, {Autoplay, EffectFade, Navigation} from 'swiper';
+import Isotope from "isotope-layout"
 
 import "./fields"
 import "./select"
@@ -12,6 +13,32 @@ import "./forms"
 import "./cart"
 
 window.addEventListener("DOMContentLoaded", () => {
+    const tables = document.querySelectorAll('.js-filter-order')
+    tables.forEach(table => {
+        const iso = new Isotope(table, {
+            itemSelector: '.orders__row',
+            getSortData: {
+                date: '.filter-date',
+                status: '.filter-status',
+            }
+        });
+
+        const buttonDateEl = document.querySelector('.orders__button-date')
+        const buttonStatusEl = document.querySelector('.orders__button-status')
+        let reverseDate = true
+        let reverseStatus = true
+
+        buttonDateEl && buttonDateEl.addEventListener('click', () => {
+            reverseDate = !reverseDate
+            iso.arrange({ sortBy: 'date', sortAscending: reverseDate });
+        })
+
+        buttonStatusEl && buttonStatusEl.addEventListener('click', () => {
+            reverseStatus = !reverseStatus
+            iso.arrange({ sortBy: 'status', sortAscending: reverseStatus });
+        })
+    })
+
     const navBarButtonEls = document.querySelectorAll('.nav-bar-menu')
     navBarButtonEls.forEach(button => {
         button.addEventListener('click', (e) => {

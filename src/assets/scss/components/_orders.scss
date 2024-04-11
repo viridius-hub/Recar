@@ -150,6 +150,14 @@
         gap: 8px;
         align-self: stretch;
         
+        &--main {
+            .orders__row {
+                &:first-child {
+                    border-bottom: none;
+                }
+            }
+        }
+        
         @include media-down(md) {
             width: 100%;
             padding: 0;
@@ -165,9 +173,13 @@
         justify-content: center;
         align-items: center;
         flex: 1 0 0;
-        transition: .3s;
+        transition: background .3s;
         color: #000000;
         font-family: Inter, sans-serif;
+        
+        @include media-down(md) {
+            grid-template-columns: 130px 130px 130px 130px 130px 50px;
+        }
         
         @include media-down(md) {
             width: 100%;
@@ -187,12 +199,16 @@
             grid-template-columns: 1fr 1fr 1fr 125px 1fr;
             
             @include media-down(md) {
-                grid-template-columns: 1fr 1fr 1fr 130px 24px;
+                grid-template-columns: 1fr 1fr 1fr 130px 50px;
             }
         }
         
         &--grid-6 {
             grid-template-columns: 1fr 1fr 1fr 1fr 130px 125px;
+            
+            @include media-down(md) {
+                grid-template-columns: 130px 130px 130px 130px 130px 50px;
+            }
         }
         
         
@@ -230,6 +246,24 @@
         line-height: normal;
         letter-spacing: -0.16px;
         gap: 8px;
+        color: inherit;
+        
+        button {
+            color: inherit;
+            font-size: inherit;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            
+            p {
+                width: auto;
+            }
+        }
+        
+        .icon {
+            width: 16px;
+            height: 16px;
+        }
         
         @include media-down(sm) {
             font-size: 14px;
@@ -282,7 +316,7 @@
         justify-content: center;
         align-items: center;
         gap: 8px;
-        color: var(--accent-1, #139BE8);
+        color: var(--accent-1, #139BE8) !important;
         font-family: Inter, sans-serif;
         font-size: 14px;
         font-weight: 400;

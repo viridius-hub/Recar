@@ -1,4 +1,4 @@
-extends ../layout/default
+extends ../layout/simple
 
 block content
     .orders
@@ -13,20 +13,17 @@ block content
                         label.orders__search
                             +icon('search')
                             input(placeholder="Поиск по названию или артикулу")
-                        //- .orders__filters
-                        //-     button.orders__filter
-                        //-         | По дате добавления
-                        //-         +icon('arrow-down')
-                        //-     button.orders__filter
-                        //-         | По статусу
-                        //-         +icon('arrow-down')
                 .orders__main
                     .orders__table
                         .orders__row.orders__row_header.orders__row--grid-6
                             .orders__column
-                                p Дата
+                                button.orders__button-date
+                                    p Дата
+                                    +icon('ImportExportRounded')
                             .orders__column
-                                p Статус
+                                button.orders__button-status
+                                    p Статус
+                                    +icon('ImportExportRounded')
                             .orders__column
                                 p Номер
                             .orders__column
@@ -34,10 +31,11 @@ block content
                             .orders__column
                                 p Сумма
                             .orders__column
+                    .orders__table--main.orders__table.js-filter-order
                         .orders__row.orders__row--grid-6
-                            .orders__column.orders__column--start
-                                p 20.12.2022
-                            .orders__column
+                            .filter-date.orders__column.orders__column--start
+                                p 12.12.2022
+                            .filter-status.orders__column
                                 span.orders__circle.orders__circle--yellow
                                 | Оформлен
                             .orders__column
@@ -47,11 +45,13 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button.orders__column--end(data-modal-open='remove_car') Подробнее
+                                button.orders__button.orders__column--end(data-modal-open='remove_car')
+                                    span Подробнее
+                                    +icon('InfoOutlineRounded')
                         .orders__row.orders__row--grid-6
-                            .orders__column.orders__column--start
-                                p 20.12.2022
-                            .orders__column
+                            .filter-date.orders__column.orders__column--start
+                                p 13.12.2022
+                            .filter-status.orders__column
                                 span.orders__circle.orders__circle--yellow
                                 | Оформлен
                             .orders__column
@@ -61,11 +61,13 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button.orders__column--end Подробнее
+                                button.orders__button.orders__column--end
+                                    span Подробнее
+                                    +icon('InfoOutlineRounded')
                         .orders__row.orders__row--grid-6
-                            .orders__column.orders__column--start
-                                p 20.12.2022
-                            .orders__column
+                            .filter-date.orders__column.orders__column--start
+                                p 14.12.2022
+                            .filter-status.orders__column
                                 span.orders__circle.orders__circle--yellow
                                 | Оформлен
                             .orders__column
@@ -75,11 +77,13 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button.orders__column--end Подробнее
+                                button.orders__button.orders__column--end
+                                    span Подробнее
+                                    +icon('InfoOutlineRounded')
                         .orders__row.orders__row--grid-6
-                            .orders__column.orders__column--start
-                                p 20.12.2022
-                            .orders__column
+                            .filter-date.orders__column.orders__column--start
+                                p 15.12.2022
+                            .filter-status.orders__column
                                 span.orders__circle.orders__circle--red
                                 | Отменен
                             .orders__column
@@ -89,11 +93,13 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button.orders__column--end Подробнее
+                                button.orders__button.orders__column--end
+                                    span Подробнее
+                                    +icon('InfoOutlineRounded')
                         .orders__row.orders__row--grid-6
-                            .orders__column.orders__column--start
-                                p 20.12.2022
-                            .orders__column
+                            .filter-date.orders__column.orders__column--start
+                                p 16.12.2022
+                            .filter-status.orders__column
                                 span.orders__circle.orders__circle--green
                                 | Завершен
                             .orders__column
@@ -103,11 +109,13 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button.orders__column--end Подробнее
+                                button.orders__button.orders__column--end
+                                    span Подробнее
+                                    +icon('InfoOutlineRounded')
                         .orders__row.orders__row--grid-6
-                            .orders__column.orders__column--start
-                                p 20.12.2022
-                            .orders__column
+                            .filter-date.orders__column.orders__column--start
+                                p 17.12.2022
+                            .filter-status.orders__column
                                 span.orders__circle.orders__circle--yellow
                                 | Оформлен
                             .orders__column
@@ -117,11 +125,13 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button.orders__column--end Подробнее
+                                button.orders__button.orders__column--end
+                                    span Подробнее
+                                    +icon('InfoOutlineRounded')
                         .orders__row.orders__row--grid-6
-                            .orders__column.orders__column--start
-                                p 20.12.2022
-                            .orders__column
+                            .filter-date.orders__column.orders__column--start
+                                p 18.12.2022
+                            .filter-status.orders__column
                                 span.orders__circle.orders__circle--yellow
                                 | Оформлен
                             .orders__column
@@ -131,10 +141,12 @@ block content
                             .orders__column
                                 p.text-black 30 000,00 ₽
                             .orders__column
-                                button.orders__button.orders__column--end Подробнее
+                                button.orders__button.orders__column--end
+                                    span Подробнее
+                                    +icon('InfoOutlineRounded')
     +modal('remove_car')(class="modal_w706")
-        .modal__header 
-            .modal__header__wrapper 
+        .modal__header
+            .modal__header__wrapper
                 p.modal__header__title Заказ 892189-098
                 .modal__header__status
                     span.orders__circle.orders__circle--yellow
@@ -180,7 +192,7 @@ block content
                 span.text-black Отзыв
                 .field-label__textarea
                     textarea(type="textarea" placeholder="Поделитесь впечатлениями о товарах и/или продавце" resize=false)
-        .modal__footer 
+        .modal__footer
             .modal__footer__wrapper.modal__footer__wrapper_right
                 button.button.button--text_blue Повторить заказ
                 button.button.button--secondary Оставить отзыв 
