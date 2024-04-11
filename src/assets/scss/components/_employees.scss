@@ -1,5 +1,7 @@
 .employees {
-    padding-bottom: 50px;
+    @include media-down(md) {
+        padding-bottom: 200px;
+    }
     
     &__main {
         display: flex;
@@ -7,6 +9,10 @@
         gap: 24px;
         padding: 24px;
         height: fit-content;
+        
+        @include media-down(sm) {
+            padding: 24px 16px;
+        }
     }
     
     &__title {
@@ -41,6 +47,10 @@
     }
     
     &__item {
+        @include media-down(sm) {
+            position: relative;
+            padding-bottom: 32px;
+        }
         display: flex;
         flex-direction: column;
         gap: 6px;
@@ -53,6 +63,12 @@
         &__title {
             font-weight: 700;
             color: #000000;
+            
+            @include media-down(sm) {
+                span {
+                    display: block;
+                }
+            }
         }
         
         &__change {
@@ -60,6 +76,12 @@
             font-size: 14px;
             font-family: "Inter";
             font-weight: 400;
+            
+            @include media-down(sm) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
         }
         
         &__mail, &__info {
@@ -69,6 +91,7 @@
     }
     
     &__new {
+        cursor: pointer;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -77,13 +100,9 @@
         font-family: "Inter";
         color: #000000;
         
-        button {
-            display: flex;
-            
-            svg {
-                width: 24px;
-                height: 24px;
-            }
+        .icon {
+            width: 24px;
+            height: 24px;
         }
     }
     
