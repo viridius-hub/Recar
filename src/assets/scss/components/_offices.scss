@@ -1,61 +1,93 @@
-.office{
-    &__main{
+.office {
+    padding-bottom: 50px;
+    
+    &__main {
         display: flex;
         flex-direction: column;
         gap: 24px;
         padding: 24px;
         height: fit-content;
+        
+        @include media-down(sm) {
+            padding: 24px 16px;
+        }
     }
-    &__title{
+    
+    &__title {
         width: 100%;
-        text-align: center; 
-        color: #000000; 
+        text-align: center;
+        color: #000000;
         font-size: 20px;
         font-weight: 700;
     }
-    &__search{
+    
+    &__search {
         width: 100%;
-        input{
+        
+        input {
             background: rgba(0, 185, 227, 0.05);
             border: 1px solid;
             border-color: rgba(0, 185, 227, 0.05);
         }
     }
-    &__wrapper{
+    
+    &__wrapper {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
-    &__line{
+    
+    &__line {
         width: 100%;
         height: 1px;
         background: #E2EEF6;
     }
-    &__item{
+    
+    &__item {
         display: flex;
         justify-content: space-between;
-        &__wrapper{
+        
+        @include media-down(sm) {
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 16px;
+        }
+        
+        &__wrapper {
             display: flex;
             align-items: center;
             gap: 8px;
-            svg{
+            
+            svg {
                 width: 24px;
                 height: 24px;
+                min-width: 24px;
+                min-height: 24px;
+                max-width: 24px;
+                max-height: 24px;
             }
         }
-        &__title{
+        
+        &__title {
             font-weight: 500;
             color: #000000;
         }
-        &__change{
-            color: #139BE8; 
-            font-size: 14px; 
-            font-family: "Inter"; 
+        
+        &__change {
+            color: #139BE8;
+            font-size: 14px;
+            font-family: "Inter";
             font-weight: 400;
+            
+            @include media-down(sm) {
+                padding-left: 32px;
+                text-align: left;
+            }
         }
     }
-    &__new{
+    
+    &__new {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -63,12 +95,10 @@
         font-size: 17px;
         font-family: "Inter";
         color: #000000;
-        button{
-            display: flex;
-            svg{
-                width: 24px;
-                height: 24px;
-            }
+        
+        .icon {
+            width: 24px;
+            height: 24px;
         }
     }
 }

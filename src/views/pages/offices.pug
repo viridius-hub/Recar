@@ -1,4 +1,4 @@
-extends ../layout/default
+extends ../layout/simple
 
 block content
     .office 
@@ -41,12 +41,11 @@ block content
                                 .office__item__wrapper
                                     +icon("LocationonRounded")
                                     p.office__item__title г. Санкт-Петербург, ул. Пушкина, д. 17
-                                button.office__item__change Редактировать
+                                button.office__item__change Изменить
                             .office__line
-                    .office__new 
+                    button.office__new
                         p Новый адрес
-                        button 
-                            +icon("AddRounded")
+                        +icon("AddRounded")
 
 
 

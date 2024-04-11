@@ -1,61 +1,74 @@
-.employees{
-    &__main{
+.employees {
+    padding-bottom: 50px;
+    
+    &__main {
         display: flex;
         flex-direction: column;
         gap: 24px;
         padding: 24px;
         height: fit-content;
     }
-    &__title{
+    
+    &__title {
         width: 100%;
-        text-align: center; 
-        color: #000000; 
+        text-align: center;
+        color: #000000;
         font-size: 20px;
         font-weight: 700;
     }
-    &__search{
+    
+    &__search {
         width: 100%;
-        input{
+        
+        input {
             background: rgba(0, 185, 227, 0.05);
             border: 1px solid;
             border-color: rgba(0, 185, 227, 0.05);
         }
     }
-    &__wrapper{
+    
+    &__wrapper {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 12px;
     }
-    &__line{
+    
+    &__line {
         width: 100%;
         height: 1px;
         background: #E2EEF6;
     }
-    &__item{
+    
+    &__item {
         display: flex;
         flex-direction: column;
         gap: 6px;
-        &__header{
+        
+        &__header {
             display: flex;
             justify-content: space-between;
         }
-        &__title{
+        
+        &__title {
             font-weight: 700;
             color: #000000;
         }
-        &__change{
-            color: #139BE8; 
-            font-size: 14px; 
-            font-family: "Inter"; 
+        
+        &__change {
+            color: #139BE8;
+            font-size: 14px;
+            font-family: "Inter";
             font-weight: 400;
         }
-        &__mail, &__info{
+        
+        &__mail, &__info {
             color: #949DA5;
-            font-family: "Inter"; 
+            font-family: "Inter";
         }
     }
-    &__new{
+    
+    &__new {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -63,53 +76,64 @@
         font-size: 17px;
         font-family: "Inter";
         color: #000000;
-        button{
+        
+        button {
             display: flex;
-            svg{
+            
+            svg {
                 width: 24px;
                 height: 24px;
             }
         }
     }
-    &__modal{
+    
+    &__modal {
         display: flex;
         flex-direction: column;
         gap: 8px;
-        &__office{
+        
+        &__office {
             display: flex;
             align-items: center;
             justify-content: space-between;
             height: 46px;
-            svg{
+            
+            svg {
                 width: 24px;
                 height: 24px;
             }
-            .icon--trash{
+            
+            .icon--trash {
                 cursor: pointer;
             }
-            &__wrapper{
+            
+            &__wrapper {
                 display: flex;
                 align-items: center;
                 gap: 8px;
             }
         }
-        &__add{
+        
+        &__add {
             height: 46px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            p{
+            
+            p {
                 font-size: 17px;
                 color: #000000;
                 font-family: "Inter";
             }
-            svg{
+            
+            svg {
                 width: 24px;
                 height: 24px;
                 cursor: pointer;
             }
         }
-        &__all{
+        
+        &__all {
             display: flex;
             align-items: center;
             gap: 8px;
