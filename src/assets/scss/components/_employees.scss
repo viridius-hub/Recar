@@ -74,7 +74,7 @@
         &__change {
             color: #139BE8;
             font-size: 14px;
-            font-family: "Inter";
+            font-family: "Inter", sans-serif;
             font-weight: 400;
             
             @include media-down(sm) {
@@ -86,7 +86,7 @@
         
         &__mail, &__info {
             color: #949DA5;
-            font-family: "Inter";
+            font-family: "Inter", sans-serif;
         }
     }
     
@@ -97,7 +97,7 @@
         justify-content: space-between;
         align-items: center;
         font-size: 17px;
-        font-family: "Inter";
+        font-family: "Inter", sans-serif;
         color: #000000;
         
         .icon {
@@ -142,7 +142,7 @@
             p {
                 font-size: 17px;
                 color: #000000;
-                font-family: "Inter";
+                font-family: "Inter", sans-serif;
             }
             
             svg {
