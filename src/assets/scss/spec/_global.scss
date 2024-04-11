@@ -46,3 +46,22 @@ body {
         display: initial;
     }
 }
+
+.non-desktop {
+    @include media-up(lg) {
+        display: none;
+    }
+}
+
+
+.non-tablet {
+    @include media-only(md) {
+        display: none;
+    }
+}
+
+.non-mobile {
+    @include media-down(sm) {
+        display: none;
+    }
+}
