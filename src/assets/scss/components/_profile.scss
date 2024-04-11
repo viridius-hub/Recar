@@ -96,6 +96,10 @@
         gap: 24px;
         padding-bottom: 20px;
         
+        @include media-down(md) {
+            grid-template-columns: 1fr;
+        }
+        
         // &__block{
         //   display: flex;
         //   flex-direction: column;
