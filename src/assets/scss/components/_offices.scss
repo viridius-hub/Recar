@@ -1,5 +1,7 @@
 .office {
-    padding-bottom: 50px;
+    @include media-down(md) {
+        padding-bottom: 200px;
+    }
     
     &__main {
         display: flex;
