@@ -1,4 +1,4 @@
-extends ../layout/default
+extends ../layout/simple
 
 block content
     .catalog-select
@@ -19,7 +19,7 @@ block content
                             p Показать на карте
                     //- .catalog-select__product__info__footer
                     //-     .catalog-select__product__info__footer__wrapper
-                            
+
                     //-         button.button.catalog-select__product__info__footer__analogues
                     //-             +icon('ModalClose')
                     //-             p Закрыть аналоги
@@ -28,7 +28,7 @@ block content
                     //-         +icon("LocationonRoundedBlue")
                     //-         p Показать на карте
             .layout.layout_412.catalog-select-layout
-                form.catalog-select-filter 
+                form.catalog-select-filter
                     .catalog-select-filter__content
                         .catalog-select-filter__content__dropdown.catalog-select-filter__content__dropdown_open(data-catalog_select_dropdown)
                             button(type='button').catalog-select-filter__content__dropdown__button
@@ -172,7 +172,7 @@ block content
                                             ul.select__options__wrapper
                                                 li(data-select-option).select__options__item Полный доступ
                                                 li(data-select-option).select__options__item Ограниченый доступ
-                    .catalog-select-filter__buttons 
+                    .catalog-select-filter__buttons
                         button.button.button--primary Показать
                         button.button.button--text_blue Сбросить фильтры
                 .catalog-select-content
@@ -181,11 +181,11 @@ block content
                         .catalog-select-content__item__wrapper
                             .catalog-select-content__item__block_center
                                 .catalog-select-content__item__header
-                                    .catalog-select-content__item__header__title 
+                                    .catalog-select-content__item__header__title
                                         p Mazda, CX-9 2630035530
                                         p (S2630035530, S2630035530)
                                     p.catalog-select-content__item__header__subtitle Фильтр масляный
-                                .catalog-select-content__item__main 
+                                .catalog-select-content__item__main
                                     .catalog-select-content__item__main__header
                                         .catalog-select-content__item__brand
                                             p SPACE AUTO
@@ -194,7 +194,7 @@ block content
                                             +icon('StarRoundedActive')
                                             p 5.0 (4 отзыва)
                                     p.catalog-select-content__item__address Москва, ул. Свободы, 20
-                                    .catalog-select-content__item__main__info 
+                                    .catalog-select-content__item__main__info
                                         .catalog-select-content__item__metro
                                             +icon('SubwayRounded')
                                             p Тушинская
@@ -206,11 +206,11 @@ block content
                                         p Самовывоз
                                         p Курьер
                                         p Отправка ТК
-                                    .catalog-select-content__item__delivery__description 
+                                    .catalog-select-content__item__delivery__description
                                         p Самовывоз, доставка курьером от 300 ₽
                                         p Отправка ТК СДЭК или Деловые Линии +300 ₽ к заказу
                             .catalog-select-content__item__block_rigth
-                                .catalog-select-content__item__status 
+                                .catalog-select-content__item__status
                                     .status.status_green
                                     p В наличии
                                 .catalog-select-content__item__price
@@ -224,11 +224,11 @@ block content
                             .catalog-select-content__item__wrapper
                                 .catalog-select-content__item__block_center
                                     .catalog-select-content__item__header
-                                        .catalog-select-content__item__header__title 
+                                        .catalog-select-content__item__header__title
                                             p Mazda, CX-9 2630035530
                                             p (S2630035530, S2630035530)
                                         p.catalog-select-content__item__header__subtitle Фильтр масляный
-                                    .catalog-select-content__item__main 
+                                    .catalog-select-content__item__main
                                         .catalog-select-content__item__main__header
                                             .catalog-select-content__item__brand
                                                 p SPACE AUTO
@@ -237,7 +237,7 @@ block content
                                                 +icon('StarRoundedActive')
                                                 p 5.0 (4 отзыва)
                                         p.catalog-select-content__item__address Москва, ул. Свободы, 20
-                                        .catalog-select-content__item__main__info 
+                                        .catalog-select-content__item__main__info
                                             .catalog-select-content__item__metro
                                                 +icon('SubwayRoundedActive')
                                                 p Нагатинская
@@ -249,7 +249,7 @@ block content
                                             p Самовывоз
                                             p Курьер
                                 .catalog-select-content__item__block_rigth
-                                    .catalog-select-content__item__status 
+                                    .catalog-select-content__item__status
                                         .status.status_yellow
                                         p Под заказ 3-4 дня
                                     .catalog-select-content__item__price

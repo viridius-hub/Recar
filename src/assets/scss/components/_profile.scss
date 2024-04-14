@@ -132,10 +132,23 @@
     
     &_412 {
         grid-template-columns: 412px 1fr;
+        
+        @include media-down(md) {
+            grid-template-columns: 1fr;
+        }
     }
     
     &_582 {
         grid-template-columns: 582px 1fr;
+        
+        @include media-down(md) {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        @include media-down(sm) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
     
     &__left {
@@ -147,6 +160,10 @@
         @include media-down(md) {
             position: relative;
             z-index: 9;
+        }
+        
+        @include media-down(sm) {
+            grid-area: left;
         }
     }
     
@@ -166,6 +183,7 @@
         
         @include media-down(sm) {
             padding: 24px 16px;
+            grid-area: right;
         }
     }
 }

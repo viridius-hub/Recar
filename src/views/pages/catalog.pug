@@ -1,4 +1,4 @@
-extends ../layout/default
+extends ../layout/simple
 
 block content
     .catalog
@@ -10,34 +10,17 @@ block content
                     .catalog__product__info__wrapper
                         p.catalog__product__info__title Mazda, CX-9 2630035530
                         button.catalog__product__info__other Выбрать другое авто
-                    //- p.catalog__product__info__subtitle Фильтр масляный двигателя
-                    //- .catalog__product__info__footer
-                    //-     .catalog__product__info__footer__wrapper
-                    //-         button.button.button--primary Показать аналоги (4012)
-                    //-         button.button.button--third Сохранить номер
-                    //-     a.catalog__product__info__footer__map
-                    //-         +icon("LocationonRoundedBlue")
-                    //-         p Показать на карте
-                    //- .catalog__product__info__footer
-                    //-     .catalog__product__info__footer__wrapper
-                            
-                    //-         button.button.catalog__product__info__footer__analogues
-                    //-             +icon('ModalClose')
-                    //-             p Закрыть аналоги
-                    //-         button.button.catalog__product__info__footer__number Номер сохранен
-                    //-     a.catalog__product__info__footer__map
-                    //-         +icon("LocationonRoundedBlue")
-                    //-         p Показать на карте
-            button.back-button
-                +icon('back')
-                | Назад
+            div.only-desktop
+                button.back-button
+                    +icon('back')
+                    | Назад
             .layout.layout_412.catalog-layout
-                .catalog-filter 
-                    .catalog-filter__header 
-                        .catalog-filter__header__tabs 
+                .catalog-filter
+                    .catalog-filter__header
+                        .catalog-filter__header__tabs
                             button.button.catalog-filter__header__tab.catalog-filter__header__tab_active(data-catalog_open="groups") По группам
                             button.button.catalog-filter__header__tab(data-catalog_open="nodes") По узлам
-                        .employees__search
+                        .employees__search.only-desktop
                             label.form__field.form__field--img
                                 .form__field__wrapper
                                     .form__field--img_left
@@ -108,11 +91,11 @@ block content
                 .catalog-content.catalog-content_group.catalog-content_active(data-catalog_content_block='groups' data-catalog_content_visible)
                     a(href="##").catalog-content_group__item
                         img.catalog-content_group__item__img(src=require('@images/Rectangle.png'))
-                        .catalog-content_group__item__wrapper 
+                        .catalog-content_group__item__wrapper
                             .catalog-content_group__item__title
                                 p (2510) Элементы обеспечения работы двигателя
                                 p Узлы систем двигателя
-                            .catalog-content_group__item__table 
+                            .catalog-content_group__item__table
                                 .catalog-content_group__item__table__header
                                     p OEM
                                     p Наименование детали
@@ -127,11 +110,11 @@ block content
                                     +icon('KeyboardArrowDownRounded')
                     a(href="##").catalog-content_group__item
                         img.catalog-content_group__item__img(src=require('@images/Rectangle.png'))
-                        .catalog-content_group__item__wrapper 
+                        .catalog-content_group__item__wrapper
                             .catalog-content_group__item__title
                                 p (2510) Элементы обеспечения работы двигателя
                                 p Узлы систем двигателя
-                            .catalog-content_group__item__table 
+                            .catalog-content_group__item__table
                                 .catalog-content_group__item__table__header
                                     p OEM
                                     p Наименование детали
@@ -146,6 +129,6 @@ block content
                                     +icon('KeyboardArrowDownRounded')
                 .catalog-content.catalog-content_nodes(data-catalog_content_block='nodes')
                     +loop(6)
-                        a(href="##").catalog-content_nodes__item 
+                        a(href="##").catalog-content_nodes__item
                             p.catalog-content_nodes__item__title 1. Передняя концевая часть
                             img.catalog-content_nodes__item__img(src=require('@images/Rectangle.png'))
