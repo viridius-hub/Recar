@@ -1,4 +1,4 @@
-extends ../layout/default
+extends ../layout/simple
 
 block content
     .garage
@@ -7,29 +7,32 @@ block content
                 +icon('back')
                 | Назад
             .orders__content
+                div.orders__header-block
                     .orders__header
                         h1.orders__title Мой гараж
                         .orders__filter-block
+                            button.orders__filter.orders__filter--blue
+                                | По алфавиту
+                                +icon('KeyboardArrowDownRounded')
                             label.orders__search
                                 +icon('search')
                                 input(placeholder="Поиск по названию или артикулу")
-                            //- .orders__filters
-                            //-     button.orders__filter.orders__filter--blue
-                            //-         | A-Z
-                            //-     button.orders__filter.orders__filter--blue
-                            //-         | По дате добавления
-                    .cards
+                    .orders__header
+                        button.orders__add
+                            | Добавить авто
+                            +icon('AddRounded')
+
+                .cards
+                    .card
+                        .card__header
+                            .card__title Mazda B-Series
+                            .card__tag
+                                span
+                                | Главный
+                        a(href='#').card__edit Изменить
+                    +loop(29)
                         .card
                             .card__header
                                 .card__title Mazda B-Series
-                                .card__tag
-                                    span
-                                    | Главный
                             a(href='#').card__edit Изменить
-                        +loop(29)
-                            .card
-                                .card__header
-                                    .card__title Mazda B-Series
-                                a(href='#').card__edit Изменить
             //- .garage__wrapper
-                
