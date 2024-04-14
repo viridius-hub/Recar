@@ -1,4 +1,6 @@
 .profile {
+    padding-bottom: 50px;
+    
     &__name {
         display: flex;
         flex-direction: column;
@@ -27,6 +29,10 @@
         align-items: flex-start;
         gap: 24px;
         align-self: stretch;
+        
+        @include media-down(sm) {
+            gap: 16px;
+        }
     }
     
     &__caption {
@@ -159,7 +165,7 @@
         }
         
         @include media-down(sm) {
-            padding: 16px 24px;
+            padding: 24px 16px;
         }
     }
 }
@@ -169,7 +175,11 @@
     width: 100%;
     
     &:not(:first-child) {
-        margin-top: 60px;
+        margin-top: 16px;
+        
+        @include media-down(sm) {
+            margin-top: 0;
+        }
     }
     
     &__add {
@@ -293,6 +303,10 @@
         font-weight: 400;
         letter-spacing: -0.12px;
         margin-left: 32px;
+        
+        @include media-down(sm) {
+            margin-left: 0;
+        }
     }
 }
 
@@ -322,6 +336,13 @@
         align-self: stretch;
         border-bottom: 1px solid #DFDFDF;
         padding: 16px 0;
+        
+        @include media-down(sm) {
+            width: 100%;
+            flex-direction: column;
+            gap: 16px;
+            align-self: flex-start;
+        }
     }
     
     &__add {
@@ -363,12 +384,24 @@
     border-radius: 12px;
     background: var(--Accent-Dark, #201B45);
     
+    @include media-down(md) {
+        padding: 40px 24px;
+    }
+    
+    @include media-down(sm) {
+        padding: 24px 16px;
+    }
+    
     &__title {
         color: var(--Neutral-White, #FFF);
         text-align: center;
         font-family: Montserrat, sans-serif;
         font-size: 22px;
         font-weight: 600;
+        
+        @include media-down(md) {
+            font-size: 18px;
+        }
     }
     
     &__subtitle {
@@ -380,6 +413,10 @@
         line-height: 142%;
         letter-spacing: -0.17px;
         max-width: 400px;
+        
+        @include media-down(md) {
+            font-size: 16px;
+        }
     }
     
     &__block {
@@ -388,12 +425,24 @@
         gap: 16px;
         margin-bottom: 16px;
         
+        @include media-down(md) {
+            width: 100%;
+        }
+        
         &__wrapper {
             width: 100%;
             display: grid;
             grid-template-columns: 350px 1fr;
             align-items: center;
             gap: 24px;
+            
+            @include media-down(md) {
+                grid-template-columns: 1fr 176px;
+            }
+            
+            @include media-down(sm) {
+               grid-template-columns: 1fr;
+            }
         }
         
         &__rules {
@@ -404,8 +453,25 @@
             flex-direction: column;
             align-items: center;
             
+            @include media-down(md) {
+                display: block;
+                text-align: center;
+                
+                br {
+                    display: none;
+                }
+            }
+            
+            @include media-down(sm) {
+                font-size: 12px;
+            }
+            
             a {
                 color: #FFF;
+                
+                @include media-down(md) {
+                    margin-left: 4px;
+                }
             }
         }
     }
@@ -448,6 +514,10 @@
         font-family: Montserrat, sans-serif;
         font-size: 16px;
         font-weight: 600;
+        
+        @include media-down(sm) {
+            max-width: 100%;
+        }
     }
     
     &__caption {
@@ -459,6 +529,10 @@
         line-height: 142%;
         letter-spacing: -0.17px;
         display: flex;
+        
+        @include media-down(md) {
+            font-size: 16px;
+        }
     }
     
     &__socails {
@@ -467,6 +541,10 @@
         align-items: center;
         gap: 16px;
         align-self: stretch;
+        
+        @include media-down(sm) {
+            flex-direction: column;
+        }
         
         a {
             display: flex;
@@ -482,6 +560,10 @@
             font-family: Montserrat, sans-serif;
             font-size: 16px;
             font-weight: 600;
+            
+            @include media-down(sm) {
+                width: 100%;
+            }
         }
         
         img {
@@ -493,12 +575,16 @@
 }
 
 .profile-delete {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
     align-self: stretch;
+    
+    @include media-down(sm) {
+        margin-top: 32px;
+    }
     
     button {
         display: flex;

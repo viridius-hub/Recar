@@ -1,7 +1,7 @@
-extends ../layout/default
+extends ../layout/simple
 
 block content
-    .org 
+    .org
         .container
             button.back-button
                 +icon('back')
@@ -57,18 +57,20 @@ block content
                                         ul.select__options__wrapper
                                             li(data-select-option).select__options__item ООО
                                             li(data-select-option).select__options__item ИП
-                            <p class="org__block__change">Eсли вы хотите изменить тип организации, <br> обратитесь в <a href="##">службу поддержки</a></p>
-                                
                         label.form__field.form__field--change
                             span ФИО индивидуального предпринимателя
                             .form__field__wrapper
                                 input(placeholder="ФИО" readonly value="Пушкин Александр Сергеевич")
-                                button.button.form__field--change__button Изменить
+                                button.button.form__field--change__button
+                                    span Изменить
+                                    +icon('EditRounded')
                         label.form__field.form__field--change
                             span Руководитель
                             .form__field__wrapper
                                 input(placeholder="Руководитель" readonly value="Пушкин Александр Сергеевич")
-                                button.button.form__field--change__button Изменить
+                                button.button.form__field--change__button
+                                    span Изменить
+                                    +icon('EditRounded')
                         label.form__field.form__field--img
                             span Дата регистрации организации
                             .form__field__wrapper
@@ -94,14 +96,14 @@ block content
                             span E-mail
                             .form__field__wrapper
                                 input(placeholder="Например: example@gmail.com")
-                        label.org__checkbox 
-                            .checkbox.checkbox--square 
+                        label.org__checkbox
+                            .checkbox.checkbox--square
                                 input(type="checkbox")
                                 +icon('CheckBoxOutlineBlankRounded')
                                 +icon('CheckBoxRounded')
                             p Получать статусы заказов на почту
-                        label.org__checkbox 
-                            .checkbox.checkbox--square 
+                        label.org__checkbox
+                            .checkbox.checkbox--square
                                 input(type="checkbox")
                                 +icon('CheckBoxOutlineBlankRounded')
                                 +icon('CheckBoxRounded')
@@ -132,7 +134,7 @@ block content
                             span Instagram
                             .form__field__wrapper
                                 input(placeholder="Например: https://instagram.com/example")
-                    .org__block 
+                    .org__block
                         p.org__block__title Документы
                         .org__block__docs
                             .org__block__docs__item
@@ -143,28 +145,26 @@ block content
                                 .org__block__docs__wrapper
                                     p Свидетельство о постановке на учет в налоговом органе
                                     a(href="##") Загрузить скан
-                            .org__block__docs__item 
-                                .org__block__docs__wrapper 
+                            .org__block__docs__item
+                                .org__block__docs__wrapper
                                     p Копия паспорта
                                     a(href="##") Загрузить скан
-                                .org__block__docs__item__image 
+                                .org__block__docs__item__image
                                     img(src=require('@images/Rectangle.png'))
                                     +icon('ModalClose')
                     .org__block
                         button.button.button--secondary Отправить на проверку
                         <p class="org__block__rules">Нажимая на кнопку, вы соглашаетесь <a href="##">с Политикой обработки персональных данных</a></p>
-                    .org__block.org__block__review
-                        <p>Ваша заявка отправлена на проверку. <br> Следите за статусом в разделе «Данные организации». <br> Если у вас возникли вопросы, обратитесь в <a href="##">службу поддержки</a>.</p>
-                    .org__block 
+                    .org__block
                         button.button.button--text_red(data-modal-open='remove_organization' type="button") Удалить аккаунт
 
 
     +modal('remove_organization')(class="modal_w488")
-        .modal__header 
+        .modal__header
             p.modal__header__title Удаление аккаунта
-        .modal__content 
+        .modal__content
             p Ваш аккаунт будет удален, все данные будут потеряны. Это действие невозможно отменить.
-        .modal__footer 
+        .modal__footer
             .modal__footer__wrapper.modal__footer__wrapper_right
                 button.button.button--text_red Удалить
-                button.button.button--primary Отмена 
+                button.button.button--primary Отмена

@@ -90,20 +90,48 @@
         
         &--change {
             input {
-                padding-right: 150px;
+                padding-right: 110px;
+                
+                @include media-down(sm) {
+                    padding-right: 40px;
+                }
             }
             
             &__button {
                 display: flex;
                 color: #139BE8;
                 font-size: 14px;
-                font-family: "Inter";
+                font-family: Inter, sans-serif;
                 position: absolute;
                 top: 50%;
                 font-weight: 400;
                 left: calc(100% - 16px);
                 // left: 80%;
                 transform: translateY(-50%) translateX(-100%);
+                
+                @include media-down(sm) {
+                    right: 16px;
+                    left: auto;
+                    transform: translateY(-50%);
+                    padding: 0;
+                }
+                
+                span {
+                    color: inherit;
+                    font-size: inherit;
+                    
+                    @include media-down(sm) {
+                        display: none;
+                    }
+                }
+                
+                .icon--EditRounded {
+                    display: none;
+                    
+                    @include media-down(sm) {
+                        display: flex;
+                    }
+                }
                 
                 svg {
                     width: 20px;

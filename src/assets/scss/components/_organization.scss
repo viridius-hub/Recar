@@ -1,5 +1,7 @@
 
 .org {
+    padding-bottom: 50px;
+    
     &__title {
         color: #000000;
         font-size: 22px;
@@ -15,6 +17,15 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+        
+        @include media-down(sm) {
+            padding: 24px;
+        }
+        
+        @include media-down(sm) {
+            padding: 24px 16px;
+            gap: 32px;
+        }
     }
     
     &__info {
@@ -22,6 +33,13 @@
         width: 100%;
         gap: 10px;
         justify-content: space-between;
+        
+        @include media-down(sm) {
+            &:nth-child(2) {
+                flex-direction: column-reverse;
+                gap: 24px;
+            }
+        }
         
         &_black {
             color: #000000;
@@ -107,6 +125,19 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
             
+            @include media-down(sm) {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            &__wrapper {
+                @include media-down(sm) {
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+            
             &__item {
                 border: 1px #E2EEF6 solid;
                 border-radius: 12px;
@@ -116,6 +147,10 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                
+                @include media-down(sm) {
+                    height: auto;
+                }
                 
                 p {
                     color: #000000;
@@ -150,8 +185,13 @@
         
         &__rules {
             text-align: center;
-            font-family: "Inter";
+            font-family: Inter, sans-serif;
             color: #949DA5;
+            font-size: 14px;
+            
+            @include media-down(sm) {
+                font-size: 12px;
+            }
             
             a {
                 color: #139BE8;
