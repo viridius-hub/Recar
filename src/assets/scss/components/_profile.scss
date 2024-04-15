@@ -161,10 +161,6 @@
             position: relative;
             z-index: 9;
         }
-        
-        @include media-down(sm) {
-            grid-area: left;
-        }
     }
     
     &__right {
@@ -183,7 +179,6 @@
         
         @include media-down(sm) {
             padding: 24px 16px;
-            grid-area: right;
         }
     }
 }

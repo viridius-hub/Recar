@@ -1,6 +1,7 @@
 .select {
     position: relative;
     width: 100%;
+    cursor: pointer;
     
     
     &--img {
@@ -10,8 +11,11 @@
         
         svg {
             &:first-child {
+                position: absolute;
                 right: auto;
                 left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
     }
@@ -19,6 +23,7 @@
     input {
         height: 39px;
         padding-right: 44px;
+        cursor: pointer;
     }
     
     .icon--dropdown {
