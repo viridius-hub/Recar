@@ -12,21 +12,13 @@ block content
                         p.catalog-select__product__info__subtitle Фильтр масляный двигателя
                     .catalog-select__product__info__footer
                         .catalog-select__product__info__footer__wrapper
-                            button.button.button--primary Показать аналоги (4012)
+                            .catalog-select__product__info__group__buttons
+                                button.button.button--primary Показать аналоги
+                                    span (4012)
+                                a.catalog-select__product__info__footer__map
+                                    +icon("LocationonRoundedBlue")
+                                    span Показать на карте
                             button.button.button--third Сохранить номер
-                        a.catalog-select__product__info__footer__map
-                            +icon("LocationonRoundedBlue")
-                            p Показать на карте
-                    //- .catalog-select__product__info__footer
-                    //-     .catalog-select__product__info__footer__wrapper
-
-                    //-         button.button.catalog-select__product__info__footer__analogues
-                    //-             +icon('ModalClose')
-                    //-             p Закрыть аналоги
-                    //-         button.button.catalog-select__product__info__footer__number Номер сохранен
-                    //-     a.catalog-select__product__info__footer__map
-                    //-         +icon("LocationonRoundedBlue")
-                    //-         p Показать на карте
             .layout.layout_412.catalog-select-layout
                 form.catalog-select-filter
                     .catalog-select-filter__content
@@ -176,6 +168,10 @@ block content
                         button.button.button--primary Показать
                         button.button.button--text_blue Сбросить фильтры
                 .catalog-select-content
+                    .orders__filter-block.orders__filter-block--end
+                        button.orders__filter.orders__filter--blue
+                            | По алфавиту
+                            +icon('KeyboardArrowDownRounded')
                     a(href="##").catalog-select-content__item
                         img.catalog-select-content__item__img(src=require('@images/Rectangle.png'))
                         .catalog-select-content__item__wrapper
