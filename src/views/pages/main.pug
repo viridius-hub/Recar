@@ -29,7 +29,7 @@ block content
                                     label.search
                                         +icon('search')
                                         input(type="text" placeholder="Поиск по VIN" required)
-                                    button(type="submit").button.button--primary Найти
+                                    button(type="submit").button.button--primary(data-modal-open='search') Найти
                                 p.home-search-block__caption Например: VIN XW8AN2NE3JH035743 или FRAME KZN185-9023353
                             .home-search__select
                                 label.select-box
@@ -130,3 +130,297 @@ block content
                     .home-working-together__footer
                         a(href="#").button.button--primary Зарегистрируйтесь
                         a(href="#").button.button--text_blue Подробнее
+    +modal('search')(class="modal_w1400 modal_mh592")
+        .modal__header
+            .modal__header__wrapper
+                .tabs-header
+                    button.tabs-header__item(data-tab="tab-vin" data-group="0" type="button") Поиск по VIN
+                    button.tabs-header__item.tabs-header__item--active(data-tab="tab-model" data-group="0" type="button") Поиск по модели
+                    button.tabs-header__item(data-tab="tab-history-search" data-group="0" type="button") История поисков
+                    button.tabs-header__item(data-tab="tab-auto-garage" data-group="0" type="button") Авто из гаража
+        .modal__content
+            .tabs-content
+                #tab-vin(data-group="0").tabs-content__item
+                    .tabs-content-vin-steps
+                        .tabs-content-vin-step.tabs-content-vin-step--first.tabs-content-vin-step--active
+                            .tabs-content__inner
+                                .tabs-content-vin-step__content
+                                    label.tabs-content-vin-step__search
+                                        input(type="text" placeholder="VIN" required)
+                                    button(type="submit").button.button--text_blue.tabs-content-vin-step__submit Далее
+                                p.tabs-content-vin-step__text VIN нам нужен для точного определения модификации
+                                    br
+                                    | вашего авто в оригинальном каталоге запчастей
+                        .tabs-content-vin-step.tabs-content-vin-step--second
+                            button(type="button").back-button
+                                +icon('back')
+                                | Назад
+                            p.tabs-content-vin-step__title Результаты поиска по VIN
+                                span XW8AN2NE3JH035743
+                            p.tabs-content-vin-step__subtitle Skoda
+                            .tabs-content-vin-step__list
+                                .tabs-content-vin-step__list-item
+                                    span Год
+                                    span 2018
+                                .tabs-content-vin-step__list-item
+                                    span Двигатель
+                                    span CWVA
+                                .tabs-content-vin-step__list-item
+                                    span Код модели
+                                    span NL32H4
+                                .tabs-content-vin-step__list-item
+                                    span Код отделки салона
+                                    span HA
+                                button.button.button--text_blue.tabs-content-vin-step__params Все параметры
+                                    +icon('KeyboardArrowDownRounded')
+                            .orders__main
+                                .orders__table
+                                    .orders__row.orders__row_header.orders__row--grid-2
+                                        .orders__column
+                                            p Обозначение модели
+                                        .orders__column
+                                    .orders__rows
+                                        .orders__row.orders__row--grid-2
+                                            .orders__column
+                                                p Octavia
+                                            .orders__column.orders__column--end
+                                                button(type="button").button.button--primary Выбрать
+                                                button(type="button").button.button--text
+                                                    +icon('InfoRounded')
+
+
+                        .tabs-content-vin-step.tabs-content-vin-step--thirty
+                            .tabs-content-vin-step__wrapper
+                                .tabs-content__inner
+                                    .tabs-content-vin-step__content
+                                        label.tabs-content-vin-step__search
+                                            input(type="text" placeholder="VIN" value="XW8AN2NE3JH035743" required)
+                                        button(type="submit").button.button--text_blue.tabs-content-vin-step__submit Далее
+                                    p.tabs-content-vin-step__text VIN нам нужен для точного определения модификации
+                                        br
+                                        | вашего авто в оригинальном каталоге запчастей
+                            .tabs-content-vin-step__results
+                                label.tabs-content-vin-step__result
+                                    input(type="radio" name="search-result-vin" value="0")
+                                    span CHRYSLER, NS — CARAVAN/VOYAGER/T&S/LIMITED (US), 2000-01-17
+                                label.tabs-content-vin-step__result
+                                    input(type="radio" name="search-result-vin" value="2")
+                                    span CHRYSLER, NS — CARAVAN/VOYAGER/T&S/LIMITED (CANADA), 2000-01-17
+                                label.tabs-content-vin-step__result
+                                    input(type="radio" name="search-result-vin" value="3")
+                                    span CHRYSLER, NS — CARAVAN/VOYAGER/T&S/LIMITED (EXPORT), 2000-01-17
+                                label.tabs-content-vin-step__result
+                                    input(type="radio" name="search-result-vin" value="4")
+                                    span CHRYSLER, NS — CARAVAN/VOYAGER/T&S/LIMITED (CKD), 2000-01-17
+                                label.tabs-content-vin-step__result
+                                    input(type="radio" name="search-result-vin" value="5")
+                                    span CHRYSLER, NS — CARAVAN/VOYAGER/T&S/LIMITED (MEXICO), 2000-01-17
+                                button(type="button").button.button--primary Перейти в каталог
+                        .tabs-content-vin-step.tabs-content-vin-step--fourth
+                            button(type="button").back-button
+                                +icon('back')
+                                | Назад
+                            p.tabs-content-vin-step__title Skoda
+                            .tabs
+                                .tabs-header
+                                    button.tabs-header__item.tabs-header__item--active(data-tab="tab-vin-code" data-group="1" type="button") Опционные коды
+                                    button.tabs-header__item(data-tab="tab-vin-desc" data-group="1" type="button") Описание
+                                .tabs-content
+                                    #tab-vin-code(data-group="1").tabs-content__item.tabs-content__item--active
+                                        .tabs-content-vin-step__items
+                                            +loop(16)
+                                                .tabs-content-vin-step__item
+                                                    span 0DS
+                                                    span Дифференциация по классу а/м, агрегаты/компоненты платформы: Спецкомплект для данного класса а/м -4B0-
+                                    #tab-vin-desc(data-group="1").tabs-content__item
+                                        .tabs-content-vin-step__description
+                                            p 1998-2001. Название комплектации: A6 Audi A6 2,8
+                #tab-model(data-group="0").tabs-content__item.tabs-content__item--active
+                    .tabs-content-model-steps
+                        .tabs-content-model-step.tabs-content-model-step--active
+                            .tabs-content-model-steps__inner
+                                .tabs-content-model-step__model
+                                    span KIA
+                                    +icon('ModalClose')
+                                p.tabs-content-model-step__caption Параметры автомобиля
+                                .select.tabs-content-model-step__select
+                                    input(placeholder="Модель" data-select)
+                                    +icon('dropdown')
+                                    .select__options(data-select-options)
+                                        ul.select__options__wrapper
+                                            +loop(20)
+                                                li(data-select-option).select__options__item select option
+                        .tabs-content-model-step
+                            .tabs-content-model-steps__inner
+                                .tabs-content-model-step__model
+                                    span KIA
+                                    +icon('ModalClose')
+                                p.tabs-content-model-step__caption Параметры автомобиля
+                                .tabs-content-model-step__select
+                                    input(placeholder="Модель" value="CEED" disabled=true data-select )
+                                    +icon('ModalClose')
+                            .tabs-content-model-step__fields
+                                .select.tabs-content-model-step__select
+                                    input(placeholder="Год" data-select)
+                                    +icon('dropdown')
+                                    .select__options(data-select-options)
+                                        ul.select__options__wrapper
+                                            +loop(2)
+                                                li(data-select-option).select__options__item select option
+                                .select.tabs-content-model-step__select
+                                    input(placeholder="Регион" data-select)
+                                    +icon('dropdown')
+                                    .select__options(data-select-options)
+                                        ul.select__options__wrapper
+                                            +loop(2)
+                                                li(data-select-option).select__options__item select option
+                                .select.tabs-content-model-step__select
+                                    input(placeholder="Рулевое управление" data-select)
+                                    +icon('dropdown')
+                                    .select__options(data-select-options)
+                                        ul.select__options__wrapper
+                                            +loop(2)
+                                                li(data-select-option).select__options__item select option
+                                .select.tabs-content-model-step__select
+                                    input(placeholder="Тип кузова" data-select)
+                                    +icon('dropdown')
+                                    .select__options(data-select-options)
+                                        ul.select__options__wrapper
+                                            +loop(2)
+                                                li(data-select-option).select__options__item select option
+                                .select.tabs-content-model-step__select
+                                    input(placeholder="Тип коробки передач" data-select)
+                                    +icon('dropdown')
+                                    .select__options(data-select-options)
+                                        ul.select__options__wrapper
+                                            +loop(2)
+                                                li(data-select-option).select__options__item select option
+                                .select.tabs-content-model-step__select
+                                    input(placeholder="Серия" data-select)
+                                    +icon('dropdown')
+                                    .select__options(data-select-options)
+                                        ul.select__options__wrapper
+                                            +loop(2)
+                                                li(data-select-option).select__options__item select option
+                                .select.tabs-content-model-step__select
+                                    input(placeholder="Модель" data-select)
+                                    +icon('dropdown')
+                                    .select__options(data-select-options)
+                                        ul.select__options__wrapper
+                                            +loop(2)
+                                                li(data-select-option).select__options__item select option
+                                .select.tabs-content-model-step__select
+                                    input(placeholder="Двигатель" data-select)
+                                    +icon('dropdown')
+                                    .select__options(data-select-options)
+                                        ul.select__options__wrapper
+                                            +loop(2)
+                                                li(data-select-option).select__options__item select option
+                                button(type="button").button.button--primary Показать автомобили
+
+                        .tabs-content-model-step
+                            button(type="button").back-button
+                                +icon('back')
+                                | Назад
+                            p.tabs-content-model-step__title 3475676437-128
+                            .tabs-content-model-step__table
+                                .orders__main
+                                    .orders__table
+                                        .orders__rows
+                                            +loop(16)
+                                                .orders__row.orders__row--grid-2-fl
+                                                    .orders__column
+                                                        p prodrange
+                                                    .orders__column
+                                                        p Market
+                        .tabs-content-model-step
+                            button(type="button").back-button
+                                +icon('back')
+                                | Назад
+                            p.tabs-content-model-step__title X-Type
+                            .tabs-content-model-step__table
+                                .orders__table
+                                    .orders__row.orders__row_header.orders__row--grid-6-fl
+                                        .orders__column
+                                            p Двигатель
+                                        .orders__column
+                                            p Market
+                                        .orders__column
+                                            p Drive
+                                        .orders__column
+                                            p КП
+                                        .orders__column
+                                            p Trimlevel
+                                        .orders__column
+                                    +loop(6)
+                                        .orders__row.orders__row--grid-6-fl
+                                            .orders__column
+                                                p [Unknown]
+                                            .orders__column
+                                                p [Unknown]
+                                            .orders__column
+                                                p [Unknown]
+                                            .orders__column
+                                                p [Unknown]
+                                            .orders__column
+                                                p [Unknown]
+                                            .orders__column.orders__column--end
+                                                button.orders__button
+                                                    span Подробнее
+                                                    +icon('InfoOutlineRounded')
+                #tab-history-search(data-group="0").tabs-content__item
+                    .orders__header
+                        .orders__filter-block
+                            label.orders__search
+                                +icon('search')
+                                input(placeholder="Поиск по названию или артикулу")
+                    .orders__main
+                        .orders__table
+                            .orders__row.orders__row_header.orders__row--grid-5
+                                .orders__column
+                                    p Производитель
+                                .orders__column
+                                    p Номер
+                                .orders__column
+                                    p Наименование
+                                .orders__column
+                                    p Дата
+                                .orders__column
+                            .orders__rows
+                                +loop(6)
+                                    .orders__row.orders__row--grid-5
+                                        .orders__column
+                                            p HONDA
+                                        .orders__column
+                                            p 892189-098
+                                        .orders__column
+                                            p.text-black Втулка стабилизатора
+                                        .orders__column
+                                            p 20.12.2022
+                                        .orders__column.orders__column--end
+                                            button(type="button").orders__icon
+                                                +icon('trash')
+                #tab-auto-garage(data-group="0").tabs-content__item
+                    div.orders__header-block
+                        .orders__header
+                            h1.orders__title Мой гараж
+                            .orders__filter-block
+                                button(type="button").orders__filter.orders__filter--blue
+                                    | По алфавиту
+                                    +icon('KeyboardArrowDownRounded')
+                                label.orders__search
+                                    +icon('search')
+                                    input(placeholder="Поиск по названию или артикулу")
+                    .cards
+                        .card
+                            .card__header
+                                .card__title Mazda B-Series
+                                .card__tag
+                                    span
+                                    | Главный
+                            a(href='#').card__edit Изменить
+                        +loop(29)
+                            .card
+                                .card__header
+                                    .card__title Mazda B-Series
+                                a(href='#').card__edit Изменить

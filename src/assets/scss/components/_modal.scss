@@ -25,6 +25,22 @@
         }
     }
 
+    &_mh592{
+        #{$root}{
+            &__container{
+                min-height: 592px;
+            }
+        }
+    }
+
+    &_w1400{
+        #{$root}{
+            &__container{
+                max-width: 1400px;
+            }
+        }
+    }
+
     &__overlay {
         position: fixed;
         top: 0;

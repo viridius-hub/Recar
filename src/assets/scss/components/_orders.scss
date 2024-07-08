@@ -224,6 +224,15 @@
             justify-content: flex-start;
         }
     }
+
+    &__rows {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+    }
     
     &__row {
         width: 100%;
@@ -235,6 +244,8 @@
         transition: background .3s;
         color: #000000;
         font-family: Inter, sans-serif;
+        border-radius: 16px;
+
         
         @include media-down(md) {
             grid-template-columns: 130px 130px 130px 130px 130px 50px;
@@ -251,7 +262,30 @@
         }
         
         &_header {
-            color: #949DA5
+            color: #949DA5;
+            border-bottom: 1px solid #E2EEF6;
+            border-radius: 0;
+
+            &:hover {
+                background: none !important;
+                border-radius: 0 !important;
+            }
+        }
+
+        &--grid-2-fl {
+            grid-template-columns: 1fr 1fr;
+
+            @include media-down(md) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        &--grid-2 {
+            grid-template-columns: 1fr 225px;
+
+            @include media-down(md) {
+                grid-template-columns: 1fr 225px;
+            }
         }
         
         &--grid-5 {
@@ -269,23 +303,25 @@
                 grid-template-columns: 130px 130px 130px 130px 130px 50px;
             }
         }
-        
-        
-        &:first-child {
-            border-bottom: 1px solid #B7BDC0;
-            
-            &:hover {
-                background: none;
-                border-radius: 0;
+
+        &--grid-6-fl {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 125px;
+
+            @include media-down(md) {
+                grid-template-columns: 130px 130px 130px 130px 130px 50px;
             }
         }
-        
+
         &:hover {
             background: rgba(64, 140, 255, 0.05);
-            border-radius: 16px;
-            
+
             #{$root} {
                 &__button {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                &__icon {
                     visibility: visible;
                     opacity: 1;
                 }
@@ -366,6 +402,36 @@
         
         &--green {
             background: var(--secondary-green, #49B870);
+        }
+    }
+
+    &__icon {
+        display: flex;
+        padding: 4px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent-1, #139BE8) !important;
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.14px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+
+        @include media-down(md) {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            min-height: 24px;
+            max-width: 24px;
+            max-height: 24px;
         }
     }
     

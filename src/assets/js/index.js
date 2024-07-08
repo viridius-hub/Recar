@@ -11,6 +11,7 @@ import "./catalog_item"
 import "./catalog_item_select"
 import "./forms"
 import "./cart"
+import "./tabs"
 
 window.addEventListener("DOMContentLoaded", () => {
     const tables = document.querySelectorAll('.js-filter-order')
